@@ -1,0 +1,26 @@
+.beacons-index {
+  background-color: $white;
+}
+
+.beacon-listing {
+  .listing {
+    padding: 20px;
+  }
+
+  .name {
+    padding: 20px 0px;
+  }
+
+  .microapp {
+    margin: 20px;
+    padding: 0px 15px;
+
+    display: inline-block;
+
+    border-width: 2px;
+    border-color: $grey;
+    border-style: solid;
+    border-radius: 15px;
+    height: 30px;
+  }
+}

@@ -1,1 +1,23 @@
-Beacons go here
+<div class="container beacons-index">
+  {{#each beacon in model}}
+  <div class="beacon-listing">
+
+    <div class="right-listing">
+      {{#link-to 'beacons.new'}} + {{/link-to}}
+    </div>
+
+    <div class="listing">
+      <div class="name">
+        {{bacon.name}}
+        {{#link-to 'beacon.edit' beacon.id}} Edit {{/link-to}}
+      </div>
+      <div> {{beacon.service_id}} </div>
+
+      <!-- Micro Apps -->
+      <div class="microapp">
+        Microapp 1
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

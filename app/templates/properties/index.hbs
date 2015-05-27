@@ -1,16 +1,15 @@
 <div class="container">
 {{#each property in model}}
 	<div class="property-listing">
+		<div class="right-listing">
+			X
+		</div>
     <div class="listing">
       <div class="name">
 				{{#link-to 'property.edit' property.id}}{{property.address}} - $ {{property.price}} {{/link-to}}<br />
 			</div>
 			{{property.agent}}
 		</div>
-
-		<div class="remove-property">
-      X
-    </div>
   </div>
 	{{/each}}
 </div>

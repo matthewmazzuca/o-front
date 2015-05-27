@@ -48,11 +48,11 @@
     This is a suggested flow for Ember simplicity </i>
   </div>
 
-  {{#each f in model.fields}}
+  {{#each field in model.fields}}
     <div class="property-setting">
-      {{input value=f.name}}
+      {{input value=field.name}}
       <div class="setting">
-        {{input value=f.value}}
+        {{input value=field.value}}
       </div>
     </div>
   {{/each}}

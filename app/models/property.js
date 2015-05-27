@@ -23,7 +23,7 @@ export default DS.Model.extend({
 		lat: 1,
 		lng: 1,
 		fields: [1],
-		beacons: [1,2,3]
+		beacons: [1]
 	}, {
 		id: 2,
 		address: "52 Fifeshire Road",
@@ -32,6 +32,8 @@ export default DS.Model.extend({
 		description: "Dwelling",
 		lat: -100,
 		lng: 100,
-		fields: [2]
-	}]
+		fields: [2],
+		beacons: [1,2]
+	}
+	]
 });

@@ -4,7 +4,6 @@
 }
 
 .listing {
-  float: left;
   color: $grey;
 
   .name {
@@ -16,7 +15,7 @@
   }
 }
 
-.remove-property {
+.right-listing {
   float: right;
   margin: 40px;
 }
