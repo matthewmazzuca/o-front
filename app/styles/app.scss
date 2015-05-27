@@ -6,7 +6,9 @@ $grey: #333333;
 $white: #FFFFFF;
 
 html, body {
+  margin: 0px;
   background-color: $prime;
+  font-size: 22px;
 }
 
 a {
@@ -38,9 +40,7 @@ a {
 
 .listing {
   float: left;
-
   color: $grey;
-  font-size: 22px;
 
   .name {
     padding-bottom: 40px;
@@ -62,4 +62,12 @@ a {
 
   text-align: center;
   padding: 40px 0px;
+
+  .new-button {
+    margin: 20px;
+  }
+
+  a {
+    color: $white;
+  }
 }
