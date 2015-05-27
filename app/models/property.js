@@ -10,6 +10,7 @@ export default DS.Model.extend({
   lng: DS.attr('number'),
 
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
+  beacons: DS.hasMany('beacon', {async: true})
   
 }).reopenClass({
 	FIXTURES: [
@@ -21,7 +22,8 @@ export default DS.Model.extend({
 		description: "Dwelling",
 		lat: 1,
 		lng: 1,
-		fields: [1]
+		fields: [1],
+		beacons: [1,2,3]
 	}, {
 		id: 2,
 		address: "52 Fifeshire Road",
