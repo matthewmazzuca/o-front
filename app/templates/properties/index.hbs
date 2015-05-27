@@ -1,6 +1,20 @@
-<h2>Property List</h2>
-{{#link-to 'properties.new'}}New Property{{/link-to}}<br />
-
+<div class="container">
 {{#each property in model}}
-	{{#link-to 'properties.edit' property.id}}{{property.name}}{{/link-to}}<br />
-{{/each}}
+	<div class="property-listing">
+    <div class="listing">
+      <div class="name">
+				{{#link-to 'properties.edit' property.id}}{{property.name}}{{/link-to}}<br />
+			</div>
+			375 King St West, Toronto, ON
+		</div>
+
+		<div class="remove-property">
+      X
+    </div>
+  </div>
+	{{/each}}
+</div>
+
+<div class="new-property">
+	{{#link-to 'properties.new'}}New Property{{/link-to}}<br />
+</div>

@@ -1,0 +1,65 @@
+$prime: #50c4d4;
+
+$dark: #262626;
+$grey: #333333;
+
+$white: #FFFFFF;
+
+html, body {
+  background-color: $prime;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 60px;
+  background-color: $prime;
+}
+
+.container {
+  background-color: $white;
+}
+
+.title {
+  height: 80px;
+  line-height: 80px;
+  background-color: $dark;
+
+  color: $white;
+  font-size: 44px;
+  text-align: center;
+}
+
+.property-listing {
+  height: 140px;
+}
+
+.listing {
+  float: left;
+
+  color: $grey;
+  font-size: 22px;
+
+  .name {
+    padding-bottom: 40px;
+    font-size: 38px;
+    a {
+      color: $prime;
+    }
+  }
+}
+
+.remove-property {
+  float: right;
+  margin: 40px;
+}
+
+.new-property {
+  background-color: $prime;
+  height: 200px;
+
+  text-align: center;
+  padding: 40px 0px;
+}
