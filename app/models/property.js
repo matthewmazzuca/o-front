@@ -27,6 +27,6 @@ export default DS.Model.extend({
 		description: "Dwelling",
 		lat: -100,
 		lng: 100,
-		fields: [2,3]
+		fields: [2]
 	}]
 });
