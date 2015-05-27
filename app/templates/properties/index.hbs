@@ -3,7 +3,7 @@
 	<div class="property-listing">
     <div class="listing">
       <div class="name">
-				{{#link-to 'properties.edit' property.id}}{{property.name}}{{/link-to}}<br />
+				{{#link-to 'properties.edit' property.id}}{{property.name}} - $ {{property.price}} {{/link-to}}<br />
 			</div>
 			375 King St West, Toronto, ON
 		</div>
@@ -16,7 +16,8 @@
 </div>
 
 <div class="new-property">
-	{{#link-to 'properties.new'}}Add New Property
+	{{#link-to 'properties.new'}}
+		Add New Property
 		<div class="new-button">
 			+
 		</div>

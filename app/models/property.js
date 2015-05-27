@@ -1,8 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  name: DS.attr('string'),
   address: DS.attr('string'),
+  price: DS.attr('number'),
+  agent: DS.attr('string'),
   description: DS.attr('string'),
 
   lat: DS.attr('number'),
@@ -14,16 +15,18 @@ export default DS.Model.extend({
 	FIXTURES: [
 	{
 		id: 1,
-		name: "Gleb's Property",
 		address: "63 Rollscourt Drive",
+		price: "600000",
+		agent: "Gleb",
 		description: "Dwelling",
 		lat: 1,
 		lng: 1,
 		fields: [1]
 	}, {
 		id: 2,
-		name: "Joey's property",
 		address: "52 Fifeshire Road",
+		price: "600000",
+		agent: "Joey",
 		description: "Dwelling",
 		lat: -100,
 		lng: 100,

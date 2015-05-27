@@ -1,0 +1,69 @@
+//INDEX
+.property-listing {
+  height: 140px;
+}
+
+.listing {
+  float: left;
+  color: $grey;
+
+  .name {
+    padding: 20px 0px 40px 0px;
+    font-size: 38px;
+    a {
+      color: $prime;
+    }
+  }
+}
+
+.remove-property {
+  float: right;
+  margin: 40px;
+}
+
+.new-property {
+  background-color: $prime;
+  height: 200px;
+
+  text-align: center;
+  padding: 40px 0px;
+
+  .new-button {
+    margin: 20px;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+//SETTINGS
+.property-settings {
+  background-color: $lightGrey;
+  padding: 20px 40px;
+
+  font-size: 28px;
+}
+
+.property-setting {
+  min-height: 80px;
+  border-bottom: 1px solid $white;
+
+  .title {
+    float: left;
+    color: $grey;
+    font-size: 28px;
+  }
+
+  .setting {
+    float: right;
+  }
+
+  .description {
+  }
+
+  .sub-text {
+    color: $subGrey;
+    font-size: 22px;
+  }
+}
