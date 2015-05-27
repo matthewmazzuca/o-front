@@ -3,9 +3,9 @@
 	<div class="property-listing">
     <div class="listing">
       <div class="name">
-				{{#link-to 'properties.edit' property.id}}{{property.name}} - $ {{property.price}} {{/link-to}}<br />
+				{{#link-to 'properties.edit' property.id}}{{property.address}} - $ {{property.price}} {{/link-to}}<br />
 			</div>
-			375 King St West, Toronto, ON
+			{{property.agent}}
 		</div>
 
 		<div class="remove-property">
