@@ -1,0 +1,6 @@
+<h2>Property List</h2>
+{{#link-to 'properties.new'}}New Property{{/link-to}}<br />
+
+{{#each property in model}}
+	{{#link-to 'properties.edit' property.id}}{{property.name}}{{/link-to}}<br />
+{{/each}}

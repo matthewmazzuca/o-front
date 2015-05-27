@@ -6,4 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.resource('properties', function() {
+      this.route('new');
+      this.route('edit', {path: '/:property_id/edit'});
+  });
 });
