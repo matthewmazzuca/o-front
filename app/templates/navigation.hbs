@@ -1,7 +1,9 @@
-{{title}}
+<div {{bind-attr class="controllers.application.navVisible:visible:nav"}}> 
+{{!class visible is visible while nav is making it invisible}}
 
-<ul class="left">
-	{{#each item in model}}
-	  {{#link-to item.route}}{{item.title}}{{/link-to}}
-	{{/each}}
-</ul>
+	<ul class="left">
+		{{#each item in model}}
+		  <li>{{#link-to item.route}}{{item.title}}{{/link-to}}</li>
+		{{/each}}
+	</ul>
+</div>

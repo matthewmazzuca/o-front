@@ -3,6 +3,7 @@ $dark: #262626;
 $grey: #333333;
 $lightGrey: #eaeaea;
 $subGrey: #999999;
+$menuGrey: #2e3031;
 $white: #FFFFFF;
 
 html, body {
@@ -14,6 +15,7 @@ html, body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -56,3 +58,4 @@ button {
 
 @import 'properties';
 @import 'beacons';
+@import 'nav';
