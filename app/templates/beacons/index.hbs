@@ -1,22 +1,26 @@
+{{#link-to 'beacons.new'}}NEW BEACON{{/link-to}}
+
 <div class="container beacons-index">
   {{#each beacon in model}}
   <div class="beacon-listing">
 
     <div class="right-listing">
-      {{#link-to 'beacons.new'}} + {{/link-to}}
+      {{#link-to 'micro_apps.new'}} + {{/link-to}}
     </div>
 
     <div class="listing">
       <div class="name">
-        {{bacon.name}}
+        {{beacon.name}}
         {{#link-to 'beacon.edit' beacon.id}} Edit {{/link-to}}
       </div>
       <div> {{beacon.service_id}} </div>
 
       <!-- Micro Apps -->
-      <div class="microapp">
-        Microapp 1
-      </div>
+      {{#each microapp in beacon.micro_apps}}
+        <div class="microapp">
+          {{#link-to 'micro_app.edit' microapp.id}}{{microapp.name}}{{/link-to}}
+        </div>
+      {{/each}}
     </div>
   </div>
   {{/each}}

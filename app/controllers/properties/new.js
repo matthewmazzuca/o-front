@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 		save: function() {
 			var property = this.get('model');
 			property.save();
-			this.transitionToRoute('properties.edit', property);
+			this.transitionToRoute('property.edit', property);
 		}
 	}
 });
