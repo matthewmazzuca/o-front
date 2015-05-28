@@ -30,8 +30,15 @@ button {
 }
 
 .header {
-  height: 30px;
+  height: 100px;
+  line-height: 100px;
   background-color: $prime;
+}
+
+.nav-icon {
+  padding: 30px 40px;
+  line-height: 100px;
+  vertical-align: middle;
 }
 
 .container {

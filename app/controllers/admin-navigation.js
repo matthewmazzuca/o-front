@@ -10,7 +10,7 @@ export default Ember.ArrayController.extend({
 		Ember.Object.create({
 			title: "Microapps",
 			route: 'properties.new',
-			icon: 'beacons-icon.png'}),
+			icon: 'microapps-icon.png'}),
 		Ember.Object.create({
 			title: "Users",
 			route: 'properties.new',

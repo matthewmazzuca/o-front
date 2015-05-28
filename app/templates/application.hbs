@@ -2,7 +2,7 @@
 <div {{bind-attr class="controller.navVisible:left:container"}}>
 
   <div class="header">
-    <button {{action 'toggleNav'}}> Toggle Nav </button>
+    <img src="nav-icon.png" class="nav-icon" {{action 'toggleNav'}}>
   </div>
 
   {{render 'navigation'}}
