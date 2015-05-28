@@ -1,14 +1,14 @@
 //INDEX
 .property-listing {
-  height: 140px;
+  height: 70px;
 }
 
 .listing {
   color: $grey;
 
   .name {
-    padding: 20px 0px 40px 0px;
-    font-size: 38px;
+    padding: 10px 0px 40px 0px;
+    font-size: 19px;
     a {
       color: $prime;
     }
@@ -17,18 +17,18 @@
 
 .right-listing {
   float: right;
-  margin: 40px;
+  margin: 20px;
 }
 
 .new-property {
   background-color: $prime;
-  height: 200px;
+  height: 100px;
 
   text-align: center;
-  padding: 40px 0px;
+  padding: 20px 0px;
 
   .new-button {
-    margin: 20px;
+    margin: 10px;
   }
 
   a {
@@ -39,19 +39,19 @@
 //SETTINGS
 .property-settings {
   background-color: $lightGrey;
-  padding: 20px 40px;
+  padding: 10px 20px;
 
-  font-size: 28px;
+  font-size: 14px;
 }
 
 .property-setting {
-  min-height: 80px;
+  min-height: 40px;
   border-bottom: 1px solid $white;
 
   .title {
     float: left;
     color: $grey;
-    font-size: 28px;
+    font-size: 14px;
   }
 
   .setting {
@@ -63,6 +63,6 @@
 
   .sub-text {
     color: $subGrey;
-    font-size: 22px;
+    font-size: 11px;
   }
 }

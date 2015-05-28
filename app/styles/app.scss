@@ -8,7 +8,7 @@ $white: #FFFFFF;
 html, body {
   margin: 0px;
   background-color: $prime;
-  font-size: 22px;
+  font-size: 11px;
   font-family: "Brandon Grotesque";
 }
 
@@ -21,7 +21,7 @@ button {
 }
 
 .header {
-  height: 60px;
+  height: 30px;
   background-color: $prime;
 }
 
@@ -30,28 +30,28 @@ button {
 }
 
 .page-title {
-  height: 80px;
-  line-height: 80px;
+  height: 40px;
+  line-height: 40px;
   background-color: $dark;
 
   color: $white;
-  font-size: 44px;
+  font-size: 22px;
   text-align: center;
 }
 
 .save-container {
-  padding: 60px 0px;
+  padding: 30px 0px;
   text-align: center;
 }
 
 .button {
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: $prime;
-  height: 60px;
-  padding: 0px 40px;
+  height: 30px;
+  padding: 0px 20px;
 
   color: $white;
-  font-size: 36px;
+  font-size: 18px;
 }
 
 @import 'properties';
