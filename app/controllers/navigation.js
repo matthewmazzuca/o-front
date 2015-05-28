@@ -5,11 +5,17 @@ export default Ember.ArrayController.extend({
 	title: "Navigation Bar",
 
 	model: Ember.A([
-		Ember.Object.create({title: "Edit Profile", route: ""}),
-		Ember.Object.create({title: "Account Settings", route: ""}),
-		Ember.Object.create({title: "Properties", route: 'properties.index'}),
-		Ember.Object.create({title: "Beacons", route: 'properties.new'}),
-		Ember.Object.create({title: "Microapps", route: 'properties.new'}),
-		Ember.Object.create({title: "Users", route: 'properties.new'})
+		Ember.Object.create({
+			title: "Edit Profile", 
+			route: "",
+			icon: 'profile-icon.png'}),
+		Ember.Object.create({
+			title: "Account Settings", 
+			route: "",
+			icon: 'settings-icon.png'}),
+		Ember.Object.create({
+			title: "Properties", 
+			route: 'properties.index',
+			icon: 'properties-icon.png'}),
 	])
 });

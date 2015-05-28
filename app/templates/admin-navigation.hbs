@@ -1,0 +1,14 @@
+<div class="admin-header">
+	MANAGE:
+</div>
+
+<ul>
+	{{#each item in model}}
+		<li>
+	  	<img class="icon" {{bind-attr src="icon"}}>
+	  		{{#link-to item.route}}{{item.title}}{{/link-to}}
+	  </li>
+	{{/each}}
+</ul>
+
+<div class="small-nav-spacer"></div>

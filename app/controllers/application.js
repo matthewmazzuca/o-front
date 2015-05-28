@@ -1,5 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	navVisible: false
+	navVisible: false,
+
+	propertyAddress: "63 Rollscourt Drive",
+	propertyLocation: "Toronto, Canada"
 });
