@@ -1,5 +1,8 @@
-<div {{bind-attr class="controllers.application.navVisible:visible:nav"}}> 
-{{!class visible is visible while nav is making it invisible}}
+<div {{bind-attr class="controllers.application.navVisible:visible:nav"}}>
+
+  <img src="avatar.png">
+
+{{title}}
 
 	<ul class="left">
 		{{#each item in model}}

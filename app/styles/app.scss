@@ -22,6 +22,12 @@ button {
   border: none;
 }
 
+.container {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
 .header {
   height: 30px;
   background-color: $prime;
@@ -47,7 +53,7 @@ button {
 }
 
 .button {
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: $prime;
   height: 30px;
   padding: 0px 20px;
