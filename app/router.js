@@ -32,8 +32,13 @@ export default Router.map(function() {
 
       this.resource('highlights', function() {
         this.resource('highlight', {path: ':highlight_id'}, function() {
-          this.route('show');
           this.route('edit');
+
+          this.resource('options', function() {
+            this.route('option', {path: ':option_id'} {
+              
+            })
+          })
         });
       });
 
