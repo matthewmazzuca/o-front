@@ -4,10 +4,13 @@ $grey: #333333;
 $lightGrey: #eaeaea;
 $subGrey: #999999;
 $menuGrey: #2e3031;
+
 $white: #FFFFFF;
 $black: #000000;
-$highlightGrey: #3C3C3C;
 
+$highlightGrey: #3C3C3C;
+$lineGrey: #939393;
+$lightBlue: #13a9c0;
 
 html, body {
   margin: 0px;
@@ -59,6 +62,14 @@ button {
   text-align: center;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .save-container {
   padding: 30px 0px;
   text-align: center;
@@ -75,5 +86,6 @@ button {
 }
 
 @import 'properties';
+@import 'property';
 @import 'beacons';
 @import 'nav';

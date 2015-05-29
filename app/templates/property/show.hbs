@@ -1,6 +1,5 @@
 {{partial 'property/hero-header'}}
 
-
   <div class="down-icon-cont">
     <img src="down-icon.png">
   </div>
@@ -19,7 +18,7 @@
         PAY
       </div>
 
-      {{#each highlight in model}}
+      {{#each highlight in model.highlights}}
         {{partial 'highlight/inline'}}
       {{/each}}
     </div>
