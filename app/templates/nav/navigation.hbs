@@ -1,0 +1,28 @@
+<div {{bind-attr class="controllers.application.navVisible:visible:nav"}}>
+
+	<div class="avatar">
+  	<img src="avatar.png">
+  </div>
+
+  <div class="property">
+  	<div class="property-name">
+  		{{controllers.application.propertyAddress}}
+  	</div>
+
+  	<div class="property-location">
+  		{{controllers.application.propertyLocation}}
+  	</div>
+  </div>
+
+	<ul >
+		{{#each item in model}}
+		  <li>
+		  	<img class="icon" {{bind-attr src=item.icon}}>
+		  	{{#link-to item.route}}{{item.title}}{{/link-to}}
+		  </li>
+		{{/each}}
+	</ul>
+
+	{{partial 'admin-navigation'}}
+
+</div>

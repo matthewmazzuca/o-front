@@ -4,6 +4,7 @@ export default DS.Model.extend({
   address: DS.attr('string'),
   price: DS.attr('number'),
   agent: DS.attr('string'),
+  website: DS.attr('string'),
   description: DS.attr('string'),
 
   lat: DS.attr('number'),
@@ -19,6 +20,7 @@ export default DS.Model.extend({
 		address: "63 Rollscourt Drive",
 		price: "600000",
 		agent: "Gleb",
+		website: "www.google.com",
 		description: "Dwelling",
 		lat: 1,
 		lng: 1,
@@ -29,6 +31,7 @@ export default DS.Model.extend({
 		address: "52 Fifeshire Road",
 		price: "600000",
 		agent: "Joey",
+		website: "www.yahoo.com",
 		description: "Dwelling",
 		lat: -100,
 		lng: 100,
