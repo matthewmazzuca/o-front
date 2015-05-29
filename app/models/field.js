@@ -7,12 +7,12 @@ export default DS.Model.extend({
 	FIXTURES: [
 		{
 			id: 1,
-			name: "Custom field",
-			value: "Thing"
+			name: "Field 1 Name",
+			value: "FIeld 1 Value"
 		}, {
 			id: 2,
-			name: "Custom field",
-			value: "Thing"
+			name: "Field 2 Name",
+			value: "Field 2 Value"
 		}
 	]
 });

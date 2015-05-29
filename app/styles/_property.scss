@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.property-details {
+  background-color: $dark;
+}
+
 .property-hero {
   position: relative;
 
@@ -25,7 +29,7 @@
   margin-left: 6%;
 }
 
-.property-details {
+.property-contact {
   font-size: 18px;
   padding: 20px 0px 40px 0px;
 
@@ -34,10 +38,22 @@
   }
 }
 
+.wait-time-cont {
+}
+
+.wait-time {
+  display: inline-block;
+  background: $highlightGrey;
+  font-size: 22px;
+  height: 100%;
+  padding: 20px 20px;
+}
+
 .down-icon-cont {
-  position: absolute;
-  bottom: 20px;
+  height: 20px;
+  padding-bottom: 10px;
   left: 50%;
+  background-color: $dark;
 }
 
 .property-apps {
@@ -58,4 +74,51 @@
 
 .app-icon {
   margin-right: 6%;
+}
+
+.property-description {
+  font-size: 22px;
+  margin: 60px 20px 0px 20px;
+}
+
+.property-desc {
+  margin-top: 80px;
+}
+
+.property-detail {
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  border-bottom: 1px solid $lineGrey;
+
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+}
+
+.property-map-container {
+  background-color: $lineGrey;
+  height: 400px;
+  padding: 25px;
+  margin-top: 120px;
+}
+
+.property-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.property-address {
+  position: absolute;
+  bottom: 0;
+
+  background-color: $prime;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  font-size: 32px;
 }
