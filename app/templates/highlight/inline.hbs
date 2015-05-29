@@ -1,5 +1,12 @@
-<div class="app-card highlight-card">
-  <div class="highlight-img">
-    <img {{bind-attr src=highlight.image_url}}>
+<div class="app-card highlight-card" style={{highlight.style}}>
+  <div class="highlight-content">
+    <div class="highlight-title">
+      {{highlight.name}}
+    </div>
+
+    <div class="highlight-subtitle">
+      {{highlight.sub_heading}}
+    </div>
+
   </div>
 </div>

@@ -76,16 +76,34 @@ $appCardHeight: 160px;
 }
 
 .highlight-card {
+  height: 240px;
+
   padding: 0%;
-  overflow-x: hidden;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-.highlight-img {
-  position: absolute;
-  left: 0;
-  width: 100%;
+.highlight-content {
+  height: 240px;
+  background:rgba(0,0,0,0.2);
+
+  padding: 40px;
+  text-align: center;
   overflow: hidden;
-  height: $appCardHeight;
+
+  color: $white;
+  line-height: 52px;
+
+  .highlight-title {
+    font-size: 52px;
+  }
+
+  .highlight-subtitle {
+    font-size: 36px;
+    line-height: 60px;
+  }
 }
 
 .app-icon {

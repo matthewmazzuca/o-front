@@ -4,8 +4,15 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   sub_heading: DS.attr('string'),
   image_url: DS.attr('string'),
+  options: DS.hasMany('option', {async: true}),
 
-  options: DS.hasMany('option', {async: true})
+  style: function() {
+  	console.log('looking for style');
+    return [ "background-image:url('",
+             this.get("image_url"),
+             "')"].join('');
+  }.property('image_url'),
+
 
 }).reopenClass({
 	FIXTURES: [

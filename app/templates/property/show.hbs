@@ -10,17 +10,13 @@
 
       <div class="app-card">
         <img src="menu-icon.png" class="app-icon">
-        Leave Comment
-      </div>
-
-      <div class="app-card">
-        <img src="pay-icon.png" class="app-icon">
-        PAY
+          Comment
       </div>
 
       {{#each highlight in model.highlights}}
         {{partial 'highlight/inline'}}
       {{/each}}
+      
     </div>
 
   </div>
