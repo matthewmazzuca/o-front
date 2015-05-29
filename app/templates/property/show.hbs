@@ -18,6 +18,10 @@
         <img src="pay-icon.png" class="app-icon">
         PAY
       </div>
+
+      {{#each highlight in model}}
+        {{partial 'highlight/inline'}}
+      {{/each}}
     </div>
 
   </div>

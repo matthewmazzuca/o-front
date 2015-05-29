@@ -35,10 +35,10 @@ export default Router.map(function() {
           this.route('edit');
 
           this.resource('options', function() {
-            this.route('option', {path: ':option_id'} {
+            this.route('option', {path: ':option_id'}, function() {
               
-            })
-          })
+            });
+          });
         });
       });
 

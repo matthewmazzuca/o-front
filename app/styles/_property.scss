@@ -1,3 +1,5 @@
+$appCardHeight: 160px;
+
 .property-show {
   color: $white;
   text-align: center;
@@ -59,10 +61,11 @@
 .property-apps {
   padding: 0% 9%;
   background-color: $lightGrey;
+  position: relative;
 }
 
 .app-card {
-  height: 160px;
+  height: $appCardHeight;
   padding: 0% 9%;
 
   line-height: 160px;
@@ -70,6 +73,19 @@
 
   color: $black;
   font-size: 48px;
+}
+
+.highlight-card {
+  padding: 0%;
+  overflow-x: hidden;
+}
+
+.highlight-img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: $appCardHeight;
 }
 
 .app-icon {
