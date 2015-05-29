@@ -11,6 +11,7 @@ export default Router.map(function() {
 
     this.resource('property', {path: ':property_id'}, function() {
       this.route('edit'),
+      this.route('show'),
 
       this.resource('beacons', function() {
         this.route('new'),

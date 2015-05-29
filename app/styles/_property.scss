@@ -1,0 +1,61 @@
+.property-show {
+  color: $white;
+  text-align: center;
+}
+
+.property-hero {
+  position: relative;
+
+  max-height: 320px;
+  background-color: $dark;
+
+  padding: 9% 3%;
+}
+
+.property-hero-title {
+  font-size: 76px;
+  line-height: 80px;
+}
+
+.back-icon {
+  padding-right: 6%;
+}
+
+.clock-icon {
+  margin-left: 6%;
+}
+
+.property-details {
+  font-size: 18px;
+  padding: 20px 0px 40px 0px;
+
+  .detail {
+    padding: 0% 4.5%;
+  }
+}
+
+.down-icon-cont {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
+
+.property-apps {
+  padding: 0% 9%;
+  background-color: $lightGrey;
+}
+
+.app-card {
+  height: 160px;
+  padding: 0% 9%;
+
+  line-height: 160px;
+  border-bottom: 2px solid $white;
+
+  color: $black;
+  font-size: 48px;
+}
+
+.app-icon {
+  margin-right: 6%;
+}

@@ -5,11 +5,15 @@ $lightGrey: #eaeaea;
 $subGrey: #999999;
 $menuGrey: #2e3031;
 $white: #FFFFFF;
+$black: #000000;
+$highlightGrey: #3C3C3C;
+
 
 html, body {
   margin: 0px;
   background-color: $prime;
   font-size: 11px;
+  font-color: inherit;
   font-family: "Brandon Grotesque";
   overflow-y: hidden;
 }
