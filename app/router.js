@@ -31,8 +31,18 @@ export default Router.map(function() {
       });
 
       this.resource('highlights', function() {
+        this.route('new');
+
         this.resource('highlight', {path: ':highlight_id'}, function() {
           this.route('edit');
+
+          this.resource('options', function() {
+            this.route('new');
+
+            this.rousource('option', {path: ':option_id'}, function() {
+              this.rotue('edit');
+            })
+          })
             });
       });
 
