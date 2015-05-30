@@ -30,6 +30,17 @@ button {
   border: none;
 }
 
+input,
+textarea {
+  border: none;
+  background-color: $white;
+  font-size: inherit;
+  color: $lightBlue;
+  padding: 1px;
+  width: 125px;
+}
+
+
 .container {
   overflow-x: hidden;
   position: relative;
@@ -66,6 +77,8 @@ button {
   color: $white;
   font-size: 22px;
   text-align: center;
+
+  font-weight: bold;
 }
 
 .left {
@@ -95,3 +108,4 @@ button {
 @import 'property';
 @import 'beacons';
 @import 'nav';
+@import 'menu';

@@ -1,71 +1,72 @@
-<div class="container property-settings">
-	{{#link-to 'beacons.index'}}beacons link{{/link-to}}
+<div class="page-title">
+	Property Information
+</div>
 
-	<div class="property-setting">
-		<div class="setting-title"> Address </div>
-		<div class="setting">
-			{{input value=model.address}}
+	<div class="container property-settings">
+		{{#link-to 'beacons.index'}}beacons link{{/link-to}}
+
+		<div class="property-setting">
+			<div class="setting-title"> Address </div>
+			<div class="setting">
+				{{render 'editable-inline' model.address}}
+			</div>
 		</div>
-	</div>
 
-	<div class="property-setting">
-		<div class="title"> Location </div>
-		<div class="setting">
-			MAP or Text Box?
+		<div class="property-setting">
+			<div class="title"> Location </div>
+			<div class="setting">
+				MAP or Text Box?
+			</div>
 		</div>
-	</div>
 
-	<div class="property-setting">
-		<div class="title"> Price </div>
-		<div class="setting">
-			{{input value=model.price}}
+		<div class="property-setting">
+			<div class="title"> Price </div>
+			<div class="setting">
+				{{render 'editable-inline' model.price}}
+			</div>
 		</div>
-	</div>
 
-	<div class="property-setting">
-		<div class="title"> Agent Name</div>
-		<div class="setting">
-			${{input value=model.agent}}
+		<div class="property-setting">
+			<div class="title"> Agent Name</div>
+			<div class="setting">
+				{{render 'editable-inline' model.agent}}
+			</div>
 		</div>
-	</div>
 
-	<div class="property-setting">
-		<div class="title"> Description </div>
-		<div class="description">
-			{{input value=model.description}}
+		<div class="property-setting">
+			<div class="title"> Description </div>
+			<div class="description">
+				{{input type=textarea value=model.description}}
+			</div>
 		</div>
-	</div>
 
-	<div class="property-setting">
-    <div class="title"> Add new attribute </div>
-    <div class="setting sub-text">
-      e.g. Bedrooms: 2
-      <button {{action "newField"}}> + </button>
-    </div>
-  </div>
+		<div class="property-setting">
+	    <div class="title"> Add new attribute </div>
+	    <div class="setting sub-text">
+	      e.g. Bedrooms: 2
+	      <button {{action "newField"}}> <img src="new-property-icon.png"> </button>
+	    </div>
+	  </div>
 
-  <div class="sub-text">
-    <i> DEV Note: New custom fields only work when editing an already created property.
-    This is a suggested flow for Ember simplicity </i>
-  </div>
 
   {{#each field in model.fields}}
     <div class="property-setting">
       {{input value=field.name}}
       <div class="setting">
-        {{input value=field .value}}
+        {{input value=field.value}}
       </div>
     </div>
   {{/each}}
 
   <div class="property-setting">
-    {{input value=model.newFieldName placeholder="e.g. \"Takes Debit\""}}
-    <div class="setting">
-      {{input value=model.newFieldValue placeholder="e.g. \"Yes\""}}
+    {{input value=newFieldName placeholder="e.g. \"Takes Debit\""}}
+    <div class="setting new-field-setting">
+      {{input value=newFieldValue placeholder="e.g. \"Yes\""}}
     </div>
   </div>
 
-  <div class="save-container">
-    <button class="button" {{action "save"}}> Save </button>
-  </div>
-</div>
+
+	  <div class="save-container">
+	    <button class="button" {{action "save"}}> Save </button>
+	  </div>
+	</div>

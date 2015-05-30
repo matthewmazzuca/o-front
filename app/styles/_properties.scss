@@ -59,8 +59,15 @@
 }
 
 .property-setting {
-  min-height: 40px;
+  min-height: 30px;
   border-bottom: 1px solid $white;
+  position: relative;
+  line-height: 30px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
 
   .title {
     float: left;
@@ -69,10 +76,25 @@
   }
 
   .setting {
-    float: right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    input {
+      margin-right: 40px;
+    }
+
+    .editable-icon {
+      top: 5px;
+    }
   }
 
   .description {
+    textarea {
+      width: 90%;
+      height: 60px;
+      line-height: 20px;
+    }
   }
 
   .sub-text {

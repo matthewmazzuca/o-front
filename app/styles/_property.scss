@@ -167,3 +167,14 @@ $appCardHeight: 80px;
   line-height: 45px;
   font-size: 16px;
 }
+
+.new-att-icon {
+  color: $lightBlue;
+  display: inline-blacok;
+  margin-left: 10px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}

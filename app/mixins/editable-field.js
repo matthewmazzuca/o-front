@@ -8,6 +8,6 @@ export default Ember.Mixin.create({
 	},
 
 	finishEdit: function() {
-		this.set('isEditing',false);
+		this.set('isEditing', false);
 	}
 });

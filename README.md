@@ -5,6 +5,9 @@ A short introduction of this app could easily go here.
 
 ## Prerequisites
 
+TODO***
+-Editable-inline make sure it works in property show screen because its not firing off anything to the mixin. 
+
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
