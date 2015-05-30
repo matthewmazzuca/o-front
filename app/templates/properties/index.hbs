@@ -1,13 +1,18 @@
-q<div class="container">
+<div class="page-title">
+	Properties
+</div>
+
+<div class="container">
 {{#each property in model}}
 	<div class="property-listing">
 		<div class="right-listing">
-			X
+			<img src="img/delete-icon.png">
 		</div>
     <div class="listing">
       <div class="name">
 				{{#link-to 'property.show' property.id}}{{property.address}} - $ {{property.price}} {{/link-to}}<br />
 				{{property.agent}}
+				{{#link-to 'property.edit' property.id}}Edit Shortcut{{/link-to}}
 			</div>
 			
 		</div>
@@ -17,9 +22,9 @@ q<div class="container">
 
 <div class="new-property">
 	{{#link-to 'properties.new'}}
-		Add New Property
-		<div class="new-button">
-			+
+		ADD NEW PROPERTY
+		<div class="new-property-button">
+			<img src="img/new-property-icon.png">
 		</div>
 	{{/link-to}}
 </div>
