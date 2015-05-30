@@ -4,23 +4,23 @@
 
 .beacon-listing {
   .listing {
-    padding: 10px;
+    padding: 5px;
   }
 
   .name {
-    padding: 10px 0px;
+    padding: 5px 0px;
   }
 
   .microapp {
-    margin: 10px;
-    padding: 0px 8px;
+    margin: 5px;
+    padding: 0px 4px;
 
     display: inline-block;
 
     border-width: 1px;
     border-color: $grey;
     border-style: solid;
-    border-radius: 8px;
-    height: 15px;
+    border-radius: 4px;
+    height: 7.5px;
   }
 }

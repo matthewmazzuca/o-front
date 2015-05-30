@@ -37,15 +37,21 @@ button {
 }
 
 .header {
-  height: 100px;
-  line-height: 100px;
+  height: 75px;
+  line-height: 50px;
   background-color: $prime;
 }
 
 .nav-icon {
-  padding: 30px 40px;
-  line-height: 100px;
+  margin-top: 20px;
+  padding: 7.5px 10px;
+  line-height: 25px;
   vertical-align: middle;
+  height: 25px;
+
+  img {
+    height: 20px;
+  }
 }
 
 .container {

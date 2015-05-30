@@ -1,4 +1,4 @@
-$appCardHeight: 160px;
+$appCardHeight: 80px;
 
 .property-show {
   color: $white;
@@ -11,36 +11,40 @@ $appCardHeight: 160px;
 
 .property-hero {
   position: relative;
+  font-weight: 800;
 
-  max-height: 320px;
+  max-height: 160px;
   background-color: $dark;
 
-  padding: 9% 3%;
+  padding: 4.5% 1.5%;
 }
 
 .property-hero-title {
-  font-size: 76px;
-  line-height: 80px;
+  font-size: 38px;
+  line-height: 40px;
 }
 
 .back-icon {
-  padding-right: 6%;
+  padding-right: 1.5%;
+  height: 25px;
 }
 
 .clock-icon {
-  margin-left: 6%;
+  margin-left: 1.5%;
+  height: 25px;
 }
 
 .property-contact {
-  font-size: 18px;
-  padding: 20px 0px 40px 0px;
+  font-size: 10px;
+  padding: 10px 0px 20px 0px;
 
   .detail {
-    padding: 0% 4.5%;
+    padding: 0% 2.25%;
   }
 }
 
 .wait-time-cont {
+  height: 12px;
 }
 
 .wait-time {
@@ -52,31 +56,31 @@ $appCardHeight: 160px;
 }
 
 .down-icon-cont {
-  height: 20px;
-  padding-bottom: 10px;
+  height: 10px;
+  padding-bottom: 5px;
   left: 50%;
   background-color: $dark;
 }
 
 .property-apps {
-  padding: 0% 9%;
+  padding: 0% 4.5%;
   background-color: $lightGrey;
   position: relative;
 }
 
 .app-card {
   height: $appCardHeight;
-  padding: 0% 9%;
+  padding: 0% 4.5%;
 
-  line-height: 160px;
-  border-bottom: 2px solid $white;
+  line-height: 80px;
+  border-bottom: 1px solid $white;
 
   color: $black;
-  font-size: 48px;
+  font-size: 24px;
 }
 
 .highlight-card {
-  height: 240px;
+  height: 110px;
 
   padding: 0%;
   overflow: hidden;
@@ -86,43 +90,44 @@ $appCardHeight: 160px;
 }
 
 .highlight-content {
-  height: 240px;
+  height: 110px;
   background:rgba(0,0,0,0.2);
 
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   overflow: hidden;
 
   color: $white;
-  line-height: 52px;
+  line-height: 25px;
 
   .highlight-title {
-    font-size: 52px;
+    font-size: 25px;
   }
 
   .highlight-subtitle {
-    font-size: 36px;
-    line-height: 60px;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
 .app-icon {
-  margin-right: 6%;
+  margin-right: 3%;
+  height: 20px;
 }
 
 .property-description {
-  font-size: 22px;
-  margin: 60px 20px 0px 20px;
+  font-size: 11px;
+  margin: 30px 10px 0px 10px;
 }
 
 .property-desc {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .property-detail {
-  height: 40px;
-  line-height: 40px;
-  font-size: 24px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
   border-bottom: 1px solid $lineGrey;
 
   .left {
@@ -135,9 +140,9 @@ $appCardHeight: 160px;
 
 .property-map-container {
   background-color: $lineGrey;
-  height: 400px;
-  padding: 25px;
-  margin-top: 120px;
+  height: 200px;
+  padding: 12.5px;
+  margin-top: 60px;
 }
 
 .property-map {
@@ -152,7 +157,7 @@ $appCardHeight: 160px;
 
   background-color: $prime;
   width: 100%;
-  height: 90px;
-  line-height: 90px;
-  font-size: 32px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
 }
