@@ -7,6 +7,7 @@ A short introduction of this app could easily go here.
 
 TODO***
 -Editable-inline make sure it works in property show screen because its not firing off anything to the mixin. 
+-Fix property hero header
 
 You will need the following things properly installed on your computer.
 
