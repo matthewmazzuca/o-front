@@ -39,10 +39,10 @@ export default Router.map(function() {
           this.resource('options', function() {
             this.route('new');
 
-            this.rousource('option', {path: ':option_id'}, function() {
-              this.rotue('edit');
-            })
-          })
+            this.resource('option', {path: ':option_id'}, function() {
+              this.route('edit');
+            });
+          });
             });
       });
 
