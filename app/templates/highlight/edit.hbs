@@ -1,5 +1,24 @@
+<div class="page-title">
+  {{model.name}}
+</div>
+
 <div class="container property-settings">
-	{{input value=name}}
-	{{input value=subHeading}}
-	<a {{action 'save'}}> Save </a>
+
+  <div class="property-setting">
+    <div class="setting-title"> Heading </div>
+    <div class="setting">
+      {{render 'editable-inline' model.name}}
+    </div>
+  </div>
+
+  <div class="property-setting">
+    <div class="setting-title"> Subheading </div>
+    <div class="setting">
+      {{render 'editable-inline' model.sub_heading}} 
+    </div>
+  </div>
+
+  <div class="save-container">
+    <button class="button" {{action "save"}}> Save </button>
+  </div>
 </div>
