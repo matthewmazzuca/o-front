@@ -7,6 +7,11 @@ $appCardHeight: 80px;
 
 .property-details {
   background-color: $dark;
+  font-weight: 800;
+
+  property-hero {
+    padding: 4.5% 1.5% 1.5% 1.5%;
+  }
 }
 
 .property-hero {
