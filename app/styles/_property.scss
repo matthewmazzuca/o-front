@@ -13,7 +13,6 @@ $appCardHeight: 80px;
   position: relative;
   font-weight: 800;
 
-  max-height: 160px;
   background-color: $dark;
 
   padding: 4.5% 1.5%;
@@ -45,6 +44,7 @@ $appCardHeight: 80px;
 
 .wait-time-cont {
   height: 12px;
+  margin-bottom: 20px;
 }
 
 .wait-time {
@@ -56,8 +56,8 @@ $appCardHeight: 80px;
 }
 
 .down-icon-cont {
-  height: 10px;
-  padding-bottom: 5px;
+  height: 5px;
+  opacity: 0.5;
   left: 50%;
   background-color: $dark;
 }
@@ -80,7 +80,7 @@ $appCardHeight: 80px;
 }
 
 .highlight-card {
-  height: 110px;
+  height: 150px;
 
   padding: 0%;
   overflow: hidden;
@@ -90,7 +90,7 @@ $appCardHeight: 80px;
 }
 
 .highlight-content {
-  height: 110px;
+  height: 150px;
   background:rgba(0,0,0,0.2);
 
   padding: 20px;
