@@ -7,7 +7,7 @@
   {{render 'navigation'}}
 
 	<div class="content">
-		<div {{bind-attr class="controller.navVisible:visible :content-overlay"}}> </div>
+		{{render 'content-overlay' controller="application"}}
   	{{outlet}}
   </div>
 
