@@ -1,12 +1,14 @@
-{{!class left is when true and then container when false}}
-<div {{bind-attr class="controller.navVisible:left:container"}}>
+<div class="header">
+	<img src="img/nav-icon.png" class="nav-icon" {{action 'toggleNav'}}>
+</div>
 
-  <div class="header">
-    <img src="img/nav-icon.png" class="nav-icon" {{action 'toggleNav'}}>
-  </div>
+	<div {{bind-attr class="controller.navVisible:left :container"}}>
 
   {{render 'navigation'}}
 
-  {{outlet}}
+	<div class="content">
+		<div {{bind-attr class="controller.navVisible:visible :content-overlay"}}> </div>
+  	{{outlet}}
+  </div>
 
 </div>

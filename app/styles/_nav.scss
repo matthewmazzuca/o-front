@@ -38,8 +38,30 @@ $nav-margin: 30px;
   left: 0px;
 }
 
-.left {
+.container.left {
   left: 70%;
+  .content {
+    overflow: hidden;
+  }
+}
+
+.content {
+  position: relative;
+}
+
+.content-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.content-overlay.visible {
+  display: block;
 }
 
 .avatar {
