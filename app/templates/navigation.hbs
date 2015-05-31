@@ -15,10 +15,12 @@
   </div>
 
 	<ul >
-		{{#each item in model}}
-		  <li>
-		  	<img class="icon" {{bind-attr src=item.icon}}>
-		  	{{#link-to item.route}}{{item.title}}{{/link-to}}
+		{{#each item in nav_links}}
+		  <li class="nav-li">
+		 		{{#link-to item.route}}
+		  		<img class="icon" {{bind-attr src=item.icon}}>
+		  		{{item.title}}
+		  	{{/link-to}}
 		  </li>
 		{{/each}}
 	</ul>

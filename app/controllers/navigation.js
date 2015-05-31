@@ -4,7 +4,7 @@ export default Ember.ArrayController.extend({
 	needs: ['application', 'admin-navigation'],
 	title: "Navigation Bar",
 
-	model: Ember.A([
+	nav_links: Ember.A([
 		Ember.Object.create({
 			title: "Edit Profile", 
 			route: "",
@@ -17,5 +17,20 @@ export default Ember.ArrayController.extend({
 			title: "Properties", 
 			route: 'properties.index',
 			icon: 'img/properties-icon.png'}),
-	])
+	]),
+
+	admin_links: Ember.A([
+		Ember.Object.create({
+			title: "Beacons",
+			route: 'properties.new',
+			icon: 'img/beacons-icon.png'}),
+		Ember.Object.create({
+			title: "Highlights",
+			route: 'highlights.new',
+			icon: 'img/microapps-icon.png'}),
+		Ember.Object.create({
+			title: "Users",
+			route: 'properties.new',
+			icon: 'img/users-icon.png'})
+		])
 });

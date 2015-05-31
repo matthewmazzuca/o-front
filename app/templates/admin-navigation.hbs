@@ -3,7 +3,7 @@
 </div>
 
 <ul>
-	{{#each item in controllers.admin-navigation.model}}
+	{{#each item in admin_links}}
 		<li>
 	  	<img class="icon" {{bind-attr src=item.icon}}>
 	  		{{#link-to item.route}}{{item.title}}{{/link-to}}
