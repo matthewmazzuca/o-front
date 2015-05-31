@@ -7,6 +7,7 @@ $nav-margin: 30px;
   height:100%;
   background-color: $menuGrey;
   padding: 0px;
+  margin-top: $headerHeight;
   box-shadow: -1.5px 1.5px 1.5px #ddd;
 
   font-size: 18px;
@@ -40,13 +41,10 @@ $nav-margin: 30px;
 
 .container.left {
   left: 70%;
+
   .content {
     overflow: hidden;
   }
-}
-
-.content {
-  position: relative;
 }
 
 .content-overlay {
@@ -103,7 +101,7 @@ $nav-margin: 30px;
 
 .nav,
 .container {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }

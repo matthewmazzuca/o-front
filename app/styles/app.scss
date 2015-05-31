@@ -12,6 +12,8 @@ $highlightGrey: #3C3C3C;
 $lineGrey: #939393;
 $lightBlue: #13a9c0;
 
+$headerHeight: 65px;
+
 html, body {
   margin: 0px;
   background-color: $prime;
@@ -40,15 +42,20 @@ textarea {
   width: 125px;
 }
 
-
 .container {
   overflow-x: hidden;
   position: relative;
   left: 0;
 }
 
+
 .header {
-  height: 65px;
+  height: $headerHeight;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
   line-height: 50px;
   background-color: $prime;
 }
@@ -82,10 +89,12 @@ textarea {
 }
 
 .left {
+  display: inline-block;
   float: left;
 }
 
 .right {
+  display: inline-block;
   float: right;
 }
 
@@ -102,6 +111,21 @@ textarea {
 
   color: $white;
   font-size: 18px;
+}
+
+.edit-app-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.content {
+  position: relative;
+  margin-top: $headerHeight;
 }
 
 @import 'properties';
