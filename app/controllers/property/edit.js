@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import NewFieldMixin from "../../mixins/new-field";
 
-
 export default Ember.Controller.extend(
   NewFieldMixin, {
 
@@ -12,7 +11,7 @@ export default Ember.Controller.extend(
       var model = this.get('model');
       var self = this;
       model.save().then(function() {
-        self.transitionToRoute('properties.index');
+        self.transitionToRoute('property.show', model.id);
       }, function() {
         alert('save error');
       });
