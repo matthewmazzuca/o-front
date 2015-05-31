@@ -11,7 +11,7 @@ export default Ember.View.extend({
 		var self = this;
 		var tag = e.target.tagName;
 
-		if (tag === "LI" || tag === "A" || tag === "IMG") {
+		if (tag === "A") {
 			var controller = self.get('controller.controllers.application');
 			controller.send('toggleNav');
 		}
