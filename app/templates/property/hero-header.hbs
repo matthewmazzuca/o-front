@@ -1,8 +1,7 @@
 <div class="property-hero">
     <div class="property-hero-title">
-      {{#link-to 'property.details' model.id}}
-        <img src="img/back-icon.png" class="back-icon">
-      {{/link-to}}
+      <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
+      
 
       {{#link-to 'property.show' model.id}}{{model.name}}{{/link-to}}
       <img src="img/clock-icon.png" class="clock-icon">

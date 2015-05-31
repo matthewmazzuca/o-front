@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+	needs: ['application'], 
+
 	actions: {
 		newField: function() {
       var name = this.get('newFieldName');

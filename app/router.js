@@ -48,4 +48,8 @@ export default Router.map(function() {
 
     });
   });
+
+  this.route('promotion', function() {
+    this.route('edit');
+  });
 });

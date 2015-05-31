@@ -6,6 +6,8 @@ export default Ember.Controller.extend(
 
   needs: ["application"],
 
+  pageTitle: "Edit Property",
+
   actions: {
     save: function() {
       var model = this.get('model');
