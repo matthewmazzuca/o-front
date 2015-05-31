@@ -11,12 +11,12 @@
     {{#if view.isEditing}}
       {{view Ember.TextField value=value}}
       <div class="editable-icon">
-        <img src="finished-edit-icon.png" {{action "finishEdit" target="view"}}>
+        <img src="img/finished-edit-icon.png" {{action "finishEdit" target="view"}}>
       </div>
     {{else}}
       {{value}}
       <div class="editable-icon">
-        <img src="edit-icon.png" {{action "edit" target="view"}}>
+        <img src="img/edit-icon.png" {{action "edit" target="view"}}>
       </div>
     {{/if}}
   </div>

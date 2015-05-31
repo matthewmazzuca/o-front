@@ -8,14 +8,14 @@ export default Ember.ArrayController.extend({
 		Ember.Object.create({
 			title: "Edit Profile", 
 			route: "",
-			icon: 'profile-icon.png'}),
+			icon: 'img/profile-icon.png'}),
 		Ember.Object.create({
 			title: "Account Settings", 
 			route: "",
-			icon: 'settings-icon.png'}),
+			icon: 'img/settings-icon.png'}),
 		Ember.Object.create({
 			title: "Properties", 
 			route: 'properties.index',
-			icon: 'properties-icon.png'}),
+			icon: 'img/properties-icon.png'}),
 	])
 });
