@@ -21,6 +21,10 @@ html, body {
   font-color: inherit;
   font-family: "Brandon Grotesque";
   overflow-y: hidden;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 a {
