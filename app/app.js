@@ -13,6 +13,10 @@ App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+Ember.View.reopen({
+	touchStart: Ember.aliasMethod('click')
+});
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;
