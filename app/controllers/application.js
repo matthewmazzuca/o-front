@@ -8,8 +8,11 @@ export default Ember.Controller.extend({
 
 	actions: {
 		toggleNav: function() {
-			console.log('toggle');
 			this.toggleProperty('navVisible');
+		},
+
+		back: function() {
+			window.history.back();
 		}
 	}
 });
