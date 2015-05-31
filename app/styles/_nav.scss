@@ -10,8 +10,9 @@ $nav-margin: 30px;
   margin-top: $headerHeight;
   box-shadow: -1.5px 1.5px 1.5px #ddd;
 
-  font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
+
+  font-size: 1.5em;
   color: $white;
 
   overflow-y: scroll;
@@ -41,7 +42,6 @@ $nav-margin: 30px;
 
 .container.left {
   left: 70%;
-
   .content {
     overflow: hidden;
   }
@@ -78,12 +78,14 @@ $nav-margin: 30px;
 }
 
 .property-name {
-  font-size: 16px;
+  font-size: inherit;
+  font-weight: normal;
 }
 
 .property-location {
-  font-size: 10px;
+  font-size: 0.6667em;
   line-height: 20px;
+  @extend .uppercase-or-num;
 }
 
 .nav-spacer {
@@ -95,7 +97,11 @@ $nav-margin: 30px;
 }
 
 .admin-header {
-  font-size: 12px;
+  @extend .uppercase-or-num;
+
+  font-size: 0.6667em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: $nav-margin;
 }
 

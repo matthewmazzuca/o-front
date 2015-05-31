@@ -3,15 +3,17 @@
   height: 70px;
   position: relative;
   margin-left: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $white;
 }
 
 .listing {
   color: $grey;
 
   .name {
-    padding: 10px 0px 40px 0px;
-    font-size: 19px;
+    padding: 10px 0px 0.5em;
+    font-size: 1.75em;
+
     a {
       color: $prime;
     }
@@ -20,8 +22,8 @@
 
 .right-listing {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 2em;
+  top: 2em;
 
   img {
     width: 30px;
@@ -30,9 +32,11 @@
 }
 
 .new-property {
+  @extend .uppercase-or-num;
+
   background-color: $prime;
   height: 100px;
-  font-size: 12px;
+  font-size: inherit;
 
   text-align: center;
   padding: 20px 0px;
@@ -55,19 +59,14 @@
   background-color: $lightGrey;
   padding: 10px 20px;
 
-  font-size: 14px;
+  font-size: 1.5em;
 }
 
 .property-setting {
-  min-height: 30px;
+  min-height: 3em;
   border-bottom: 1px solid $white;
   position: relative;
-  line-height: 30px;
-
-  img {
-    width: 20px;
-    height: 20px;
-  }
+  line-height: 3em;
 
   .title {
     float: left;
@@ -89,6 +88,10 @@
     }
   }
 
+  .setting-title, .title, .setting {
+    font-size: inherit;
+  }
+
   .description {
     textarea {
       width: 90%;
@@ -99,6 +102,6 @@
 
   .sub-text {
     color: $subGrey;
-    font-size: 11px;
+    font-size: 0.6667em;
   }
 }

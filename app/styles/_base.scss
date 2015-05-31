@@ -1,0 +1,42 @@
+/* variables */
+
+$prime: #50c4d4;
+$dark: #262626;
+$grey: #333333;
+$lightestGrey: #edf3f3;
+$lightGrey: #eaeaea;
+$subGrey: #999999;
+$menuGrey: #2e3031;
+
+$white: #FFFFFF;
+$black: #000000;
+
+$highlightGrey: #3C3C3C;
+$lineGrey: #939393;
+$lightBlue: #13a9c0;
+
+$translucentAqua: rgba(80, 196, 212, 0.8);
+
+$headerHeight: 65px;
+
+/* fonts */
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("/fonts/brandon_grotesque.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("/fonts/brandon_grotesque_med.otf") format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* extension classes */
+
+.uppercase-or-num {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

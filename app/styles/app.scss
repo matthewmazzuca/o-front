@@ -1,23 +1,9 @@
-$prime: #50c4d4;
-$dark: #262626;
-$grey: #333333;
-$lightGrey: #eaeaea;
-$subGrey: #999999;
-$menuGrey: #2e3031;
-
-$white: #FFFFFF;
-$black: #000000;
-
-$highlightGrey: #3C3C3C;
-$lineGrey: #939393;
-$lightBlue: #13a9c0;
-
-$headerHeight: 65px;
+@import "base";
 
 html, body {
   margin: 0px;
   background-color: $prime;
-  font-size: 11px;
+  font-size: 12px;
   font-color: inherit;
   font-family: "Brandon Grotesque";
   overflow-y: hidden;
@@ -42,8 +28,16 @@ textarea {
   background-color: $white;
   font-size: inherit;
   color: $lightBlue;
-  padding: 1px;
+  padding: 8px;
   width: 125px;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+button, input, textarea {
+  font-family: "Brandon Grotesque";
 }
 
 .container {
@@ -77,20 +71,20 @@ textarea {
 }
 
 .container {
-  background-color: $white;
+  background-color: $lightestGrey;
 }
 
 .page-title {
   position: relative;
   height: 40px;
-  line-height: 40px;
+  line-height: 1.5em;
   background-color: $dark;
 
   color: $white;
-  font-size: 22px;
+  font-size: 2em;
   text-align: center;
 
-  font-weight: bold;
+  font-weight: 500;
 
   .title-icon {
     position: absolute;
@@ -120,13 +114,13 @@ textarea {
 }
 
 .button {
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: $prime;
-  height: 30px;
+  height: 32px;
   padding: 0px 20px;
 
   color: $white;
-  font-size: 18px;
+  font-size: inherit;
 }
 
 .edit-app-icon {
