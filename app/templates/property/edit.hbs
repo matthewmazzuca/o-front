@@ -6,7 +6,7 @@
 		<div class="property-setting">
 			<div class="setting-title"> Address </div>
 			<div class="setting">
-				{{render 'editable-inline' model.address}}
+				{{input value=model.address}}
 			</div>
 		</div>
 
@@ -20,21 +20,21 @@
 		<div class="property-setting">
 			<div class="title"> Price </div>
 			<div class="setting">
-				{{render 'editable-inline' model.price}}
+				{{input value=model.price}}
 			</div>
 		</div>
 
 		<div class="property-setting">
 			<div class="title"> Agent Name</div>
 			<div class="setting">
-				{{render 'editable-inline' model.agent}}
+				{{input value=model.agent}}
 			</div>
 		</div>
 
 		<div class="property-setting">
 			<div class="title"> Description </div>
 			<div class="description">
-				{{render 'editable-inline' model.description}}
+				{{input value=model.description}}
 			</div>
 		</div>
 
@@ -62,7 +62,6 @@
       {{input value=newFieldValue placeholder="e.g. \"Yes\""}}
     </div>
   </div>
-
 
 	  <div class="save-container">
 	    <button class="button" {{action "save"}}> Save </button>
