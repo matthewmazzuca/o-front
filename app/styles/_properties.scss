@@ -3,7 +3,6 @@
   height: 70px;
   position: relative;
   margin-left: 20px;
-  padding-bottom: 1em;
   border-bottom: 1px solid $white;
 }
 
@@ -11,7 +10,7 @@
   color: $grey;
 
   .name {
-    padding: 1em 0px 0.25em;
+    padding: 0.5em 0px 0.25em;
     font-size: 1.5em;
 
     a {
@@ -26,8 +25,8 @@
   top: 2em;
 
   img {
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
   }
 }
 
@@ -57,31 +56,23 @@
 //SETTINGS
 .property-settings {
   background-color: $lightGrey;
-  padding: 10px 20px;
-
-  font-size: 1.5em;
+  padding: 0 $leftBumper;
 }
 
 .property-setting {
-  min-height: 3em;
+  padding: 1em $leftBumper 0;
+  font-size: 1.5em;
   border-bottom: 1px solid $white;
   position: relative;
-  line-height: 3em;
-
-  .title {
-    float: left;
-    color: $grey;
-    font-size: 14px;
-  }
+  line-height: 1em;
+  height: 2em;
+  color: $grey;
 
   .setting {
+    padding: 0.5em $leftBumper;
     position: absolute;
     right: 0px;
     top: 0px;
-
-    input {
-      margin-right: 40px;
-    }
 
     .editable-icon {
       top: 5px;
@@ -104,4 +95,8 @@
     color: $subGrey;
     font-size: 0.6667em;
   }
+}
+
+.save-container {
+  font-size: 1.5em;
 }
