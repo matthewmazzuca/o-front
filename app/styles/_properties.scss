@@ -65,8 +65,15 @@
   border-bottom: 1px solid $white;
   position: relative;
   line-height: 1em;
-  height: 2em;
+  min-height: 2em;
   color: $grey;
+
+  .title-setting {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 0.5em $leftBumper;
+  }
 
   .setting {
     padding: 0.5em $leftBumper;
@@ -79,24 +86,47 @@
     }
   }
 
-  .setting-title, .title, .setting {
-    font-size: inherit;
-  }
-
   .description {
+    padding-bottom: 1em;
+
     textarea {
-      width: 90%;
-      height: 60px;
-      line-height: 20px;
+      width: 260px;
+      height: 3em;
+      padding: 0.5em;
+      line-height: 1em;
     }
   }
 
-  .sub-text {
-    color: $subGrey;
-    font-size: 0.6667em;
+  &.custom input {
+    width: 110px;
   }
+  
 }
 
 .save-container {
   font-size: 1.5em;
+}
+
+.preamble {
+  padding: 1em $leftBumper 0;
+  font-size: inherit;
+  display: block;
+  height: 2em;
+  position: relative;
+
+  .sub-text {
+    color: $subGrey;
+    padding: 0 1em;
+  }
+
+  input {
+    width: 110px;
+  }
+}
+
+.new-att-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em $leftBumper;
 }

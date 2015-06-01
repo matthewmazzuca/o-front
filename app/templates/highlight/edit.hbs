@@ -28,15 +28,24 @@
     {{partial 'option/inline'}}
   {{/each}}
 
-
-  <div class="property-setting">
-    {{input value=newFieldName placeholder="e.g. \"Granite countertops\""}}
-    <div class="setting new-field-setting">
-      <img src="img/new-property-icon.png">
+  <div class="preamble">
+    <div class="title small">
+      Add new option image to be displayed
+      <span class="sub-text"> e.g. Granite top </span>
+    </div>
+    <div class="new-att-icon">
+      <a {{action "newOption"}}> <img src="img/new-property-icon.png"></a>
     </div>
   </div>
 
-  <div class="save-container">
-    <button class="button" {{action "save"}}> Save </button>
+  <div class="property-setting custom">
+    <div class="title-setting">
+      {{input value=newOptionName placeholder="e.g. \"Granite top\""}}
+  </div>
+
+
+    <div class="save-container">
+      <button class="button" {{action "save"}}> Save </button>
+    </div>
   </div>
 </div>

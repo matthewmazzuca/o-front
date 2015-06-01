@@ -6,22 +6,22 @@ export default Ember.Controller.extend({
 	pageTitle: ['Highlights'],
 
 	actions: {
-		newField: function() {
-      var name = this.get('newFieldName');
+		newOption: function() {
+      var name = this.get('newOptionName');
 
       var model = this.get('model');
       var self = this;
       model.get('options').addObject(this.store.createRecord('option', {
         name: name
       })).then(function() {
-        self.set('newFieldName', '');
+        self.set('newOptionName', '');
       });
     },
 		save: function() {
 			var model = this.get('model');
 			var self = this;
 			model.save().then(function() {
-				self.transitionToRoute('properties.index');
+				self.transitionToRoute('property.show');
 			}, function() {
 				alert('save error');
 			});
