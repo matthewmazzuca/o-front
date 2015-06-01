@@ -10,14 +10,14 @@
 
     <div class="property-apps">
 
-      <div class="app-card">
-        <img src="img/comment-icon.png" class="app-icon">
-          Comment
-      </div>
-
       {{#each highlight in model.highlights}}
         {{partial 'highlight/inline'}}
       {{/each}}
+
+        <div class="app-card">
+        <img src="img/comment-icon.png" class="app-icon">
+          Comment
+      </div>
       
     </div>
 
