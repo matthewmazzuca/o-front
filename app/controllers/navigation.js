@@ -22,15 +22,15 @@ export default Ember.ArrayController.extend({
 	admin_links: Ember.A([
 		Ember.Object.create({
 			title: "Beacons",
-			route: 'properties.new',
+			route: 'beacons.index',
 			icon: 'img/beacons-icon.png'}),
 		Ember.Object.create({
 			title: "Highlights",
-			route: 'highlights.new',
+			route: 'highlights.index',
 			icon: 'img/microapps-icon.png'}),
 		Ember.Object.create({
 			title: "Users",
-			route: 'properties.new',
+			route: '',
 			icon: 'img/users-icon.png'})
 		])
 });
