@@ -3,6 +3,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	needs: ['application'], 
 
+	pageTitle: ['Highlights'],
+
 	actions: {
 		newField: function() {
       var name = this.get('newFieldName');

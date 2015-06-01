@@ -23,15 +23,11 @@
       <button {{action "newField"}}> <img src="img/new-property-icon.png"> </button>
     </div>
   </div>
-
+  
   {{#each option in model.options}}
-    <div class="property-setting">
-      {{input value=option.name}}
-      <div class="setting">
-        <img src={{option.image_url}}>
-      </div>
-    </div>
+    {{partial 'option/inline'}}
   {{/each}}
+
 
   <div class="property-setting">
     {{input value=newFieldName placeholder="e.g. \"Granite countertops\""}}
