@@ -28,8 +28,10 @@ textarea {
   background-color: $white;
   font-size: inherit;
   color: $lightBlue;
-  padding: 8px;
+  padding: 0.25em 0.5em;
+  height: 1.5em;
   width: 125px;
+  @include border-radius(0);
 }
 
 input:focus, textarea:focus{
@@ -59,15 +61,11 @@ button, input, textarea {
 }
 
 .nav-icon {
-  margin-top: 20px;
-  padding: 7.5px 10px;
-  line-height: 25px;
+  margin: 3em $leftBumper 1.5em;
+  line-height: 1.5em;
   vertical-align: middle;
-  height: 25px;
-
-  img {
-    height: 20px;
-  }
+  height: 1.5em;
+  width: 2em;
 }
 
 .container {
@@ -76,7 +74,7 @@ button, input, textarea {
 
 .page-title {
   position: relative;
-  height: 40px;
+  height: 1.5em;
   line-height: 1.5em;
   background-color: $dark;
 
@@ -86,15 +84,11 @@ button, input, textarea {
 
   font-weight: 500;
 
-  .title-icon {
+  .back-icon {
     position: absolute;
-    left: 30px;
-    top: 5px;
+    left: $leftBumper;
+    top: 0.5em;
 
-    img {
-      width: 20px;
-      height: 20px;
-    }
   }
 }
 

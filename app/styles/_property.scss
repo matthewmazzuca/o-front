@@ -8,27 +8,33 @@ $appCardHeight: 80px;
 .property-details {
   background-color: $dark;
   font-weight: normal;
-
-  .property-hero {
-     padding: 4.5% 1.5% 1.5% 1.5%;
-  }
 }
 
 .property-hero {
   position: relative;
-  font-weight: 500;
+  font-weight: normal;
 
   background-color: $dark;
 
-  padding: 4.5% 1.5%;
+  padding: 2em 2px 1em;
 }
 
 .property-hero-title {
   @extend .uppercase-or-num;
 
   font-size: 2.5em;
-  line-height: 40px;
+  line-height: 1em;
   font-weight: normal;
+
+  .name {
+    @extend .ellipsize;
+    width: 73%;
+  }
+}
+
+.property-hero-box {
+  display: inline-block;
+  width: 180px;
 }
 
 .back-icon {
@@ -37,18 +43,33 @@ $appCardHeight: 80px;
 }
 
 .clock-icon {
-  margin-left: 1.5%;
-  height: 25px;
+  margin: 0 $leftBumper 0 0.25em;
+  height: 0.66667em;
 }
 
 .property-contact {
+  @extend .property-hero-box;
+
   font-size: inherit;
-  padding: 10px 0px 20px 0px;
+  padding: 0.5em 0;
   margin: 0 auto;
-  width: 180px;
 
   .detail {
+    a{
+      text-deocration: underline;
+    }
+
     padding: 0 1%;
+
+    .left {
+      text-align: left;
+      left: 0;
+    }
+
+    .right {
+      text-align: right;
+      right: 0;
+    }
   }
 }
 
@@ -70,9 +91,14 @@ $appCardHeight: 80px;
 }
 
 .down-icon-cont {
-  height: 5px;
   left: 50%;
   background-color: $dark;
+  padding-bottom: 0.5em;
+
+  img {
+    opacity: 0.3;
+    height: 0.5em;
+  }
 }
 
 .property-apps {
@@ -135,12 +161,12 @@ $appCardHeight: 80px;
 
 .property-description {
   font-size: inherit;
-  margin: 15px 5px 0px 5px;
+  margin: 15px $leftBumper 0px;
   text-align: left;
 }
 
 .property-desc {
-  margin-top: 40px;
+  margin-top: 1.5em;
 }
 
 .property-detail {

@@ -17,7 +17,8 @@ $lightBlue: #13a9c0;
 
 $translucentAqua: rgba(80, 196, 212, 0.8);
 
-$headerHeight: 65px;
+$headerHeight: 6em;
+$leftBumper: 10px;
 
 /* fonts */
 
@@ -39,4 +40,19 @@ $headerHeight: 65px;
 .uppercase-or-num {
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.ellipsize {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin border-radius($rad) {
+  @mixin border-radius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+  }
 }

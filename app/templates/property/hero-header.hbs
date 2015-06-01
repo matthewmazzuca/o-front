@@ -3,17 +3,17 @@
       <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
       
 
-      {{#link-to 'property.show' model.id}}{{model.address}}{{/link-to}}
+      {{#link-to 'property.show' model.id classNames="model.name"}}{{model.address}}{{/link-to}}
       <img src="img/clock-icon.png" class="clock-icon">
     </div>
 
     <div class="property-contact">
-      <span class="detail">
+      <span class="detail left">
         {{model.phone}}
       </span>
 
-      <span class="detail">
-        {{model.website}}
+      <span class="detail right">
+        <a class="external" target="_blank" href="{{unbound model.website}}">Visit website</a>
       </span>
     </div>
 
