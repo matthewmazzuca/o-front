@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	needs: ['application'], 
 
-	pageTitle: ['Highlights'],
+	pageTitle: ['Highlight'],
 
 	actions: {
 		newOption: function() {
