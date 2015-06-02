@@ -1,0 +1,23 @@
+<div class="menu-item">
+  <div class="left">
+    {{#if view.isEditing}}
+      {{view Ember.TextField value=name}}
+    {{else}}
+      {{name}}
+    {{/if}}
+  </div>
+
+  <div class="menu-item-right">
+    {{#if view.isEditing}}
+      {{view Ember.TextField value=value}}
+      <div class="editable-icon">
+        <img src="img/finished-edit-icon.png" {{action "finishEdit" target="view"}}>
+      </div>
+    {{else}}
+      {{value}}
+      <div class="editable-icon">
+        <img src="img/edit-icon.png" {{action "edit" target="view"}}>
+      </div>
+    {{/if}}
+  </div>
+</div>
