@@ -64,6 +64,15 @@ button, input, textarea {
   background-color: $prime;
 }
 
+.header-left {
+  display: inline-block;
+  float: right;
+  margin: 2.5em 10px 1.5em;
+
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
 .nav-icon {
   margin: 3em $leftBumper 1.5em;
   line-height: 1.5em;

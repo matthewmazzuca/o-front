@@ -1,26 +1,52 @@
 .listpage-index {
-  background-color: $white;
+  padding: 0 $leftBumper;
 }
 
 .listpage-listing {
-  .listing {
-    padding: 5px;
-  }
+  min-height: 70px;
+  position: relative;
+  border-bottom: 1px solid $white;
+  padding: 0 $leftBumper;
+}
+
+.left-listing {
+  color: $grey;
+  font-size: inherit;
 
   .name {
-    padding: 5px 0px;
+    @extend .ellipsize;
+    font-size: 1.5em;
+    padding: 0.5em 0px 0.25em;
+    color: $prime;
+    width: 90%;
+
+    a {
+      color: $prime;
+    }
   }
+}
 
-  .circled {
-    margin: 5px;
-    padding: 0px 4px;
+.right-listing {
+  position: absolute;
+  right: 0.5em;
+  top: 2em;
 
-    display: inline-block;
-
-    border-width: 1px;
-    border-color: $grey;
-    border-style: solid;
-    border-radius: 4px;
-    height: 1.5em;
+  img {
+    width: 2em;
+    height: 2em;
   }
+}
+
+
+.circled {
+  margin: 5px;
+  padding: 0px 4px;
+
+  display: inline-block;
+
+  border-width: 1px;
+  border-color: $grey;
+  border-style: solid;
+  border-radius: 4px;
+  height: 1.5em;
 }

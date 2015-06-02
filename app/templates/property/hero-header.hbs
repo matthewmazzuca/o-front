@@ -9,7 +9,9 @@
 
     <div class="property-contact">
       <span class="detail left">
-        {{model.phone}}
+        {{#view 'tel-link'}}
+          {{model.phone}}
+        {{/view}}
       </span>
 
       <span class="detail right">

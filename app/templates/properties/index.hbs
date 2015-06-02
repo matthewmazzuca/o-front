@@ -1,16 +1,18 @@
 {{view 'page-title'}}
 
-<div class="container">
+<div class="container list-page index">
 {{#each property in model}}
-	<div class="property-listing">
+	<div class="listpage-listing">
 		<div class="right-listing">
 			<img src="img/delete-icon.png">
 		</div>
-    <div class="listing">
+    <div class="left-listing">
       <div class="name">
 				{{#link-to 'property.show' property.id}}{{property.address}} - $ {{property.price}} {{/link-to}}<br />
 				{{property.agent}}
-				{{#link-to 'property.edit' property.id}}Edit Shortcut{{/link-to}}
+				<div class="details">
+					{{#link-to 'property.edit' property.id}}Edit Shortcut{{/link-to}}
+				</div>
 			</div>
 			
 		</div>
