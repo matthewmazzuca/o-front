@@ -1,1 +1,53 @@
-Edit me
+{{view 'page-title'}}
+
+<div class="container settings property-settings">
+  <div class="setting">
+    <div class="setting-title"> Name </div>
+    <div class="setting-value">
+      {{input value=model.name}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Email </div>
+    <div class="setting-value">
+      {{input value=model.email}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Brokerage </div>
+    <div class="setting-value">
+      {{input value=model.brokerage}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Phone Number </div>
+    <div class="setting-value">
+      {{input value=model.phone}}
+    </div>
+  </div>
+
+  <div class="setting-title-small">
+    Change Password
+  </div>
+
+  <div class="setting">
+    <div class="title"> Current Password </div>
+    <div class="setting-value">
+      {{view Ember.TextField value=old_password}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> New Password </div>
+    <div class="setting-value">
+      {{view Ember.TextField value=password}}
+    </div>
+  </div>
+
+  <div class="save-container">
+    <button class="button" {{action "save"}}> Save </button>
+  </div>
+</div>

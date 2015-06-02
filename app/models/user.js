@@ -7,6 +7,10 @@ var User = DS.Model.extend({
   email: DS.attr('sring'),
   brokerage: DS.attr('string'),
 
+  //TODO -rm once rails /proper auth
+  password: DS.attr('string'),
+  old_password: DS.attr('string'),
+
   name: function() {
   	return this.get('first_name') + " " + this.get('last_name');
   }.property()
@@ -22,7 +26,7 @@ User.reopenClass({
 		phone: "647 271 4747",
 		email: "gleb@addolabs.co"
 	}, {
-		id: 1,
+		id: 2,
 		first_name: "Joey",
 		last_name: "Gollish",
 		brokerage: "Joey Co",
