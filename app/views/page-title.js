@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
 	needs: ['application'],
-	templateName: 'page-title',
+	templateName: 'partials/page-title',
 
 	actions: {
 		back: function() {
