@@ -49,6 +49,9 @@ $nav-margin: 30px;
 }
 
 .content-overlay {
+  /* don't delete or action failes */
+  cursor: pointer;
+
   display: none;
   position: absolute;
   top: 0;
