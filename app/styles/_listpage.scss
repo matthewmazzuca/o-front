@@ -1,8 +1,8 @@
-.beacons-index {
+.listpage-index {
   background-color: $white;
 }
 
-.beacon-listing {
+.listpage-listing {
   .listing {
     padding: 5px;
   }
@@ -11,7 +11,7 @@
     padding: 5px 0px;
   }
 
-  .microapp {
+  .circled {
     margin: 5px;
     padding: 0px 4px;
 
@@ -21,6 +21,6 @@
     border-color: $grey;
     border-style: solid;
     border-radius: 4px;
-    height: 7.5px;
+    height: 1.5em;
   }
 }

@@ -39,7 +39,7 @@ textarea {
 }
 
 input:focus, textarea:focus{
-    outline: none;
+  outline: none;
 }
 
 button, input, textarea {
@@ -70,6 +70,13 @@ button, input, textarea {
   vertical-align: middle;
   height: 1.5em;
   width: 2em;
+}
+
+.edit-button {
+  padding: 0.5em 1em;
+  background-color: $white;
+  font-size: 1em;
+  color: $prime;
 }
 
 .container {
@@ -138,6 +145,6 @@ button, input, textarea {
 
 @import 'properties';
 @import 'property';
-@import 'beacons';
+@import 'listpage';
 @import 'nav';
 @import 'menu';
