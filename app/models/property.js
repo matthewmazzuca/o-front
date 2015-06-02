@@ -12,7 +12,6 @@ export default DS.Model.extend({
   lng: DS.attr('number'),
 
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
-  beacons: DS.hasMany('beacon', {async: true}),
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'})
   
 }).reopenClass({

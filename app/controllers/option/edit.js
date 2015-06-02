@@ -5,9 +5,19 @@ export default Ember.Controller.extend({
 		save: function() {
 			model = this.get('model');
 			self = this;
-			model.save().thenTransitionToRoute('highlight.edit', highlight.id);
+			model.save().then(function() {
+				self.flash({
+					message: "Option saved",
+					type: 'alert-success'
+				});
+			});
+			self.transitionToRoute('highlight.edit', highlight.id);
 		}, function() {
-			alert('save error')
+			alert('save error');
+			self.flash({
+				message: "Sorry, there was an error saving your option",
+				type: 'alert-error'
+			})
 		}
 	}
 });

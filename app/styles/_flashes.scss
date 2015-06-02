@@ -1,0 +1,61 @@
+/* Flash Notice Styling: Modified bootstrap */
+
+.alerts {
+  cursor: default;
+  margin-bottom: 20px;
+}
+.alert {
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  position: relative;
+}
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.alert-success .alert-link {
+  color: #356635;
+}
+.alert-notice {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #3a87ad;
+}
+.alert-notice .alert-link {
+  color: #2d6987;
+}
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #c09853;
+}
+.alert-warning .alert-link {
+  color: #a47e3c;
+}
+.alert-error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #b94a48;
+}
+.alert-error .alert-link {
+  color: #953b39;
+}
+
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn-close:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  cursor: pointer;
+}

@@ -1,8 +1,10 @@
 import Ember from 'ember';
+import FlashableMixin from "../../mixins/flashable";
 
-export default Ember.Controller.extend({
+export default Ember.Controller.extend(
+	FlashableMixin, {
+
 	needs: ['application'], 
-
 	pageTitle: ['Highlight'],
 
 	actions: {
@@ -21,9 +23,17 @@ export default Ember.Controller.extend({
 			var model = this.get('model');
 			var self = this;
 			model.save().then(function() {
-				self.transitionToRoute('property.show');
+				self.flash({
+          message: "Highlight saved",
+          type: 'alert-success'
+        });
+       	self.transitionToRoute('property.show');
 			}, function() {
 				alert('save error');
+				self.flash({
+					message: "Sorry, there was an error saving your highlight",
+					type: "alert-error"
+				});
 			});
 		}
 	}
