@@ -152,6 +152,11 @@ button, input, textarea {
   margin-top: $headerHeight;
 }
 
+.form-validator {
+  font-size: 0.8em;
+  color: $subGrey;
+}
+
 @import 'properties';
 @import 'property';
 @import 'listpage';

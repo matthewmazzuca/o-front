@@ -4,7 +4,7 @@ var User = DS.Model.extend({
   first_name: DS.attr('string'),
   last_name: DS.attr('string'),
   phone: DS.attr('string'),
-  email: DS.attr('sring'),
+  email: DS.attr('string'),
   brokerage: DS.attr('string'),
 
   //TODO -rm once rails /proper auth

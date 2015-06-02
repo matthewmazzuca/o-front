@@ -1,0 +1,62 @@
+{{view 'page-title'}}
+
+<div class="container settings property-settings">
+  <div class="setting">
+    <div class="setting-title"> Name </div>
+    <div class="setting-value">
+      {{input value=controller.name}}
+    </div>
+
+    <div class="form-validator">
+      {{#if errors.name}}
+        name {{errors.name}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Email </div>
+    <div class="setting-value">
+      {{input value=controller.email}}
+    </div>
+
+    <div class="form-validator">
+      {{#if errors.email}}
+        email {{errors.email}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Password </div>
+    <div class="setting-value">
+      {{input type="password" value=controller.password placeholder="Password"}}
+    </div>
+
+
+    <div class="form-validator">
+      {{#if errors.password}}
+        password {{errors.password}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Password Confirmation </div>
+    <div class="setting-value">
+      {{input type="password" value=passwordConfirmation placeholder="Password Confirmation"}}
+    </div>
+
+
+    <div class="form-validator">
+      {{#if errors.passwordConfirmation}}
+        password confirmation {{errors.passwordConfirmation}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="save-container">
+    <button class="button" {{action "save"}} {{bind-attr disabled="isInvalid"}} > Register </button>
+  </div>
+</div>
+
