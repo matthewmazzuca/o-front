@@ -7,7 +7,7 @@ export default Ember.ArrayController.extend({
 	nav_links: Ember.A([
 		Ember.Object.create({
 			title: "Edit Profile", 
-			route: "",
+			route: "users.edit",
 			icon: 'img/profile-icon.png'}),
 		Ember.Object.create({
 			title: "Account Settings", 
