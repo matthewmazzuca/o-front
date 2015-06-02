@@ -1,17 +1,16 @@
 {{view 'page-title'}}
 
-<div class="container property-settings">
-
-  <div class="property-setting">
+<div class="container settings property-settings">
+  <div class="setting">
     <div class="setting-title"> Heading </div>
-    <div class="setting">
+    <div class="setting-value">
       {{input value=model.name}}
     </div>
   </div>
 
-  <div class="property-setting">
+  <div class="setting">
     <div class="setting-title"> Subheading </div>
-    <div class="setting">
+    <div class="setting-value">
       {{input value=model.sub_heading}} 
     </div>
   </div>
@@ -31,8 +30,8 @@
     </div>
   </div>
 
-  <div class="property-setting custom">
-    <div class="title-setting">
+  <div class="setting custom">
+    <div class="setting-key">
       {{input value=newOptionName placeholder="e.g. \"Granite top\""}}
   </div>
 

@@ -1,37 +1,35 @@
 {{view 'page-title'}}
 
-	<div class="container property-settings">
-		{{#link-to 'beacons.index'}}beacons link{{/link-to}}
-
-		<div class="property-setting">
+	<div class="container settings property-settings">
+		<div class="setting">
 			<div class="setting-title"> Address </div>
-			<div class="setting">
+			<div class="setting-value">
 				{{input value=model.address}}
 			</div>
 		</div>
 
-		<div class="property-setting">
+		<div class="setting">
 			<div class="title"> Location </div>
-			<div class="setting">
+			<div class="setting-value">
 				MAP or Text Box?
 			</div>
 		</div>
 
-		<div class="property-setting">
+		<div class="setting">
 			<div class="title"> Price </div>
-			<div class="setting">
+			<div class="setting-value">
 				{{input value=model.price}}
 			</div>
 		</div>
 
-		<div class="property-setting">
+		<div class="setting">
 			<div class="title"> Agent Name</div>
-			<div class="setting">
+			<div class="setting-value">
 				{{input value=model.agent}}
 			</div>
 		</div>
 
-		<div class="property-setting">
+		<div class="setting">
 			<div class="title"> Description </div>
 			<div class="description">
 				{{input value=model.description}}
@@ -39,11 +37,11 @@
 		</div>
 
   {{#each field in model.fields}}
-    <div class="property-setting custom">
-    	<div class="title-setting custom">
+    <div class="setting custom">
+    	<div class="setting-key">
       	{{input value=field.name}}
       </div>
-      <div class="setting">
+      <div class="setting-value">
         {{input value=field.value}}
       </div>
     </div>
@@ -60,12 +58,12 @@
 		</div>
 	</div>
 
-	<div class="property-setting custom">
-		<div class="title-setting">
+	<div class="setting custom">
+		<div class="setting-key">
 			{{input value=newFieldName placeholder="e.g. \"Takes Debit\""}}
 	</div>
 
-    <div class="setting new-field-setting">
+    <div class="setting-value new-field-setting">
       {{input value=newFieldValue placeholder="e.g. \"Yes\""}}
     </div>
   </div>

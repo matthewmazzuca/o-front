@@ -1,5 +1,4 @@
-
-
+//INDEX
 .new-property {
   @extend .uppercase-or-num;
 
@@ -24,12 +23,12 @@
 }
 
 //SETTINGS
-.property-settings {
+.settings {
   background-color: $lightGrey;
   padding: 0 $leftBumper;
 }
 
-.property-setting {
+.setting {
   padding: 1em $leftBumper 0;
   font-size: 1.5em;
   border-bottom: 1px solid $white;
@@ -38,14 +37,14 @@
   min-height: 2em;
   color: $grey;
 
-  .title-setting {
+  .setting-key {
     position: absolute;
     left: 0px;
     top: 0px;
     padding: 0.5em $leftBumper;
   }
 
-  .setting {
+  .setting-value {
     padding: 0.5em $leftBumper;
     position: absolute;
     right: 0px;
@@ -70,7 +69,6 @@
   &.custom input {
     width: 110px;
   }
-  
 }
 
 .save-container {
