@@ -1,4 +1,4 @@
-<div {{bind-attr class="controllers.application.navVisible:visible:nav"}}>
+<div {{bind-attr class="controllers.application.navVisible:visible :nav"}}>
 
 	<div class="avatar">
   	<img src="img/avatar.png">
@@ -15,14 +15,21 @@
   </div>
 
 	<ul >
-		{{#each item in model}}
-		  <li>
-		  	<img class="icon" {{bind-attr src=item.icon}}>
-		  	{{#link-to item.route}}{{item.title}}{{/link-to}}
+		{{#each item in nav_links}}
+		  <li class="nav-li">
+		 		{{#link-to item.route}}
+		  		<img class="icon" {{bind-attr src=item.icon}}>
+		  		{{item.title}}
+		  	{{/link-to}}
 		  </li>
 		{{/each}}
 	</ul>
 
-	{{partial 'admin-navigation'}}
+	{{partial 'nav/admin-navigation'}}
+
+	<div class="nav-spacer"></div>
+	<div class="nav-spacer"></div>
+	<div class="nav-spacer"></div>
+	<div class="nav-spacer"></div>
 
 </div>

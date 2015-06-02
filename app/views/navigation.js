@@ -4,7 +4,7 @@ export default Ember.View.extend({
 	needs: ['application'],
 
 	tagName: 'navigation',
-	templateName: 'navigation',
+	templateName: 'nav/navigation',
 
 	//When an item is clicked, contract nav
 	click: function(e) {
