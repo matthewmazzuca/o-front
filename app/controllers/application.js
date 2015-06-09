@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
   //TODO - I should be deleted when Aidan can set me
   init: function() {
     var store = this.get('store');
-    var active = store.find('property', 1);
+    var active = store.find('property', 2);
     this.set('activeProperty', active);
   },
 
