@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	navVisible: false,
-
 	activeProperty: null,
 
   //TODO - I should be deleted when Aidan can set me
