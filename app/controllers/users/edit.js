@@ -4,7 +4,7 @@ import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(
 	FlashableMixin,
-  EmberValidations, {
+  EmberValidations.Mixin, {
 
 	pageTitle: 'Edit Profile',
 
