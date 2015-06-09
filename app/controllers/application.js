@@ -3,8 +3,26 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	navVisible: false,
 
-	propertyAddress: "63 Rollscourt Drive",
-	propertyLocation: "Toronto, Canada",
+	activeProperty: null,
+
+  //TODO - I should be deleted when Aidan can set me
+  init: function() {
+    var store = this.get('store');
+    var active = store.find('property', 1);
+    this.set('activeProperty', active);
+  },
+
+  propertyAddress: function() {
+    if (!this.activeProperty) { return; }
+
+    return this.activeProperty.get('address');
+  }.property('address'),
+
+  propertyLocation: function() {
+    if (!this.activeProperty) { return; }
+
+    return this.activeProperty.get('location');
+  }.property('location'),
 
 	actions: {
 		toggleNav: function() {

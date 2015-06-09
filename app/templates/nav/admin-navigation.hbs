@@ -6,7 +6,7 @@
 	{{#each item in admin_links}}
 		<li>
 	  	<img class="icon" {{bind-attr src=item.icon}}>
-	  		{{#link-to item.route}}{{item.title}}{{/link-to}}
+	  		 {{link-to item.title item.route controller.controllers.application.activeProperty}}
 	  </li>
 	{{/each}}
 </ul>

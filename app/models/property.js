@@ -7,6 +7,7 @@ export default DS.Model.extend({
   phone: DS.attr('string'),
   website: DS.attr('string'),
   description: DS.attr('string'),
+  location: DS.attr('string'),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
@@ -21,6 +22,7 @@ export default DS.Model.extend({
 			address: "63 Rollscourt Drive",
 			price: "600000",
 			agent: "Gleb",
+			location: "Toronto, Canada",
 			phone: "(647) 271 4747",
 			website: "www.google.com",
 			description: "Dwelling",
@@ -34,6 +36,7 @@ export default DS.Model.extend({
 			address: "52 Fifeshire Road",
 			price: "600000",
 			agent: "Joey",
+			location: "Toronto, Canada",
 			phone: "(647) 696 9696",
 			website: "www.yahoo.com",
 			description: "Dwelling",
