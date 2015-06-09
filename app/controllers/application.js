@@ -16,13 +16,13 @@ export default Ember.Controller.extend({
     if (!this.activeProperty) { return; }
 
     return this.activeProperty.get('address');
-  }.property('address'),
+  }.property(),
 
   propertyLocation: function() {
     if (!this.activeProperty) { return; }
 
     return this.activeProperty.get('location');
-  }.property('location'),
+  }.property(),
 
 	actions: {
 		toggleNav: function() {

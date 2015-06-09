@@ -1,13 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-	needs: ['application', 'admin-navigation'],
+	needs: ['application'],
 	title: "Navigation Bar",
+	property: 'controllers.application.activeProperty',
 
 	nav_links: Ember.A([
 		Ember.Object.create({
 			title: "Edit Profile", 
-			route: "users.edit",
+			route: "user.edit",
 			icon: 'img/profile-icon.png'}),
 		Ember.Object.create({
 			title: "Account Settings", 
