@@ -1,5 +1,5 @@
 //INDEX
-.new-property {
+.new-ptroperty {
   @extend .uppercase-or-num;
 
   background-color: $prime;
@@ -31,7 +31,7 @@
 .setting {
   padding: 1em $leftBumper 0;
   font-size: 1.5em;
-  border-bottom: 1px solid $white;
+  border-bottom: 2px solid $white;
   position: relative;
   line-height: 1em;
   min-height: 2em;
@@ -56,13 +56,14 @@
   }
 
   .description {
-    padding-bottom: 1em;
+   padding-bottom: 1em;
 
+    
     textarea {
-      width: 260px;
+      width: 364px;
       height: 3em;
       padding: 0.5em;
-      line-height: 1em;
+      line-height: 1.1em;
     }
   }
 
@@ -88,7 +89,7 @@
   }
 
   input {
-    width: 110px;
+    width: 1100px;
   }
 }
 

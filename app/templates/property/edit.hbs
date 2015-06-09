@@ -9,6 +9,7 @@
 		</div>
 
 		<div class="setting">
+			<!--should be automated-->
 			<div class="title"> Location </div>
 			<div class="setting-value">
 				MAP or Text Box?
@@ -23,6 +24,7 @@
 		</div>
 
 		<div class="setting">
+			<!--should be automated -->
 			<div class="title"> Agent Name</div>
 			<div class="setting-value">
 				{{input value=model.agent}}
@@ -31,8 +33,9 @@
 
 		<div class="setting">
 			<div class="title"> Description </div>
+			<br>
 			<div class="description">
-				{{input value=model.description}}
+				{{textarea value=model.description maxlength="500"}}
 			</div>
 		</div>
 
@@ -49,6 +52,7 @@
 
 	
 	<div class="preamble">
+		<!--shouldn't have to add new attributes, should be a list-->
 		<div class="title small">
 			Add new attribute
 			<span class="sub-text"> e.g. Bedrooms: 2</span>

@@ -3,10 +3,15 @@
       <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
       
 
-      {{#link-to 'property.show' model.id classNames="model.name"}}{{model.address}}{{/link-to}}
-      <img src="img/clock-icon.png" class="clock-icon">
+      {{#link-to 'property.show' model.id classNames="name"}}{{model.address}}{{/link-to}}
+      
     </div>
 
+    <div class="property-subheading">
+      <span class="detail left"> M2L 2G8</span>
+      <span class="detail right"> Toronto, Ontario</span>
+
+    </div>
     <div class="property-contact">
       <span class="detail left">
         {{#view 'tel-link'}}
