@@ -8,6 +8,9 @@
   @include border-radius(2px);
   border: none;
 
+  overflow-x: hidden;
+  white-space: nowrap;
+
   input {
     @include border-radius(2px);
     border: none;
