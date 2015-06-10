@@ -7,6 +7,33 @@
   position: relative;
   border-bottom: 1px solid $white;
   padding: 0 $leftBumper;
+
+  &.property {
+    height: 10em;
+    margin: 0.67em 0;
+  }
+}
+
+.listing-main {
+  text-align: center;
+
+  .name {
+    padding: 2em 0;
+    @extend .uppsercase-or-num;
+    @extend .ellipsize;
+    color: white;
+    font-size: 1.5me;
+  }
+}
+
+.listing-footer {
+  width: 100%;
+  background: $translucentAqua;
+  height: 2.5em;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .left-listing {
@@ -23,6 +50,14 @@
     a {
       color: $prime;
     }
+  }
+
+  &.distance {
+    width: 80%;
+    text-align: left;
+    color: white;
+    font-size: 1em;
+    padding: 0.5em $leftBumper;
   }
 }
 

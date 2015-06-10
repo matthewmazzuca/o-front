@@ -8,9 +8,11 @@ var Router = Ember.Router.extend({
 export default Router.map(function() {
 
   this.resource('users', function() {
-    this.route('edit');
     this.route('new');
-  })
+    this.resource('user', {path: ':user_id'}, function() {
+      this.route('edit');
+    });
+  });
 
   this.resource('properties', function() {
     this.route('new'),

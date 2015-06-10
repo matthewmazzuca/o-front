@@ -1,4 +1,34 @@
 //INDEX
+
+.search-bar {
+  width: 100%;
+  margin: 0.67em 0;
+
+  background-color: $fillBlue;
+  @include border-radius(2px);
+  border: none;
+
+  overflow-x: hidden;
+  white-space: nowrap;
+
+  input {
+    @include border-radius(2px);
+    border: none;
+    background-color: $fillBlue;
+    @include placeholder('color', $white);
+    color: $white;
+    padding: 0.5em 0;
+    width: 90%;
+  }
+
+  img {
+    height: 1em;
+    width: 1em;
+    margin: 0.75em $leftBumper;
+    float: left;
+  }
+}
+
 .new-property {
   @extend .uppercase-or-num;
 

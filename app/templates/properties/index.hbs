@@ -1,22 +1,28 @@
 {{view 'page-title'}}
 
 <div class="container list-page index">
+	<div class="search-bar">
+    <img src='img/search-icon.png'>
+    {{input placeholder='Type address or name'}}	
+	</div>
 {{#each property in model}}
-	<div class="listpage-listing">
-		<div class="right-listing">
-			<img src="img/delete-icon.png">
+{{#link-to 'property.show' property.id}} <!-- make clickable once component -->
+  <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
+    <div class='listing-main'>
+      <span class='name'>{{property.address}}</span>
 		</div>
-    <div class="left-listing">
-      <div class="name">
-				{{#link-to 'property.show' property.id}}{{property.address}} - $ {{property.price}} {{/link-to}}<br />
-				{{property.agent}}
-				<div class="details">
-					{{#link-to 'property.edit' property.id}}Edit Shortcut{{/link-to}}
+
+    <div class='listing-footer'>
+      <div class="right-listing wait-list">
+        <img src='img/compass-icon.png'>
+				<div class="left-listing distance">
++        {{calculatedDistance}} from here
 				</div>
 			</div>
 			
 		</div>
   </div>
+  {{/link-to}}
 	{{/each}}
 </div>
 

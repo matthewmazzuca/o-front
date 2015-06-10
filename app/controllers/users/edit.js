@@ -4,12 +4,14 @@ import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(
 	FlashableMixin,
-  EmberValidations, {
+  EmberValidations.Mixin, {
 
 	pageTitle: 'Edit Profile',
 
   actions: {
     save: function() {
+      var self = this;
+      
       this.get('model').save().then(function() {
         self.flash({
           message: "Profile Updated",

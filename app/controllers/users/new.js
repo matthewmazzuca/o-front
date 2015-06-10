@@ -3,7 +3,7 @@ import FlashableMixin from "../../mixins/flashable";
 import EmberValidations from 'ember-validations';
 
 export default Ember.ObjectController.extend(
-  EmberValidations,
+  EmberValidations.Mixin,
   FlashableMixin, {
 
   pageTitle: "Register",

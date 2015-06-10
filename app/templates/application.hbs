@@ -2,13 +2,11 @@
 	<img src="img/nav-icon.png" class="nav-icon" {{action 'toggleNav'}}>
 </div>
 
-	<div {{bind-attr class="controller.navVisible:left :container"}}>
-
-  {{render 'navigation'}}
-
+{{render 'navigation'}}
+	<div class="container">
 	<div class="content">
 		{{render 'content-overlay' controller="application"}}
-  	{{outlet}}
+  	{{liquid-outlet}}
   </div>
 
 </div>

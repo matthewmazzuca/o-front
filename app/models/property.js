@@ -7,12 +7,28 @@ export default DS.Model.extend({
   phone: DS.attr('string'),
   website: DS.attr('string'),
   description: DS.attr('string'),
+  location: DS.attr('string'),
+  photoURL: DS.attr('string'),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
 
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
-  highlights: DS.hasMany('highlight', {async: true, embedded: 'always'})
+  highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
+
+  styleString: function() {
+  	var imgURL = 'img/property-placeholder.jpg';
+
+  	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
+  	var urlStr = 'url(' + imgURL + ')';
+
+  	var style = [overlayStr, urlStr].join(',');
+  	return 'background: ' + style + ';';
+  }.property('photoURL'),
+
+  calculatedDistance: function() {
+  	return '500m';
+  }.property('lat', 'lng')
   
 }).reopenClass({
 	FIXTURES: [
@@ -21,6 +37,7 @@ export default DS.Model.extend({
 			address: "63 Rollscourt Drive",
 			price: "600000",
 			agent: "Gleb",
+			location: "Toronto, Canada",
 			phone: "(647) 271 4747",
 			website: "www.google.com",
 			description: "Dwelling",
@@ -34,6 +51,7 @@ export default DS.Model.extend({
 			address: "52 Fifeshire Road",
 			price: "600000",
 			agent: "Joey",
+			location: "Toronto, Canada",
 			phone: "(647) 696 9696",
 			website: "www.yahoo.com",
 			description: "Dwelling",

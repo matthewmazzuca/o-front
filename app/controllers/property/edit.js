@@ -24,7 +24,7 @@ export default Ember.Controller.extend(
         self.flash({
           message: "Error saving property",
           type: 'alert-failure'
-        })
+        });
       });
     }
   },

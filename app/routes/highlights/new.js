@@ -1,6 +1,8 @@
 import Ember from 'ember';
+import RequireRegisteredMixin from "../../mixins/require-registered";
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(
+	RequireRegisteredMixin, {
 	controllerName: 'highlight/edit',
 
 	model: function() {
