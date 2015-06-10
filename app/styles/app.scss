@@ -104,13 +104,20 @@ button, input, textarea {
 
   font-weight: 500;
 
-  .back-icon {
-    position: absolute;
-    left: $leftBumper;
-    top: 0.5em;
-
+  span {
+    float: left;
+    padding-left: 10px;
+    padding-top: 6px;
   }
 }
+
+.back-icon {
+    position: absolute;
+    height: 1em;
+  }
+
+
+
 
 .left {
   display: inline-block;
