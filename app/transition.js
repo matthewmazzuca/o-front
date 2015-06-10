@@ -20,4 +20,4 @@ export default function() {
     this.toModel(true),
     this.reverse('toLeft', {duration: 300})
   );
-};
+}

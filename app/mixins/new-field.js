@@ -5,7 +5,7 @@ export default Ember.Mixin.create({
     newField: function() {
       var name = this.get('newFieldName');
       var value = this.get('newFieldValue');
-      if (!name || !value) { return false; };
+      if (!name || !value) { return false; }
 
       var model = this.get('model');
       var self = this;

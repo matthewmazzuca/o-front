@@ -5,7 +5,7 @@ export default Ember.Mixin.create({
 
 	edit: function() {
 		this.set('isEditing', true);
-		console.log("Test")
+		console.log("Test");
 	},
 
 	finishEdit: function() {
