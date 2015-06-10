@@ -8,12 +8,25 @@ export default DS.Model.extend({
   website: DS.attr('string'),
   description: DS.attr('string'),
   location: DS.attr('string'),
+  photoURL: DS.attr('string'),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
 
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
-  highlights: DS.hasMany('highlight', {async: true, embedded: 'always'})
+  highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
+
+  styleString: function() {
+  	var imgURL = '/img/property-placeholder.jpg';
+
+  	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
+  	var urlStr = 'url(' + imgURL + ')';
+  	return 'background:' + [overlayStr,urlStr].join(',') + ';';
+  }.property('photoURL'),
+
+  calculatedDistance: function() {
+  	return '500m';
+  }.property('lat', 'lng')
   
 }).reopenClass({
 	FIXTURES: [
