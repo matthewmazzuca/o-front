@@ -35,18 +35,6 @@ $nav-margin: 30px;
   }
 }
 
-.nav.invisible {
-  display: none;
-}
-
-.container.left {
-  left: 70%;
-
-  .content {
-    overflow: hidden;
-  }
-}
-
 .content-overlay {
   /* don't delete or action failes */
   cursor: pointer;
