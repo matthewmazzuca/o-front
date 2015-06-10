@@ -17,11 +17,13 @@ export default DS.Model.extend({
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
 
   styleString: function() {
-  	var imgURL = '/img/property-placeholder.jpg';
+  	var imgURL = 'img/property-placeholder.jpg';
 
   	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
   	var urlStr = 'url(' + imgURL + ')';
-  	return 'background:' + [overlayStr,urlStr].join(',') + ';';
+
+  	var style = [overlayStr, urlStr].join(',');
+  	return 'background: ' + style + ';';
   }.property('photoURL'),
 
   calculatedDistance: function() {
