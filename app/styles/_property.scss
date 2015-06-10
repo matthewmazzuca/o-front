@@ -3,6 +3,56 @@
 
 $appCardHeight: 80px;
 
+
+
+.property-profile {
+  position: relative;
+  height: 20em;
+  width: 100%;
+  display: block;
+
+    img {
+      max-width: 1000px;
+      max-height: 1000px;
+    }
+  }
+
+
+.property-hero-title {
+  /*should pull info from google maps to show address, postal code/zip, and city,state */
+
+  @extend .uppercase-or-num;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: normal;
+  color:white;
+  margin: 0 auto;
+  position: absolute;
+  top: 175px;
+  width: 100%;
+    
+    span {
+      background: rgba(0,0,0,0.7);
+        padding: 5px;
+      }
+
+  .name {
+    @extend .ellipsize;
+    width: 75%;
+  }
+}
+
+.property-subheading {
+  @extend .propery-hero-box;
+  positon: absolute;
+  font-size: 0.5em;
+  padding-top: 1.25em;
+  margin: 0 auto;
+  color:white;
+}
+
+
+
 .property-show {
   color: $white;
   text-align: center;
@@ -22,34 +72,20 @@ $appCardHeight: 80px;
   padding: 2em 2px;
 }
 
-.property-hero-title {
-  /*should pull info from google maps to show address, postal code/zip, and city,state */
 
-  @extend .uppercase-or-num;
-
-  font-size: 2em;
-  line-height: 1em;
-  font-weight: normal;
-  color:white;
-  margin: 0 auto;
-
-  .name {
-    @extend .ellipsize;
-    width: 75%;
-    margin-left: 0.5em;
-  }
-}
 
 .property-hero-box {
   display: block;
   width: 180px;
-  height: 15em;
 }
 
 .back-icon {
+  position: absolute;
   padding-right: 1.5%;
   padding-left: 2%;
-  height: 0.75em;
+  height: 2em;
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
 }
 
 .clock-icon {
@@ -58,16 +94,7 @@ $appCardHeight: 80px;
   height: 0.66667em;
 }
 
-.property-subheading {
-  @extend .property-hero-box;
-  font-size: 1.25em;
-  padding-top: 0.1em;
-  margin-left: auto;
-  margin-right: auto;
-  color:white;
 
-
-}
 .property-contact {
   /*removed because it serves no purpose with address, may be useful with agent info */
   @extend .property-hero-box;
