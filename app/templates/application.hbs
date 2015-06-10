@@ -2,10 +2,8 @@
 	<img src="img/nav-icon.png" class="nav-icon" {{action 'toggleNav'}}>
 </div>
 
+{{render 'navigation'}}
 	<div class="container">
-
-  {{render 'navigation'}}
-
 	<div class="content">
 		{{render 'content-overlay' controller="application"}}
   	{{liquid-outlet}}

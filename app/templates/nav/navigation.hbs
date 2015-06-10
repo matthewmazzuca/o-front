@@ -1,7 +1,8 @@
-{{#liquid-if controllers.application.navVisible class="nav-visible"}}
-    <div class="avatar">
-      <img src="img/avatar.png">
-    </div>
+{{#if controllers.application.navVisible}}
+  {{#liquid-if controllers.application.navVisible class="nav-visible"}}
+      <div class="avatar">
+        <img src="img/avatar.png">
+      </div>
 
   <div class="property">
   	<div class="property-name">
@@ -34,5 +35,6 @@
 	<div class="nav-spacer"></div>
 	<div class="nav-spacer"></div>
 	<div class="nav-spacer"></div>
-	
-{{/liquid-if}}
+
+	{{/liquid-if}}
+{{/if}}
