@@ -6,7 +6,7 @@
     {{input placeholder='Type address or name'}}	
 	</div>
 {{#each property in model}}
-{{#link-to 'property.show' id}} <!-- make clickable once component -->
+{{#link-to 'property.show' property.id}} <!-- make clickable once component -->
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
     <div class='listing-main'>
       <span class='name'>{{property.address}}</span>
