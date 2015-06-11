@@ -6,6 +6,12 @@
 			<div class="setting-value">
 				{{input value=model.address}}
 			</div>
+
+	    <div class="form-validator">
+	      {{#if errors.address}}
+	        address {{errors.address}}
+	      {{/if}}
+	    </div>
 		</div>
 
 		<div class="setting">
@@ -21,6 +27,12 @@
 			<div class="setting-value">
 				{{input value=model.price}}
 			</div>
+
+			<div class="form-validator">
+	      {{#if errors.price}}
+	        price {{errors.price}}
+	      {{/if}}
+    	</div>
 		</div>
 
 		<div class="setting">
@@ -37,6 +49,12 @@
 			<div class="description">
 				{{textarea value=model.description maxlength="500"}}
 			</div>
+
+			<div class="form-validator">
+	      {{#if errors.description}}
+	        description {{errors.description}}
+	      {{/if}}
+	    </div>
 		</div>
 
   {{#each field in model.fields}}
@@ -71,6 +89,10 @@
       {{input value=newFieldValue placeholder="e.g. \"Yes\""}}
     </div>
   </div>
+
+  	<div class="form-validator">
+			both fields need to be filled out to be added
+	  </div>
 
 	  <div class="save-container">
 	    <button class="button" {{action "save"}}> Save </button>

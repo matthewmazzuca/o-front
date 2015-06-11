@@ -1,13 +1,24 @@
 import Ember from 'ember';
 import NewFieldMixin from "../../mixins/new-field";
 import FlashableMixin from "../../mixins/flashable";
+import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(
   NewFieldMixin,
-  FlashableMixin, {
+  FlashableMixin,
+  EmberValidations.Mixin, {
 
   needs: ["application"],
-  pageTitle: "Edit Property",
+
+  address: null,
+  price: null,
+  description: null,
+
+  validations: {
+    address: { presence: true },
+    price: { presence: true },
+    description: { presence: true }
+  },
 
   actions: {
     save: function() {
