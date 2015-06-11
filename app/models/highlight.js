@@ -7,7 +7,6 @@ export default DS.Model.extend({
   options: DS.hasMany('option', {async: true}),
 
   style: function() {
-  	console.log('looking for style');
     return [ "background-image:url('",
              this.get("image_url"),
              "')"].join('');

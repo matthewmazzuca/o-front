@@ -8,7 +8,7 @@ export default DS.Model.extend({
   website: DS.attr('string'),
   description: DS.attr('string'),
   location: DS.attr('string'),
-  photoURL: DS.attr('string'),
+  image_url: DS.attr('string'),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
@@ -28,7 +28,13 @@ export default DS.Model.extend({
 
   calculatedDistance: function() {
   	return '500m';
-  }.property('lat', 'lng')
+  }.property('lat', 'lng'),
+
+  style: function() {
+  	return [ "background-image:url('",
+             'img/property-profile-1.jpg',
+             "')"].join('');
+  }.property('image_url'),
   
 }).reopenClass({
 	FIXTURES: [
@@ -45,7 +51,8 @@ export default DS.Model.extend({
 			lng: 1,
 			fields: [1],
 			beacons: [1],
-			highlights: [1]
+			highlights: [1],
+			image_url: 'img/property-profile-1.jpg'
 		}, {
 			id: 2,
 			address: "52 Fifeshire Road",
