@@ -1,5 +1,5 @@
 {{#if flashMessage}}
-<div {{bindAttr class=":alert flashMessage.type"}} id="flash">
+<div {{bindAttr class="flashMessage.type :alert"}} id="flash">
 	<a class="btn-close" {{action "closeFlash"}}>X</a>
 	{{flashMessage.message}}
 </div>

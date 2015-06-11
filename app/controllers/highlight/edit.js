@@ -5,7 +5,6 @@ export default Ember.Controller.extend(
 	FlashableMixin, {
 
 	needs: ['application'], 
-	pageTitle: ['Highlight'],
 
 	actions: {
 		newOption: function() {
@@ -25,9 +24,8 @@ export default Ember.Controller.extend(
 			model.save().then(function() {
 				self.flash({
           message: "Highlight saved",
-          type: 'alert-success'
+          type: 'alert-success',
         });
-       	self.transitionToRoute('property.show');
 			}, function() {
 				alert('save error');
 				self.flash({
