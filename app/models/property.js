@@ -17,7 +17,7 @@ export default DS.Model.extend({
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
 
   styleString: function() {
-  	var imgURL = 'img/property-placeholder.jpg';
+  	var imgURL = 'img/property-profile-1.jpg';
 
   	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
   	var urlStr = 'url(' + imgURL + ')';
@@ -66,7 +66,8 @@ export default DS.Model.extend({
 			lng: 100,
 			fields: [2],
 			beacons: [1,2],
-			highlights: [2]
+			highlights: [2],
+			image_url: 'img/property-profile-1.jpg'
 		}
 	]
 });
