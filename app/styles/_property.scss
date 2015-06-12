@@ -54,6 +54,7 @@ $appCardHeight: 80px;
 
 .property-subheading {
   @extend .propery-hero-box;
+  @extend .uppercase-or-num;
   positon: absolute;
   font-size: 0.5em;
   padding-top: 1.25em;
