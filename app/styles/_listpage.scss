@@ -5,28 +5,44 @@
 .listpage-listing {
   min-height: 70px;
   position: relative;
-  border-bottom: 1px solid $white;
-  padding: 0 $leftBumper;
 
   &.property {
-    height: 10em;
-    margin: 0.67em 0;
+    height: 12em;
+    margin: 0.67em;
   }
 }
 
 .listing-main {
-  text-align: center;
+  
+  text-align: left;
+  
+  span {
+      background: rgba(0,0,0,0.7);
+        padding: 5px;
+      }
 
   .name {
-    padding: 2em 0;
-    @extend .uppsercase-or-num;
+    
+    @extend .uppercase-or-num;
     @extend .ellipsize;
     color: white;
-    font-size: 1.5me;
+    font-size: 2em;
+    position: relative;
+    top: 3em;
+ 
+  }
+
+  .property-subheading {
+
+    @extend .uppercase-or-num;
+    font-size: 1em;
+    padding-top: 7em;
+    position: absolute;
   }
 }
 
 .listing-footer {
+  display:none;
   width: 100%;
   background: $translucentAqua;
   height: 2.5em;
