@@ -1,0 +1,100 @@
+{{view 'page-title'}}
+
+	<div class="container settings property-settings">
+		<div class="setting">
+			<div class="setting-title"> Address </div>
+			<div class="setting-value">
+				{{input value=controller.address}}
+			</div>
+
+	    <div class="form-validator">
+	      {{#if errors.address}}
+	        address {{errors.address}}
+	      {{/if}}
+	    </div>
+		</div>
+
+		<div class="setting">
+			<!--should be automated-->
+			<div class="title"> Location </div>
+			<div class="setting-value">
+				MAP or Text Box?
+			</div>
+		</div>
+
+		<div class="setting">
+			<div class="title"> Price </div>
+			<div class="setting-value">
+				{{input value=controller.price}}
+			</div>
+
+			<div class="form-validator">
+	      {{#if errors.price}}
+	        price {{errors.price}}
+	      {{/if}}
+    	</div>
+		</div>
+
+		<div class="setting">
+			<!--should be automated -->
+			<div class="title"> Agent Name</div>
+			<div class="setting-value">
+				{{input value=controller.agent}}
+			</div>
+		</div>
+
+		<div class="setting">
+			<div class="title"> Description </div>
+			<br>
+			<div class="description">
+				{{textarea value=controller.description maxlength="500"}}
+			</div>
+
+			<div class="form-validator">
+	      {{#if errors.description}}
+	        description {{errors.description}}
+	      {{/if}}
+	    </div>
+		</div>
+
+  {{#each field in model.fields}}
+    <div class="setting custom">
+    	<div class="setting-key">
+      	{{input value=field.name}}
+      </div>
+      <div class="setting-value">
+        {{input value=field.value}}
+      </div>
+    </div>
+  {{/each}}
+
+	
+	<div class="preamble">
+		<!--shouldn't have to add new attributes, should be a list-->
+		<div class="title small">
+			Add new attribute
+			<span class="sub-text"> e.g. Bedrooms: 2</span>
+		</div>
+		<div class="new-att-icon">
+			<a {{action "newField"}}> <img src="img/new-property-icon.png"></a>
+		</div>
+	</div>
+
+	<div class="setting custom">
+		<div class="setting-key">
+			{{input value=newFieldName placeholder="e.g. \"Takes Debit\""}}
+	</div>
+
+    <div class="setting-value new-field-setting">
+      {{input value=newFieldValue placeholder="e.g. \"Yes\""}}
+    </div>
+  </div>
+
+  	<div class="form-validator">
+			both fields need to be filled out to be added
+	  </div>
+
+	  <div class="save-container">
+	    <button class="button" {{action "save"}} {{bind-attr disabled="isInvalid"}}> Save </button>
+	  </div>
+	</div>
