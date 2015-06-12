@@ -49,7 +49,7 @@ export default Ember.Controller.extend(
           message: "Welcome to openhouse",
           type: "alert-success"
         });
-        self.transitionTo('properties.index');
+        self.transitionTo('property.show', property.id);
       }, function() {
         self.flash({
           message: "Error creating account",

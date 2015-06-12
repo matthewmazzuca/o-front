@@ -9,6 +9,7 @@ export default Ember.Controller.extend(
 	actions: {
 		newOption: function() {
       var name = this.get('newOptionName');
+      if (!name) { return false; }
 
       var model = this.get('model');
       var self = this;
