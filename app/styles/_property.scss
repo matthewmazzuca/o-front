@@ -18,6 +18,16 @@ $appCardHeight: 80px;
       max-width: 1000px;
       max-height: 1000px;
     }
+
+    .back-icon {
+      position: absolute;
+      padding-right: 1.5%;
+      padding-left: 2%;
+      height: 2em;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+    }
+
   }
 
 
@@ -31,7 +41,7 @@ $appCardHeight: 80px;
   color:white;
   margin: 0 auto;
   position: absolute;
-  top: 175px;
+  top: 7.083em; /* or 170px */
   width: 100%;
     
     span {
@@ -47,9 +57,11 @@ $appCardHeight: 80px;
 
 .property-subheading {
   @extend .propery-hero-box;
+  @extend .uppercase-or-num;
   positon: absolute;
   font-size: 0.5em;
   padding-top: 1.25em;
+  padding-bottom: 1em;
   margin: 0 auto;
   color:white;
 }
@@ -82,14 +94,6 @@ $appCardHeight: 80px;
   width: 180px;
 }
 
-.back-icon {
-  position: absolute;
-  padding-right: 1.5%;
-  padding-left: 2%;
-  height: 2em;
-  background: rgba(0,0,0,0.7);
-  padding: 10px;
-}
 
 .clock-icon {
   display: none;
