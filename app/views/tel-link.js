@@ -5,7 +5,9 @@ export default Ember.View.extend({
   attributeBindings: ['href'],
   
   href: function() {
-    return "tel:" + this.get('controller').get('model.phone').replace(/[^\d]/g, '');
+  	if (this.get('controller').get('model.phone')) {
+    	return "tel:" + this.get('controller').get('model.phone').replace(/[^\d]/g, '');
+    }
   }.property('controller.model.phone')
 });
 
