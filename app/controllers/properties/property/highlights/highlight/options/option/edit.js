@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 					type: 'alert-success'
 				});
 			});
-			self.transitionToRoute('highlight.edit', highlight.id);
+			self.transitionToRoute('properties.property.highlights.highlight.edit', highlight.id);
 		}, function() {
 			alert('save error');
 			self.flash({

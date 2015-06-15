@@ -29,7 +29,7 @@ export default Ember.Controller.extend(
           message: "Property Saved",
           type: 'alert-success'
         });
-        self.transitionToRoute('property.show', model.id);
+        self.transitionToRoute('properties.property.index', model.id);
       }, function() {
         alert('save error');
         self.flash({

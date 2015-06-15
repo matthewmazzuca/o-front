@@ -7,39 +7,38 @@ var Router = Ember.Router.extend({
 
 export default Router.map(function() {
 
-  this.resource('users', function() {
+  this.route('users', function() {
     this.route('new');
-    this.resource('user', {path: ':user_id'}, function() {
+    this.route('user', {path: ':user_id'}, function() {
       this.route('edit');
     });
   });
 
-  this.resource('properties', function() {
-    this.route('new'),
+  this.route('properties', function() {
+    this.route('new');
 
-    this.resource('property', {path: ':property_id'}, function() {
-      this.route('edit'),
-      this.route('show'),
-      this.route('details'),
+    this.route('property', {path: ':property_id'}, function() {
+      this.route('edit');
+      this.route('details');
 
-      this.resource('beacons', function() {
-        this.route('new'),
+      this.route('beacons', function() {
+        this.route('new');
 
-        this.resource('beacon', {path: ':beacon_id'}, function() {
+        this.route('beacon', {path: ':beacon_id'}, function() {
           this.route('edit');
         });
       });
 
-      this.resource('highlights', function() {
+      this.route('highlights', function() {
         this.route('new');
 
-        this.resource('highlight', {path: ':highlight_id'}, function() {
+        this.route('highlight', {path: ':highlight_id'}, function() {
           this.route('edit');
 
-          this.resource('options', function() {
+          this.route('options', function() {
             this.route('new');
 
-            this.resource('option', {path: ':option_id'}, function() {
+            this.route('option', {path: ':option_id'}, function() {
               this.route('edit');
             });
           });

@@ -6,8 +6,8 @@ export default function() {
 
   //match the down arrow
   this.transition(
-    this.fromRoute('property.show'),
-    this.toRoute('property.details'),
+    this.fromRoute('properties.property.index'),
+    this.toRoute('properties.property.details'),
     this.use('toDown')
   );
 

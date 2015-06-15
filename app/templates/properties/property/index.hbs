@@ -7,7 +7,7 @@
 
     <div class="property-hero-title">
       <span>
-        {{#link-to 'property.show' model.id classNames="name"}}{{model.address}}{{/link-to}}
+        {{#link-to 'properties.property.index' model.id classNames="name"}}{{model.address}}{{/link-to}}
       </span>
 
         <div class="property-subheading">
@@ -20,10 +20,10 @@
 
   </div>
 
-  {{partial 'property/hero-header'}}
+  {{partial 'properties/property/hero-header'}}
 
   <div class="down-icon-cont">
-  {{#link-to 'property.details' model.id}}
+  {{#link-to 'properties.property.details' model.id}}
     <img src="img/down-icon.png">
   {{/link-to}}
   </div>
@@ -33,7 +33,7 @@
     <div class="property-apps">
 
       {{#each highlight in model.highlights}}
-        {{partial 'highlight/inline'}}
+        {{partial 'properties/property/highlights/highlight/inline'}}
       {{/each}}
 
         <div class="app-card">
