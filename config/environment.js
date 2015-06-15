@@ -10,6 +10,9 @@ module.exports = function(environment) {
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "dialog.filepicker.io www.filepicker.io",
       'report-uri': "'self'",
+      'simple-auth-devise': {
+        serverTokenEndpoint: '/api/v1/users'
+      },
       filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     },
     modulePrefix: 'openhouse-front',
