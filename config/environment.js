@@ -11,6 +11,9 @@ module.exports = function(environment) {
       'style-src': "'self' fonts.googleapis.com maps.gstatic.com",
       'frame-src': "dialog.filepicker.io www.filepicker.io",
       'report-uri': "'self'",
+      'simple-auth-devise': {
+        serverTokenEndpoint: '/api/v1/users'
+      },
       filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     },
     googleMap: {
