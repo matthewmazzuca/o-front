@@ -96,13 +96,13 @@ button, input, textarea {
   position: relative;
   height: 1.5em;
   line-height: 1.5em;
-  background-color: $dark;
+  background-color: $prime;
 
   color: $white;
   font-size: 2em;
   text-align: center;
 
-  font-weight: 500;
+  @extend .uppercase-or-num;
 
   span {
     float: left;
@@ -113,6 +113,9 @@ button, input, textarea {
 
 .back-icon {
     position: absolute;
+    position: fixed;
+    background-color: $prime;
+    background-size: 1em;
     height: 1em;
   }
 

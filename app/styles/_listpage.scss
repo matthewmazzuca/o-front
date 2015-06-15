@@ -5,10 +5,12 @@
 .listpage-listing {
   min-height: 70px;
   position: relative;
+  display: block;
 
   &.property {
     height: 12em;
-    margin: 0.67em;
+    margin: 2em;
+
   }
 }
 

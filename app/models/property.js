@@ -8,7 +8,7 @@ export default DS.Model.extend({
   website: DS.attr('string'),
   description: DS.attr('string'),
   location: DS.attr('string'),
-  photoURL: DS.attr('string'),
+  image_url: DS.attr('string'),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
@@ -17,7 +17,7 @@ export default DS.Model.extend({
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
 
   styleString: function() {
-  	var imgURL = 'img/property-placeholder.jpg';
+  	var imgURL = 'img/property-profile-1.jpg';
 
   	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
   	var urlStr = 'url(' + imgURL + ')';
@@ -28,7 +28,13 @@ export default DS.Model.extend({
 
   calculatedDistance: function() {
   	return '500m';
-  }.property('lat', 'lng')
+  }.property('lat', 'lng'),
+
+	style: function() {
+	     return [ "background-image:url('",
+	            'img/property-profile-1.jpg',
+	            "')"].join('');
+	 }.property('image_url'),
   
 }).reopenClass({
 	FIXTURES: [
@@ -45,7 +51,8 @@ export default DS.Model.extend({
 			lng: 1,
 			fields: [1],
 			beacons: [1],
-			highlights: [1]
+			highlights: [1],
+			image_url: "img/property-profile-1.jpg"
 		}, {
 			id: 2,
 			address: "52 Fifeshire Road",
@@ -59,7 +66,8 @@ export default DS.Model.extend({
 			lng: 100,
 			fields: [2],
 			beacons: [1,2],
-			highlights: [2]
+			highlights: [2],
+			image_url: "img/property-profile-1.jpg"
 		}
 	]
 });
