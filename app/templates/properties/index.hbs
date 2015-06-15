@@ -10,6 +10,7 @@
 	</div>
 {{#each property in model}}
 {{#link-to 'property.show' property.id}} <!-- make clickable once component -->
+  
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
     <div class='listing-main'>
       <span class='name'>{{property.address}}</span>
@@ -32,6 +33,9 @@
 			</div>
 			
 		</div>
+
+<hr class="divider"/>
+
   </div>
   {{/link-to}}
 	{{/each}}

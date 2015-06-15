@@ -84,7 +84,18 @@ $appCardHeight: 80px;
   padding: 2em 2px;
 }
 
+.price {
+  @extend .uppercase-or-num;
+  position: relative;
+  display: block;
+  color: $white;
+  font-size: 2em;
+  margin: 0 $leftBumper;
+  padding-bottom: 0.25em;
+  top: -0.5em;
+  border-bottom: 1px solid $lineGrey;
 
+}
 
 .property-hero-box {
   display: block;
@@ -214,8 +225,9 @@ $appCardHeight: 80px;
 
 .property-description {
   font-size: 14px;
-  margin: 15px $leftBumper 0px;
+  margin: 0 $leftBumper 0px;
   text-align: left;
+  color: $white;
 
 }
 
@@ -229,11 +241,10 @@ $appCardHeight: 80px;
   border-bottom: 1px solid $lineGrey;
 
   .left {
-    float: left;
-    font-weight: 500;
+  
   }
   .right {
-    float: right;
+    margin-right: 10em;
   }
 }
 

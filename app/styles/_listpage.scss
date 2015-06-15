@@ -6,6 +6,7 @@
   min-height: 70px;
   position: relative;
   display: block;
+  border-radius: 5px;
 
   &.property {
     height: 12em;
@@ -103,3 +104,11 @@
   border-radius: 4px;
   height: 1.5em;
 }
+
+
+  .divider {
+    position: inherit;
+    display: none;
+    top: 9.6em;
+    border: 0.1em solid $prime;
+  }
