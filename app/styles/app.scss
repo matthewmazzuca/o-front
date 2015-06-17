@@ -1,5 +1,8 @@
 @import "base";
 
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 html, body {
   margin: 0px;
   background-color: $prime;
@@ -171,11 +174,39 @@ button, input, textarea {
   color: $subGrey;
 }
 
+.ember-modal-dialog {
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #222;
+  padding: 10em;
+}
+.ember-modal-overlay.translucent {
+  opacity: 0.77;
+  filter: alpha(opacity=15);
+  background-color: #808080;
+}
+
+.ember-modal-overlay {
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}
+.ember-modal-dialog {
+  z-index: 50;
+  position: fixed;
+
+  &.ember-modal-dialog-in-place {
+    position: relative;
+  }
+}
+
 @import 'properties';
 @import 'property';
 @import 'listpage';
 @import 'nav';
 @import 'menu';
 @import 'flashes';
-@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";
