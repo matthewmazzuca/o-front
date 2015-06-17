@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import NewFieldMixin from "../../mixins/new-field";
+import NewFieldMixin from "../mixins/new-field";
 import FlashableMixin from "../../mixins/flashable";
 import EmberValidations from 'ember-validations';
 

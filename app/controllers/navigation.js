@@ -8,7 +8,7 @@ export default Ember.ArrayController.extend({
 	nav_links: Ember.A([
 		Ember.Object.create({
 			title: "Edit Profile", 
-			route: "user.edit",
+			route: "",
 			icon: 'img/profile-icon.png'}),
 		Ember.Object.create({
 			title: "Account Settings", 
@@ -23,11 +23,11 @@ export default Ember.ArrayController.extend({
 	admin_links: Ember.A([
 		Ember.Object.create({
 			title: "Beacons",
-			route: 'beacons.index',
+			route: '',
 			icon: 'img/beacons-icon.png'}),
 		Ember.Object.create({
 			title: "Highlights",
-			route: 'highlights.index',
+			route: '',
 			icon: 'img/microapps-icon.png'}),
 		Ember.Object.create({
 			title: "Users",
