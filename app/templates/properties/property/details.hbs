@@ -1,20 +1,29 @@
-<div class="property-show property-details">
+<div class="property-profile" style={{model.style}}>
 
   {{partial 'properties/property/hero-header'}}
+    <div class="property-hero-title">
+      <span>
+        {{#link-to 'property.show' model.id classNames="name"}}{{model.address}}{{/link-to}}
+      </span>
 
-  <div class="property-description">
-    {{model.description}}
-
-    <div class="property-desc">
-      {{#each field in model.fields}}
-        <div class="property-detail">
-          <span class="left"> {{field.name}} </span>
-          <span class="right"> {{field.value}} </span>
+        <div class="property-subheading">
+           <span>Toronto, On</span>
+           <span> M2L 2G8</span>
         </div>
-      {{/each}}
     </div>
   </div>
 
+
+
+
+<div class="property-show property-details">
+
+  {{partial 'property/hero-header'}}
+
+
+
+
+  
   <div class="property-map-container">
     <div class="property-map">
       <img src="img/map.png">

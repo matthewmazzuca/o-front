@@ -96,13 +96,13 @@ button, input, textarea {
   position: relative;
   height: 1.5em;
   line-height: 1.5em;
-  background-color: $dark;
+  background-color: $prime;
 
   color: $white;
   font-size: 2em;
   text-align: center;
 
-  font-weight: 500;
+  @extend .uppercase-or-num;
 
   span {
     float: left;
@@ -113,6 +113,9 @@ button, input, textarea {
 
 .back-icon {
     position: absolute;
+    position: fixed;
+    background-color: $prime;
+    background-size: 1em;
     height: 1em;
   }
 
@@ -146,12 +149,16 @@ button, input, textarea {
 
 .edit-app-icon {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  left: 0.4em;
+  bottom: 1.8em;
   img {
     height: 20px;
     width: 20px;
   }
+  /*span {
+      background: rgba(0,0,0,0.7);
+      padding: auto;
+      }*/
 }
 
 .content {

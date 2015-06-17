@@ -3,8 +3,6 @@
 
     
     <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
-    
-
     <div class="property-hero-title">
       <span>
         {{#link-to 'properties.property.index' model.id classNames="name"}}{{model.address}}{{/link-to}}
@@ -22,11 +20,26 @@
 
   {{partial 'properties/property/hero-header'}}
 
+  
   <div class="down-icon-cont">
   {{#link-to 'properties.property.details' model.id}}
     <img src="img/down-icon.png">
   {{/link-to}}
   </div>
+
+
+  <div class="agent-info">
+    <p class="section-title"> Agent Info </p>
+    <img src="img/arigold.jpeg">
+    <p class="agent-name"> Ari Gold</p>
+    <p class="brokerage"> Harvey Kalles </p>
+    <p class="agent-phone"> (416) 464-4322 </p>
+
+    <div class="vertical-divider"></div>
+
+    <div class="openhouse-time"> Openhouse <br/> 12pm - 5pm </div>
+  </div>
+
 
   <div class="property-show">
 
@@ -38,7 +51,7 @@
 
         <div class="app-card">
         <img src="img/comment-icon.png" class="app-icon">
-          Comment
+          leave a note
       </div>
       
     </div>

@@ -34,7 +34,7 @@ export default DS.Model.extend({
   	return [ "background-image:url('",
              'img/property-profile-1.jpg',
              "')"].join('');
-  }.property('image_url'),
+  }.property('image_url')
   
 }).reopenClass({
 	FIXTURES: [
@@ -46,7 +46,7 @@ export default DS.Model.extend({
 			location: "Toronto, Canada",
 			phone: "(647) 271 4747",
 			website: "www.google.com",
-			description: "Dwelling",
+			description: "Very spacious beach style home. 4 bed, 3 bath. Reclaimed wood floors, granite countertop in the kitchen, and stainless steel appliances. 2 car garage, walking distance to community.",
 			lat: 1,
 			lng: 1,
 			fields: [1],
