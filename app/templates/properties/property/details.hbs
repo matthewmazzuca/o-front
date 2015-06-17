@@ -1,9 +1,8 @@
 <div class="property-profile" style={{model.style}}>
 
-  {{partial 'properties/property/hero-header'}}
     <div class="property-hero-title">
       <span>
-        {{#link-to 'property.show' model.id classNames="name"}}{{model.address}}{{/link-to}}
+        {{#link-to 'properties.property.index' model.id classNames="name"}}{{model.address}}{{/link-to}}
       </span>
 
         <div class="property-subheading">
@@ -13,17 +12,10 @@
     </div>
   </div>
 
-
-
-
 <div class="property-show property-details">
 
-  {{partial 'property/hero-header'}}
+  {{partial 'properties/property/hero-header'}}
 
-
-
-
-  
   <div class="property-map-container">
     <div class="property-map">
       <img src="img/map.png">
