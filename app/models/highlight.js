@@ -5,6 +5,7 @@ export default DS.Model.extend({
   sub_heading: DS.attr('string'),
   image_url: DS.attr('string'),
   options: DS.hasMany('option', {async: true}),
+  property: DS.belongsTo('property'),
 
   style: function() {
     return [ "background-image:url('",
