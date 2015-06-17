@@ -49,11 +49,27 @@
         {{partial 'properties/property/highlights/highlight/inline'}}
       {{/each}}
 
-        <div class="app-card">
+      <div class="app-card">
         <img src="img/comment-icon.png" class="app-icon">
           leave a note
       </div>
-      
+
+      <div class="app-card" {{action "toggleModal"}}>
+        Open Modal
+      </div>
+
+      <div id="modal-overlays">
+        <div class="ember-modal-overlay"></div>
+          <div class="ember-modal-dialog">
+            {{#if isShowingModal}}
+              {{#modal-dialog close="toggleModal"
+                          alignment="center"
+                          translucentOverlay=true}}
+              Oh hai there!
+              {{/modal-dialog}}
+            {{/if}}
+          </div>
+      </div>
     </div>
 
   </div>
