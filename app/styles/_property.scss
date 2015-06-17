@@ -4,7 +4,7 @@
 $appCardHeight: 80px;
 
 
-
+/*PROPERTY IMAGE AND INFO*/
 .property-profile {
   position: relative;
   height: 20em;
@@ -166,6 +166,8 @@ $appCardHeight: 80px;
   }
 }
 
+
+/*AGENT INFO*/
 .agent-info {
   position: relative;
   display: block;
@@ -194,15 +196,16 @@ $appCardHeight: 80px;
   }
 
   .agent-name {
+    @extend .uppercase-or-num;
     position: absolute;
     display: inline;
     margin: 0 0 0 0.5em;
     font-size: 1.25em;
-    letter-spacing: 1px;
+    
 
   }
 
-  .agent-phone {
+  .brokerage {
     @extend .uppercase-or-num;
     
     position: relative;
@@ -210,8 +213,42 @@ $appCardHeight: 80px;
     margin: 0 0 0 0.5em;
     top: -1.9em;
   }
+
+  .agent-phone {
+    @extend .uppercase-or-num;
+    
+    position: relative;
+    display: inline-block;
+    left: -8.9em;
+    top: -0.5em;
+
+    
+  }
+
+  .vertical-divider {
+     border-left:1px solid $white; 
+     border-right:1px solid $white; 
+     height: 4.75em;
+     position: absolute;
+     display: block;
+     top: 4.75em; 
+     right: 15em;
+  }
+
+  .openhouse-time {
+    @extend .uppercase-or-num;
+
+    text-align: center;
+    position: absolute;
+    display: inline;
+    right: 3em;
+    top: 4.25em;
+    font-size: 1.25em;
+  }
 }
 
+
+/*PROPERTY APPS*/
 .property-apps {
   padding: 0% 4.5%;
   background-color: $lightGrey;
@@ -296,10 +333,9 @@ $appCardHeight: 80px;
 }
 
 .property-map-container {
-  background-color: $lineGrey;
+  background-color: $lightestGrey;
   height: 200px;
   padding: 12.5px;
-  margin-top: 60px;
 }
 
 .property-map {
@@ -310,6 +346,7 @@ $appCardHeight: 80px;
 }
 
 .property-address {
+  display: none;
   position: absolute;
   bottom: 0;
 

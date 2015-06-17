@@ -1,8 +1,31 @@
+<div class="property-profile" style={{model.style}}>
+
+    
+    <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
+
+    <div class="property-hero-title">
+      <span>
+        {{#link-to 'property.show' model.id classNames="name"}}{{model.address}}{{/link-to}}
+      </span>
+
+        <div class="property-subheading">
+           <span>Toronto, On</span>
+           <span> M2L 2G8</span>
+        </div>
+    </div>
+  </div>
+
+
+
+
 <div class="property-show property-details">
 
   {{partial 'property/hero-header'}}
 
 
+
+
+  
   <div class="property-map-container">
     <div class="property-map">
       <img src="img/map.png">
