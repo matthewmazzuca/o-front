@@ -1,6 +1,6 @@
 import Ember from 'ember';
-import NewFieldMixin from "../mixins/new-field";
-import FlashableMixin from "../../mixins/flashable";
+import NewFieldMixin from "openhouse-front/mixins/new-field";
+import FlashableMixin from "openhouse-front/mixins/flashable";
 import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(
