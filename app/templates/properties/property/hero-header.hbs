@@ -1,5 +1,8 @@
 <div class="property-hero">
  
+  <div class="price">
+    $1,000,000
+  </div>
     <div class="property-contact">
       <span class="detail left">
         {{#view 'tel-link'}}
@@ -11,5 +14,18 @@
         <a class="external" target="_blank" href="{{unbound model.website}}">Visit website</a>
       </span>
     </div>
+
+      <div class="property-description">
+          {{model.description}}
+
+          <div class="property-desc">
+            {{#each field in model.fields}}
+              <div class="property-detail">
+                <span class="left"> {{field.name}} </span>
+                <span class="right"> {{field.value}} </span>
+              </div>
+            {{/each}}
+          </div>
+        </div>
 
   </div>

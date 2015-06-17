@@ -9,14 +9,16 @@
     {{input placeholder='Whatcha lookin for?'}}	
 	</div>
 {{#each property in model}}
+
 {{#link-to 'properties.property.index' property.id}} <!-- make clickable once component -->
+
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
     <div class='listing-main'>
       <span class='name'>{{property.address}}</span>
 
         <div class="property-subheading">
            <span>Toronto, On</span>
-           <span> M2L 2G8</span>
+           <span> 15 km away</span>
         </div>
 
 		</div>
@@ -31,7 +33,9 @@
         +	{{calculatedDistance}} from here
 			</div>
 		</div>
-		
+
+<hr class="divider"/>
+
   </div>
   {{/link-to}}
 	{{/each}}

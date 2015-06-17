@@ -7,8 +7,8 @@ export default DS.Model.extend({
 	FIXTURES: [
 		{
 			id: 1,
-			name: "Field 1 Name",
-			value: "FIeld 1 Value"
+			name: "4 Bedrooms",
+			value: "2 Bath"
 		}, {
 			id: 2,
 			name: "Field 2 Name",
