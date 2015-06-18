@@ -33,7 +33,7 @@ export default DS.Model.extend({
              'img/property-profile-1.jpg',
              "')"].join('');
   }.property('image_url'),
-  
+
 }).reopenClass({
 	FIXTURES: [
 		{
