@@ -1,7 +1,6 @@
 
   <div class="property-profile" style={{model.style}}>
 
-    
     <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
     <div class="property-hero-title">
       <span>
@@ -14,24 +13,20 @@
         </div>
     </div>
 
-   
-
   </div>
 
   {{partial 'properties/property/hero-header'}}
 
-  
   <div class="down-icon-cont">
   {{#link-to 'properties.property.details' model.id}}
     <img src="img/down-icon.png">
   {{/link-to}}
   </div>
 
-
   <div class="agent-info">
     <p class="section-title"> Agent Info </p>
     <img src="img/arigold.jpeg">
-    <p class="agent-name"> Ari Gold</p>
+    <p class="agent-name"> Ari Gold </p>
     <p class="brokerage"> Harvey Kalles </p>
     <p class="agent-phone"> (416) 464-4322 </p>
 

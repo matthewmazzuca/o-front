@@ -3,9 +3,6 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   address: DS.attr('string'),
   price: DS.attr('number'),
-  agent: DS.attr('string'),
-  phone: DS.attr('string'),
-  website: DS.attr('string'),
   description: DS.attr('string'),
   location: DS.attr('string'),
   image_url: DS.attr('string'),
@@ -13,6 +10,7 @@ export default DS.Model.extend({
   lat: DS.attr('number'),
   lng: DS.attr('number'),
 
+  user: DS.belongsTo('user', { async: true, embedded: 'always' }),
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
 
@@ -42,32 +40,28 @@ export default DS.Model.extend({
 			id: 1,
 			address: "63 Rollscourt Drive",
 			price: "600000",
-			agent: "Gleb",
 			location: "Toronto, Canada",
-			phone: "(647) 271 4747",
-			website: "www.google.com",
 			description: "Very spacious beach style home. 4 bed, 3 bath. Reclaimed wood floors, granite countertop in the kitchen, and stainless steel appliances. 2 car garage, walking distance to community.",
 			lat: 1,
 			lng: 1,
 			fields: [1],
 			beacons: [1],
 			highlights: [1],
-			image_url: 'img/property-profile-1.jpg'
+			image_url: 'img/property-profile-1.jpg',
+			user: 1
 		}, {
 			id: 2,
 			address: "52 Fifeshire Road",
 			price: "600000",
-			agent: "Joey",
 			location: "Toronto, Canada",
-			phone: "(647) 696 9696",
-			website: "www.yahoo.com",
 			description: "Dwelling",
 			lat: -100,
 			lng: 100,
 			fields: [2],
 			beacons: [1,2],
 			highlights: [2],
-			image_url: 'img/property-profile-1.jpg'
+			image_url: 'img/property-profile-1.jpg',
+			user: 2		
 		}
 	]
 });

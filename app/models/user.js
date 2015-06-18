@@ -6,8 +6,11 @@ var User = DS.Model.extend({
   phone: DS.attr('string'),
   email: DS.attr('string'),
   brokerage: DS.attr('string'),
+  website: DS.attr('string'),
   device_uuid: DS.attr('string'),
   registered: DS.attr('boolean'),
+
+  properties: DS.hasMany('property', { async: true }),
 
   //TODO -rm once rails /proper auth
   password: DS.attr('string'),
@@ -26,16 +29,20 @@ User.reopenClass({
 		last_name: "Nazarkin",
 		brokerage: "Homelife Victory",
 		phone: "647 271 4747",
+		website: "www.google.com",
 		email: "gleb@addolabs.co",
 		registered: true,
+		properties: [1]
 	}, {
 		id: 2,
 		first_name: "Joey",
 		last_name: "Gollish",
 		brokerage: "Joey Co",
 		phone: "647 111 2223",
+		website: "www.yahoo.com",
 		email: "joey@addolabs.co",
 		registered: true,
+		properties: [2]
 	}
 	]
 });
