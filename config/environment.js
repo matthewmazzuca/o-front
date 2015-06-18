@@ -4,16 +4,16 @@ module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com http://api.filepicker.io/v1/filepicker.js",
+      // 'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com http://api.filepicker.io/v1/filepicker.js",
       'connect-src': "'self'",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
-      'frame-src': "dialog.filepicker.io www.filepicker.io",
+      // 'frame-src': "dialog.filepicker.io www.filepicker.io",
       'report-uri': "'self'",
       'simple-auth-devise': {
         serverTokenEndpoint: '/api/v1/users'
       },
-      filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
+      // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     },
     modulePrefix: 'openhouse-front',
     environment: environment,
