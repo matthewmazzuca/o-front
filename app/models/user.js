@@ -21,30 +21,27 @@ var User = DS.Model.extend({
   }.property()
 });
 
-User.reopenClass({
-	FIXTURES: [
-	{
-		id: 1,
-		first_name: "Gleb",
-		last_name: "Nazarkin",
-		brokerage: "Homelife Victory",
-		phone: "647 271 4747",
-		website: "www.google.com",
-		email: "gleb@addolabs.co",
-		registered: true,
-		properties: [1]
-	}, {
-		id: 2,
-		first_name: "Joey",
-		last_name: "Gollish",
-		brokerage: "Joey Co",
-		phone: "647 111 2223",
-		website: "www.yahoo.com",
-		email: "joey@addolabs.co",
-		registered: true,
-		properties: [2]
-	}
-	]
-});
+
+// User.reopenClass({
+// 	FIXTURES: [
+// 	{
+// 		id: 1,
+// 		first_name: "Gleb",
+// 		last_name: "Nazarkin",
+// 		brokerage: "Homelife Victory",
+// 		phone: "647 271 4747",
+// 		email: "gleb@addolabs.co",
+// 		registered: true,
+// 	}, {
+// 		id: 2,
+// 		first_name: "Joey",
+// 		last_name: "Gollish",
+// 		brokerage: "Joey Co",
+// 		phone: "647 111 2223",
+// 		email: "joey@addolabs.co",
+// 		registered: true,
+// 	}
+// 	]
+// });
 
 export default User;

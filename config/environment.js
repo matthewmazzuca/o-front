@@ -4,17 +4,16 @@ module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com http://api.filepicker.io/v1/filepicker.js *.googleapis.com maps.gstatic.com",
-      'connect-src': "'self' maps.gstatic.com",
-      'font-src': "'self' fonts.gstatic.com",
-      'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com",
-      'style-src': "'self' fonts.googleapis.com maps.gstatic.com",
-      'frame-src': "dialog.filepicker.io www.filepicker.io",
+      // 'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com http://api.filepicker.io/v1/filepicker.js",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      // 'frame-src': "dialog.filepicker.io www.filepicker.io",
       'report-uri': "'self'",
       'simple-auth-devise': {
         serverTokenEndpoint: '/api/v1/users'
       },
-      filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
+      // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     },
     googleMap: {
       apiKey: 'AIzaSyAl5FYoQ87XnwquxX_uf_dzP4N5L1iN_z4'

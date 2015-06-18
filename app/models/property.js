@@ -33,35 +33,40 @@ export default DS.Model.extend({
              'img/property-profile-1.jpg',
              "')"].join('');
   }.property('image_url'),
-
-}).reopenClass({
-	FIXTURES: [
-		{
-			id: 1,
-			address: "63 Rollscourt Drive",
-			price: "600000",
-			location: "Toronto, Canada",
-			description: "Very spacious beach style home. 4 bed, 3 bath. Reclaimed wood floors, granite countertop in the kitchen, and stainless steel appliances. 2 car garage, walking distance to community.",
-			lat: 43.7563797,
-			lng: -79.38010939999998,
-			fields: [1],
-			beacons: [1],
-			highlights: [1],
-			image_url: 'img/property-profile-1.jpg',
-			user: 1
-		}, {
-			id: 2,
-			address: "52 Fifeshire Road",
-			price: "600000",
-			location: "Toronto, Canada",
-			description: "Dwelling",
-			lat: -100,
-			lng: 100,
-			fields: [2],
-			beacons: [1,2],
-			highlights: [2],
-			image_url: 'img/property-profile-1.jpg',
-			user: 2		
-		}
-	]
-});
+ });
+// }).reopenClass({
+// 	FIXTURES: [
+// 		{
+// 			id: 1,
+// 			address: "63 Rollscourt Drive",
+// 			price: "600000",
+// 			agent: "Gleb",
+// 			location: "Toronto, Canada",
+// 			phone: "(647) 271 4747",
+// 			website: "www.google.com",
+// 			description: "Dwelling",
+// 			lat: 1,
+// 			lng: 1,
+// 			fields: [1],
+// 			beacons: [1],
+// 			highlights: [1],
+// 			image_url: 'img/property-profile-1.jpg'
+// 		}, {
+// 			id: 2,
+// 			address: "52 Fifeshire Road",
+// 			price: "600000",
+// 			agent: "Joey",
+// 			location: "Toronto, Canada",
+// 			phone: "(647) 696 9696",
+// 			website: "www.yahoo.com",
+// 			description: "Dwelling",
+// 			lat: -100,
+// 			lng: 100,
+// 			fields: [2],
+// 			beacons: [1,2],
+// 			highlights: [2],
+// 			image_url: 'img/property-profile-1.jpg'
+// 		}
+// 	]
+// });
+>>>>>>> attempt to resolve http header resolve
