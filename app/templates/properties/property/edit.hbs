@@ -94,6 +94,8 @@
 			both fields need to be filled out to be added
 	  </div>
 
+	  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
+
 	  <div class="save-container">
 	    <button class="button" {{action "save"}}> Save </button>
 	  </div>
