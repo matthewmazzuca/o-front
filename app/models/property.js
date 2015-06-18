@@ -32,7 +32,7 @@ export default DS.Model.extend({
   	return [ "background-image:url('",
              'img/property-profile-1.jpg',
              "')"].join('');
-  }.property('image_url')
+  }.property('image_url'),
   
 }).reopenClass({
 	FIXTURES: [
@@ -42,8 +42,8 @@ export default DS.Model.extend({
 			price: "600000",
 			location: "Toronto, Canada",
 			description: "Very spacious beach style home. 4 bed, 3 bath. Reclaimed wood floors, granite countertop in the kitchen, and stainless steel appliances. 2 car garage, walking distance to community.",
-			lat: 1,
-			lng: 1,
+			lat: 43.7563797,
+			lng: -79.38010939999998,
 			fields: [1],
 			beacons: [1],
 			highlights: [1],
