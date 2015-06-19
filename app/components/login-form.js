@@ -14,7 +14,7 @@ export default Ember.Component.extend({
     },
 
     authenticate: function() {
-      var loginParams = this.getProperties('identification, password');
+      var loginParams = this.getProperties('identification', 'password');
       this.sendAction('authenticate', loginParams);
 
       this.send('resetParams');
