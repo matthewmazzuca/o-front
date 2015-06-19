@@ -2,6 +2,7 @@
   <div class="property-profile" style={{model.style}}>
 
     <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
+    
     <div class="property-hero-title">
       <span>
         {{#link-to 'properties.property.index' model.id classNames="name"}}{{model.address}}{{/link-to}}
