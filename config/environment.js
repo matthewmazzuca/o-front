@@ -10,11 +10,11 @@ module.exports = function(environment) {
       'style-src': "'self' 'unsafe-inline'",
       // 'frame-src': "dialog.filepicker.io www.filepicker.io",
       'report-uri': "'self'",
-      'simple-auth-devise': {
-        serverTokenEndpoint: '/api/v1/users'
-      },
-      // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     },
+    'simple-auth-devise': {
+      serverTokenEndpoint: '/api/v1/users/sign_in'
+    },
+    // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     modulePrefix: 'openhouse-front',
     environment: environment,
     baseURL: '/',
@@ -38,6 +38,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['simple-auth-devise'].serverTokenEndpoint =
+      'http://localhost:3000/api/v1/users/sign_in';
   }
 
   if (environment === 'test') {
