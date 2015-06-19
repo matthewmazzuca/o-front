@@ -6,5 +6,15 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "pl.makingwaves.estimotebeacons": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/isleofcode/phonegap-estimotebeacons.git",
+            "subdir": ".",
+            "ref": "feature/write-region"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

@@ -39,6 +39,11 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		2FD9426C869C4ACDBDEFB415 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C92EAFBBF1475C9B5E33E1 /* libEstimoteSDK.a */; };
+		240217DAF463430D873C027D /* EstimoteBeacons.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C33DFC0BD1C455794563EDD /* EstimoteBeacons.m */; };
+		E66DB46C6C7148B49912E9F0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28FE373B7DE4C3CA2BC90BA /* CoreBluetooth.framework */; };
+		1F64C2C4F03146EB8797B820 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C104E492B9F040C9965D33B2 /* CoreLocation.framework */; };
+		0B00108D517F404AA3B3B055 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7D5A3916C94E11821A66FD /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +109,36 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "OpenhouseFront/config.xml"; sourceTree = "<group>"; };
+		28C92EAFBBF1475C9B5E33E1 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libEstimoteSDK.a"; path = "OpenhouseFront/Plugins/pl.makingwaves.estimotebeacons/libEstimoteSDK.a"; sourceTree = "<group>"; fileEncoding = 4; };
+		2C33DFC0BD1C455794563EDD /* EstimoteBeacons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "EstimoteBeacons.m"; path = "pl.makingwaves.estimotebeacons/EstimoteBeacons.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		AD6C9F2337B040789AB7CF68 /* ESTBeacon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeacon.h"; path = "pl.makingwaves.estimotebeacons/ESTBeacon.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E68EA7AB821B413C9DEDC4BB /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconDefinitions.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconDefinitions.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		09678110ED6D438CB2F62902 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconFirmwareVO.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconFirmwareVO.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		82444E1E8BB146EDB0E7D299 /* ESTBeaconManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconManager.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		9FFA0237174547FF8B1D704B /* ESTBeaconRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconRegion.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconRegion.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		FAA9F2F20C4F427CB3F43CC1 /* ESTBeaconUpdateConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconUpdateConfig.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconUpdateConfig.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AD1ED21A8C154B58BC4DD5BF /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconUpdateInfo.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconUpdateInfo.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		D9E93669C5874FC3B22CC33A /* ESTBeaconVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBeaconVO.h"; path = "pl.makingwaves.estimotebeacons/ESTBeaconVO.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C092CEF2AC9A4AA78EB9E0E3 /* ESTBulkUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTBulkUpdater.h"; path = "pl.makingwaves.estimotebeacons/ESTBulkUpdater.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		22B44CC9DE8646BA87F2D760 /* ESTConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTConfig.h"; path = "pl.makingwaves.estimotebeacons/ESTConfig.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		38CDCFCBF4824F61AEFF0073 /* ESTDateRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTDateRule.h"; path = "pl.makingwaves.estimotebeacons/ESTDateRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		F817E7B9BB824B3FB1DAC3D3 /* ESTDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTDefinitions.h"; path = "pl.makingwaves.estimotebeacons/ESTDefinitions.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		91163A0B082A42159E10C996 /* ESTFirmwareInfoVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTFirmwareInfoVO.h"; path = "pl.makingwaves.estimotebeacons/ESTFirmwareInfoVO.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		5F1A966EBF28434EAF2A35F6 /* ESTMotionRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTMotionRule.h"; path = "pl.makingwaves.estimotebeacons/ESTMotionRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		59F55FC27D3E47DE804D8D80 /* ESTNearable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTNearable.h"; path = "pl.makingwaves.estimotebeacons/ESTNearable.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		269EF1E5A10946B595265D44 /* ESTNearableDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTNearableDefinitions.h"; path = "pl.makingwaves.estimotebeacons/ESTNearableDefinitions.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		B936CF4D9FCE4343897CB197 /* ESTNearableManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTNearableManager.h"; path = "pl.makingwaves.estimotebeacons/ESTNearableManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		3135C2CEC053439FA36ACA96 /* ESTNearableRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTNearableRule.h"; path = "pl.makingwaves.estimotebeacons/ESTNearableRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E16C2C6A79CE419787E9C6EF /* ESTOrientationRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTOrientationRule.h"; path = "pl.makingwaves.estimotebeacons/ESTOrientationRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		80FDABD7A5ED44ECAC476551 /* ESTProximityRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTProximityRule.h"; path = "pl.makingwaves.estimotebeacons/ESTProximityRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		B5B85462E40C4FFCBE0D7E7F /* ESTRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTRule.h"; path = "pl.makingwaves.estimotebeacons/ESTRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E6265BFCF02E4B78A20416FB /* ESTTemperatureRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTTemperatureRule.h"; path = "pl.makingwaves.estimotebeacons/ESTTemperatureRule.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		EDC4CA47F95A48E0BF06AA23 /* ESTTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTTrigger.h"; path = "pl.makingwaves.estimotebeacons/ESTTrigger.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C63906F26D4E4CCFB39D8C89 /* ESTTriggerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ESTTriggerManager.h"; path = "pl.makingwaves.estimotebeacons/ESTTriggerManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		9974EE8E685646F0889354A2 /* EstimoteBeacons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EstimoteBeacons.h"; path = "pl.makingwaves.estimotebeacons/EstimoteBeacons.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C28FE373B7DE4C3CA2BC90BA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		C104E492B9F040C9965D33B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		AB7D5A3916C94E11821A66FD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +150,10 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				2FD9426C869C4ACDBDEFB415 /* libEstimoteSDK.a in Frameworks */,
+				E66DB46C6C7148B49912E9F0 /* CoreBluetooth.framework in Frameworks */,
+				1F64C2C4F03146EB8797B820 /* CoreLocation.framework in Frameworks */,
+				0B00108D517F404AA3B3B055 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +226,10 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				28C92EAFBBF1475C9B5E33E1 /* libEstimoteSDK.a */,
+				C28FE373B7DE4C3CA2BC90BA /* CoreBluetooth.framework */,
+				C104E492B9F040C9965D33B2 /* CoreLocation.framework */,
+				AB7D5A3916C94E11821A66FD /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,6 +245,32 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				2C33DFC0BD1C455794563EDD /* EstimoteBeacons.m */,
+				AD6C9F2337B040789AB7CF68 /* ESTBeacon.h */,
+				E68EA7AB821B413C9DEDC4BB /* ESTBeaconDefinitions.h */,
+				09678110ED6D438CB2F62902 /* ESTBeaconFirmwareVO.h */,
+				82444E1E8BB146EDB0E7D299 /* ESTBeaconManager.h */,
+				9FFA0237174547FF8B1D704B /* ESTBeaconRegion.h */,
+				FAA9F2F20C4F427CB3F43CC1 /* ESTBeaconUpdateConfig.h */,
+				AD1ED21A8C154B58BC4DD5BF /* ESTBeaconUpdateInfo.h */,
+				D9E93669C5874FC3B22CC33A /* ESTBeaconVO.h */,
+				C092CEF2AC9A4AA78EB9E0E3 /* ESTBulkUpdater.h */,
+				22B44CC9DE8646BA87F2D760 /* ESTConfig.h */,
+				38CDCFCBF4824F61AEFF0073 /* ESTDateRule.h */,
+				F817E7B9BB824B3FB1DAC3D3 /* ESTDefinitions.h */,
+				91163A0B082A42159E10C996 /* ESTFirmwareInfoVO.h */,
+				5F1A966EBF28434EAF2A35F6 /* ESTMotionRule.h */,
+				59F55FC27D3E47DE804D8D80 /* ESTNearable.h */,
+				269EF1E5A10946B595265D44 /* ESTNearableDefinitions.h */,
+				B936CF4D9FCE4343897CB197 /* ESTNearableManager.h */,
+				3135C2CEC053439FA36ACA96 /* ESTNearableRule.h */,
+				E16C2C6A79CE419787E9C6EF /* ESTOrientationRule.h */,
+				80FDABD7A5ED44ECAC476551 /* ESTProximityRule.h */,
+				B5B85462E40C4FFCBE0D7E7F /* ESTRule.h */,
+				E6265BFCF02E4B78A20416FB /* ESTTemperatureRule.h */,
+				EDC4CA47F95A48E0BF06AA23 /* ESTTrigger.h */,
+				C63906F26D4E4CCFB39D8C89 /* ESTTriggerManager.h */,
+				9974EE8E685646F0889354A2 /* EstimoteBeacons.h */,
 			);
 			name = Plugins;
 			path = "OpenhouseFront/Plugins";
@@ -386,6 +455,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				240217DAF463430D873C027D /* EstimoteBeacons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +498,10 @@
 				);
 				PRODUCT_NAME = "OpenhouseFront";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OpenhouseFront/Plugins/pl.makingwaves.estimotebeacons\"",
+				);
 			};
 			name = Debug;
 		};
@@ -457,6 +531,10 @@
 				);
 				PRODUCT_NAME = "OpenhouseFront";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OpenhouseFront/Plugins/pl.makingwaves.estimotebeacons\"",
+				);
 			};
 			name = Release;
 		};
