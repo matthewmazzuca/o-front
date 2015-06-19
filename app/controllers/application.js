@@ -4,8 +4,7 @@ export default Ember.Controller.extend({
 	navVisible: false,
 	activeProperty: null,
 
-  //TODO - I should be deleted when Aidan can set me
-  init: function() {
+	 init: function() {
     var store = this.get('store');
     var active = store.find('property', 1);
     this.set('activeProperty', active);

@@ -1,7 +1,40 @@
-<form {{action 'authenticate' on='submit'}}>
-  <label for="identification">Login</label>
-  {{input value=identification placeholder='Enter Login'}}
-  <label for="password">Password</label>
-  {{input value=password placeholder='Enter Password' type='password'}}
-  <button type="submit">Login</button>
-</form>
+<div class="container settings property-settings">
+  <div class="setting">
+    <div class="title"> Email </div>
+    <div class="setting-value">
+      {{input
+        value=identification
+        placeholder="Email"}}
+    </div>
+
+    <div class="form-validator">
+      {{#if errors.identification}}
+        email {{errors.identification}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Password </div>
+    <div class="setting-value">
+      {{input
+        value=password type="password"
+        placeholder="Password"}}
+    </div>
+
+
+    <div class="form-validator">
+      {{#if errors.password}}
+        password {{errors.password}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="save-container">
+    <button class="button"
+      {{action "authenticate"}}
+      {{bind-attr disabled="isInvalid"}} >
+      Sign In
+    </button>
+  </div>
+</div>

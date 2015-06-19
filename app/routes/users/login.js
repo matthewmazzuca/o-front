@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	pageTitle: 'Sign In',
+	
   actions: {
     authenticate: function(loginParams) {
       return this.get('session').

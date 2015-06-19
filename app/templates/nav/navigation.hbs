@@ -16,16 +16,39 @@
 
 	<div class="small-nav-spacer"></div>
 
-	<ul >
-		{{#each item in nav_links}}
-		  <li class="nav-li">
-		 		{{#link-to item.route}}
-		  		<img class="icon" {{bind-attr src=item.icon}}>
-		  		{{item.title}}
-		  	{{/link-to}}
-		  </li>
-		{{/each}}
-	</ul>
+      <ul>
+        {{#if session.isAuthenticated}}
+          <li class='nav-li'>
+            {{#link-to 'users.user.edit' session.userID}}
+              <img class='icon' src='/img/profile-icon.png'>Account Settings
+            {{/link-to}}
+          </li>
+          <li class='nav-li'>
+            {{#link-to 'users.logout'}}
+              <img class='icon' src='/img/profile-icon.png'>Sign Out
+            {{/link-to}}
+          </li>
+        {{else}}
+          <li class='nav-li'>
+            {{#link-to 'users.user.register' session.userID}}
+              <img class='icon' src='img/profile-icon.png'>Register
+            {{/link-to}}
+          </li>
+          <li class='nav-li'>
+            {{#link-to 'users.login'}}
+              <img class='icon' src='img/profile-icon.png'>Sign In
+            {{/link-to}}
+          </li>
+        {{/if}}
+        <li class='nav-li'>
+          {{#link-to 'properties.index'}}
+            <img class='icon' src='img/properties-icon.png'>Properties
+          {{/link-to}}
+        </li>
+     </ul>
+
+   <div class="nav-spacer"> </div>
+
 
 	{{#if controller.controllers.application.activeProperty}}
 		{{partial 'nav/admin-navigation'}}
