@@ -174,58 +174,52 @@ button, input, textarea {
   color: $subGrey;
 }
 
-#modal-overlays {
 
-  top: 20em;
-}
+  .ember-modal-dialog {
 
-.ember-modal-dialog {
+    width: 90vw;
+    height: 40vh;
+    position: absolute fixed;
+    border-radius: 1em;
+    background-color: $lightestGrey;
+    box-shadow: 0 0 30px #222;
+    padding: 0 0 20em 0;
 
-  width: 90vw;
-  height: 40vh; 
-  border-radius: 1em;
-  background-color: $lightestGrey;
-  box-shadow: 0 0 30px #222;
-  padding: 0 0 20em 0;
-  z-index: 50;
-  position: absolute fixed;
-  overflow: hidden;
-  text-align: left;
+    overflow: hidden;
+    text-align: left;
 
 
 
-  &.ember-modal-dialog-in-place {
-    position: absolute;
+    &.ember-modal-dialog-in-place {
+      position: absolute;
+    }
+
   }
 
-}
+  .ember-modal-overlay.translucent {
+    opacity: 0.7;
+    filter: alpha(opacity=15);
+    background-color: $prime;
+  }
 
-.ember-modal-overlay.translucent {
-  opacity: 0.7;
-  filter: alpha(opacity=15);
-  background-color: $prime;
-}
+  .ember-modal-overlay {
+    left: 0;
+    position: absolute fixed;
+    right: 0;
+  }
 
-.ember-modal-overlay {
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 50;
-}
+  .highlight-heading-modal {
+    
+    @extend .uppercase-or-num;
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: normal;
+    color: $dark;
+    margin: 0.25em $leftBumper 0.25em;
+    border-bottom: 1px solid $dark;
+    padding-bottom: 0.25em;
 
-.highlight-heading-modal {
-  
-  @extend .uppercase-or-num;
-  font-size: 2em;
-  line-height: 1em;
-  font-weight: normal;
-  color: $dark;
-  margin: 0.25em $leftBumper 0.25em;
-  border-bottom: 1px solid $dark;
-  padding-bottom: 0.25em;
-
-}
+  }
 
 
 @import 'properties';
