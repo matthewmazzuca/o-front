@@ -3,10 +3,15 @@
 </div>
 
 {{render 'navigation'}}
+	
+<div id="content-target">
 	<div class="container">
-	<div class="content">
+	
+		<div class="content">
 		{{render 'content-overlay' controller="application"}}
   	{{liquid-outlet}}
-  </div>
+		</div>
+	
 
+	</div>
 </div>

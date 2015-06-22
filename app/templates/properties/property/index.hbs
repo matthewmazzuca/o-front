@@ -2,6 +2,7 @@
   <div class="property-profile" style={{model.style}}>
 
     <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
+    
     <div class="property-hero-title">
       <span>
         {{#link-to 'properties.property.index' model.id classNames="name"}}{{model.address}}{{/link-to}}
@@ -53,14 +54,36 @@
         Open Modal
       </div>
 
+      
             {{#if isShowingModal}}
-              {{#modal-dialog close="toggleModal"
-                          alignment="center"
-                          translucentOverlay=true}}
+              {{#modal-dialog close="toggleModal" translucentOverlay=true alignmentTarget='#content-target'
+              attachment='middle center'
+              targetAttachment='middle center'
+              }}
+
+             
+
+
+             
+            <div class="highlight-image">
               <img src='img/property-profile-1.jpg'>
+            </div>
+
+            <div class="highlight-heading-modal"> 
+                Beautiful Backyard 
+            </div>
+
+            <div class="highlight-description">
+            Your backyard is your private retreat. Screened patios extend your season outdoors and transition to patios. Plantings of hydrangeas echo the blues in the seating area and white of this Forest Hill Home. Enhance it by adding touches that make it special: a water feature, comfy seating, lovely plant beds, even just a hammock. 
+            </div>
+
+
               {{/modal-dialog}}
             {{/if}}
+     
 
     </div>
 
   </div>
+
+
