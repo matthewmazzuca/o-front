@@ -234,8 +234,9 @@ button, input, textarea {
   .highlight-description {
     text-align: left;
     font-size: 1.25em;
-    padding: 2em 2em 2em 2em;
-    
+    padding: 1em 2em 2em 2em;
+    overflow: scroll;
+
   }
 
 
