@@ -15,6 +15,7 @@ var User = DS.Model.extend({
   //TODO -rm once rails /proper auth
   password: DS.attr('string'),
   old_password: DS.attr('string'),
+  properties: DS.hasMany('property', { async: true, embedded: 'always'}),
 
   name: function() {
   	return this.get('first_name') + " " + this.get('last_name');

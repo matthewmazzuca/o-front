@@ -13,6 +13,7 @@ export default DS.Model.extend({
   user: DS.belongsTo('user', { async: true, embedded: 'always' }),
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
+  user: DS.belongsTo('user', { async: true, embedded: 'always'}),
 
   styleString: function() {
   	var imgURL = 'img/property-profile-1.jpg';
@@ -79,10 +80,7 @@ export default DS.Model.extend({
 			id: 1,
 			address: "63 Rollscourt Drive",
 			price: "600000",
-			agent: "Gleb",
 			location: "Toronto, Canada",
-			phone: "(647) 271 4747",
-			website: "www.google.com",
 			description: "Dwelling",
 			lat: 1,
 			lng: 1,
@@ -94,10 +92,7 @@ export default DS.Model.extend({
 			id: 2,
 			address: "52 Fifeshire Road",
 			price: "600000",
-			agent: "Joey",
 			location: "Toronto, Canada",
-			phone: "(647) 696 9696",
-			website: "www.yahoo.com",
 			description: "Dwelling",
 			lat: -100,
 			lng: 100,
