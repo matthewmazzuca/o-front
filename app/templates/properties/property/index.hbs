@@ -54,17 +54,33 @@
         Open Modal
       </div>
 
-      <div class="highlight-modal">
+      
             {{#if isShowingModal}}
-              {{#modal-dialog close="toggleModal"
-                
-                          translucentOverlay=true}}
-              <img src='img/property-profile-1.jpg'>
+              {{#modal-dialog close="toggleModal" translucentOverlay=true alignmentTarget='#content-target'
+              attachment='middle center'
+              targetAttachment='middle center'
+              }}
 
-              <div class="highlight-heading-modal"> Beautiful Backyard </div>
+             
+
+
+             
+            <div class="highlight-image">
+              <img src='img/property-profile-1.jpg'>
+            </div>
+
+            <div class="highlight-heading-modal"> 
+                Beautiful Backyard 
+            </div>
+
+            <div class="highlight-description">
+            Your backyard is your private retreat. Screened patios extend your season outdoors and transition to patios. Plantings of hydrangeas echo the blues in the seating area and white of this Forest Hill Home. Enhance it by adding touches that make it special: a water feature, comfy seating, lovely plant beds, even just a hammock. 
+            </div>
+
+
               {{/modal-dialog}}
             {{/if}}
-      </div>
+     
 
     </div>
 
