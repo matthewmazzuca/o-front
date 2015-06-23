@@ -13,7 +13,6 @@ export default DS.Model.extend({
   user: DS.belongsTo('user', { async: true, embedded: 'always' }),
   fields: DS.hasMany('field', {async: true, embedded: 'always'}),
   highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
-  user: DS.belongsTo('user', { async: true, embedded: 'always'}),
 
   styleString: function() {
   	var imgURL = 'img/property-profile-1.jpg';
@@ -34,53 +33,17 @@ export default DS.Model.extend({
              'img/property-profile-1.jpg',
              "')"].join('');
   }.property('image_url'),
-<<<<<<< HEAD
- });
-// }).reopenClass({
-// 	FIXTURES: [
-// 		{
-// 			id: 1,
-// 			address: "63 Rollscourt Drive",
-// 			price: "600000",
-// 			agent: "Gleb",
-// 			location: "Toronto, Canada",
-// 			phone: "(647) 271 4747",
-// 			website: "www.google.com",
-// 			description: "Dwelling",
-// 			lat: 1,
-// 			lng: 1,
-// 			fields: [1],
-// 			beacons: [1],
-// 			highlights: [1],
-// 			image_url: 'img/property-profile-1.jpg'
-// 		}, {
-// 			id: 2,
-// 			address: "52 Fifeshire Road",
-// 			price: "600000",
-// 			agent: "Joey",
-// 			location: "Toronto, Canada",
-// 			phone: "(647) 696 9696",
-// 			website: "www.yahoo.com",
-// 			description: "Dwelling",
-// 			lat: -100,
-// 			lng: 100,
-// 			fields: [2],
-// 			beacons: [1,2],
-// 			highlights: [2],
-// 			image_url: 'img/property-profile-1.jpg'
-// 		}
-// 	]
-// });
->>>>>>> attempt to resolve http header resolve
-=======
- 
+  
 }).reopenClass({
 	FIXTURES: [
 		{
 			id: 1,
 			address: "63 Rollscourt Drive",
 			price: "600000",
+			agent: "Gleb",
 			location: "Toronto, Canada",
+			phone: "(647) 271 4747",
+			website: "www.google.com",
 			description: "Dwelling",
 			lat: 1,
 			lng: 1,
@@ -92,7 +55,10 @@ export default DS.Model.extend({
 			id: 2,
 			address: "52 Fifeshire Road",
 			price: "600000",
+			agent: "Joey",
 			location: "Toronto, Canada",
+			phone: "(647) 696 9696",
+			website: "www.yahoo.com",
 			description: "Dwelling",
 			lat: -100,
 			lng: 100,
@@ -103,4 +69,3 @@ export default DS.Model.extend({
 		}
 	]
 });
->>>>>>> Basic user authentication working with some routes
