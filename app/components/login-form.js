@@ -6,18 +6,13 @@ export default Ember.Component.extend(
   LoginControllerMixin, 
   EmberValidations.Mixin, {
   // public api
-  authenticate: null,
   pageTitle: 'Sign In',
-
-  identification: '',
-  password: '',
 
   validations: {
     identification:    { presence: true },
     password: { presence: true }
   },
 
-export default Ember.Component.extend({
   // public api
   authenticate: null,
   identification: '',
