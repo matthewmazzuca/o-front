@@ -17,6 +17,12 @@ export default Ember.Component.extend(
     password: { presence: true }
   },
 
+export default Ember.Component.extend({
+  // public api
+  authenticate: null,
+  identification: '',
+  password: '',
+
   actions: {
     // n.b. split so it will be easier to hook to a cancel/clear button
     resetParams: function() {

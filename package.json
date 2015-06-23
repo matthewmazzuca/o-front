@@ -28,7 +28,11 @@
     "ember-cli-ic-ajax": "0.1.1",
     "ember-cli-inject-live-reload": "^1.3.0",
     "ember-cli-qunit": "0.3.10",
+<<<<<<< HEAD
     "ember-cli-sass": "4.0.1",
+=======
+    "ember-cli-sass": "4.0.0",
+>>>>>>> 60f7bd5a2a75d883bcec24642f6963e72811358f
     "ember-cli-simple-auth": "0.8.0-beta.3",
     "ember-cli-simple-auth-devise": "0.8.0-beta.3",
     "ember-cli-uglify": "1.0.1",
