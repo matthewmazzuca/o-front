@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import FlashableMixin from "../../mixins/flashable";
+import FlashableMixin from "openhouse-front/mixins/flashable";
 import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(
