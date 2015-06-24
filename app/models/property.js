@@ -32,9 +32,10 @@ export default DS.Model.extend({
   	return [ "background-image:url('",
              'img/property-profile-1.jpg',
              "')"].join('');
-  }.property('image_url'),
- });
-// }).reopenClass({
+  }.property('image_url')
+ 
+});
+// .reopenClass({
 // 	FIXTURES: [
 // 		{
 // 			id: 1,
