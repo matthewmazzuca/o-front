@@ -11,6 +11,9 @@ module.exports = function(environment) {
       // 'frame-src': "dialog.filepicker.io www.filepicker.io",
       'report-uri': "'self'",
     },
+    'simple-auth': {
+      authorizer: 'simple-auth-authorizer:devise',
+    },
     'simple-auth-devise': {
       serverTokenEndpoint: '/api/v1/users/sign_in'
     },
