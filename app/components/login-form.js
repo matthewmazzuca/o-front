@@ -8,6 +8,8 @@ export default Ember.Component.extend(
   // public api
   pageTitle: 'Sign In',
 
+  authenticator: 'simple-auth-authenticator:devise',
+  
   validations: {
     identification:    { presence: true },
     password: { presence: true }

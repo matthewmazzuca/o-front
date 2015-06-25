@@ -15,7 +15,8 @@ module.exports = function(environment) {
       authorizer: 'simple-auth-authorizer:devise',
     },
     'simple-auth-devise': {
-      serverTokenEndpoint: '/api/v1/users/sign_in'
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in',
+      identificationAttributeName: 'email'
     },
     // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     modulePrefix: 'openhouse-front',
@@ -45,7 +46,10 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV['simple-auth-devise'].serverTokenEndpoint =
       'http://localhost:3000/api/v1/users/sign_in';
-  }
+    ENV['simple-auth-devise'].identificationAttributeName =
+      'email';
+    }
+
 
   if (environment === 'test') {
     // Testem prefers this...
