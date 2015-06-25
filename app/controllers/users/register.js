@@ -19,14 +19,6 @@ export default Ember.Controller.extend(
     passwordConfirmation: {presence: true}
   },
 
-  resetProperties: function() {
-    var model = this.get('model');
-    model.setProperties({
-      password: '',
-      passwordConfirmation: ''
-    });
-  },
-
   actions: {
     save: function() {
       var self = this;
@@ -34,14 +26,19 @@ export default Ember.Controller.extend(
       model.setProperties({email: this.get('email'), password: this.get('password')})
 
       model.save().then(function() {
-        self.resetProperties();
+        model.setProperties({
+          password: '',
+          passwordConfirmation: ''
+        });
+
         self.set('session.isAuthenticated', true);
+        console.log(self.get('session.isAuthenticated'))
 
         // self.flash({
         //   message: "Account Registered",
         //   type: 'alert-success'
         // });
-        self.transitionToRoute('properties.index');
+        self.transitionToRoute('users.login');
       }, function() {
         // self.flash({
         //   message: "Error registering account",
