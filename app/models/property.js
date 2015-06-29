@@ -32,7 +32,13 @@ export default DS.Model.extend({
   	return [ "background-image:url('",
              'img/property-profile-1.jpg',
              "')"].join('');
-  }.property('image_url')
+  }.property('image_url'),
+
+   marker: function() {
+  	return Ember.A([
+  		{lat: this.get('lat'), lng: this.get('lng')}
+  	])
+  }.property('lat', 'lng'),
  
 });
 // .reopenClass({
