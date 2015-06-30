@@ -13,10 +13,10 @@ module.exports = function(environment) {
     },
     'simple-auth': {
       authorizer: 'simple-auth-authorizer:devise',
+      crossOriginWhitelist: ['*'],
     },
     'simple-auth-devise': {
-      serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in',
-      identificationAttributeName: 'email'
+      serverTokenEndpoint: 'http://localhost:3000',
     },
     // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     modulePrefix: 'openhouse-front',
@@ -38,6 +38,9 @@ module.exports = function(environment) {
     }
   };
 
+  // ENV['simple-auth']['crossOriginWhitelist'] = ['http://localhost:3000'];
+  // ENV['simple-auth-devise']['serverTokenEndpoint'] = "//localhost:3000/users/sign_in"
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -46,8 +49,6 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV['simple-auth-devise'].serverTokenEndpoint =
       'http://localhost:3000/api/v1/users/sign_in';
-    ENV['simple-auth-devise'].identificationAttributeName =
-      'email';
     }
 
 
