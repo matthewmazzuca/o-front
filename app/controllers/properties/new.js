@@ -37,12 +37,12 @@ export default Ember.Controller.extend(
     save: function() {
       var self = this;
       var property = this.get('model');
-
       var address = this.get('address');
       var price = this.get('price');
       var description = this.get('description')
       property.setProperties({address: address, price: price, description: description})
       console.log(property);
+
 
       property.save().then(function() {
         self.flash({
