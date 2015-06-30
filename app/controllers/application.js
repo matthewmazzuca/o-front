@@ -6,8 +6,8 @@ export default Ember.Controller.extend({
 
 	 init: function() {
     var store = this.get('store');
-    var active = store.find('property', 1);
-    this.set('activeProperty', active);
+    // var active = store.find('property', 1);
+    // this.set('activeProperty', active);
   },
 
   propertyAddress: function() {

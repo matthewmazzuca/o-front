@@ -33,8 +33,15 @@ export default DS.Model.extend({
              'img/property-profile-1.jpg',
              "')"].join('');
   }.property('image_url'),
- });
-// }).reopenClass({
+
+   marker: function() {
+  	return Ember.A([
+  		{lat: this.get('lat'), lng: this.get('lng')}
+  	])
+  }.property('lat', 'lng'),
+ 
+});
+// .reopenClass({
 // 	FIXTURES: [
 // 		{
 // 			id: 1,

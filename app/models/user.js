@@ -8,12 +8,11 @@ var User = DS.Model.extend({
   brokerage: DS.attr('string'),
   website: DS.attr('string'),
   device_uuid: DS.attr('string'),
-  registered: DS.attr('boolean'),
-
   properties: DS.hasMany('property', { async: true }),
 
   //TODO -rm once rails /proper auth
   password: DS.attr('string'),
+  password_confirmation: DS.attr('string'),
   old_password: DS.attr('string'),
   properties: DS.hasMany('property', { async: true, embedded: 'always'}),
 

@@ -6,18 +6,15 @@ export default Ember.Component.extend(
   LoginControllerMixin, 
   EmberValidations.Mixin, {
   // public api
-  authenticate: null,
   pageTitle: 'Sign In',
 
-  identification: '',
-  password: '',
-
+  authenticator: 'simple-auth-authenticator:devise',
+  
   validations: {
     identification:    { presence: true },
     password: { presence: true }
   },
 
-export default Ember.Component.extend({
   // public api
   authenticate: null,
   identification: '',
@@ -31,9 +28,10 @@ export default Ember.Component.extend({
     },
 
     authenticate: function() {
-      var loginParams = this.getProperties('identification', 'password');
-      this.sendAction('authenticate', loginParams);
+      var data= this.getProperties('identification', 'password');
+      this.sendAction('authenticate', data);
       this.send('resetParams');
+      this.transitionTo('properties.index')
     }
   }
 });

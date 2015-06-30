@@ -41,11 +41,13 @@
 	{{/each}}
 </div>
 
-<div class="new-property">
-	{{#link-to 'properties.new'}}
-		ADD NEW PROPERTY
-		<div class="new-property-button">
-			<img src="img/new-property-icon.png">
-		</div>
-	{{/link-to}}
-</div>
+{{#if session.isAuthenticated}}
+  <div class="new-property">
+  	{{#link-to 'properties.new'}}
+  		ADD NEW PROPERTY
+  		<div class="new-property-button">
+  			<img src="img/new-property-icon.png">
+  		</div>
+  	{{/link-to}}
+  </div>
+{{/if}}

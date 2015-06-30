@@ -1,15 +1,17 @@
+{{view 'page-title'}}
+
 <div class="container settings property-settings">
   <div class="setting">
     <div class="title"> Email </div>
     <div class="setting-value">
       {{input
-        value=identification
+        value=controller.email
         placeholder="Email"}}
     </div>
 
     <div class="form-validator">
-      {{#if errors.identification}}
-        email {{errors.identification}}
+      {{#if errors.email}}
+        email {{errors.email}}
       {{/if}}
     </div>
   </div>
@@ -17,8 +19,8 @@
   <div class="setting">
     <div class="title"> Password </div>
     <div class="setting-value">
-      {{input
-        value=password type="password"
+      {{input type="password"
+        value=controller.password
         placeholder="Password"}}
     </div>
 
@@ -30,12 +32,27 @@
     </div>
   </div>
 
+  <div class="setting">
+    <div class="title"> Password Confirmation </div>
+    <div class="setting-value">
+      {{input type="password"
+        value=controller.passwordConfirmation
+        placeholder="Password Confirmation"}}
+    </div>
+
+
+    <div class="form-validator">
+      {{#if errors.passwordConfirmation}}
+        password confirmation {{errors.passwordConfirmation}}
+      {{/if}}
+    </div>
+  </div>
+
   <div class="save-container">
     <button class="button"
-      {{action "authenticate"}}
+      {{action "save"}}
       {{bind-attr disabled="isInvalid"}} >
-      Sign In
+      Register
     </button>
   </div>
 </div>
-
