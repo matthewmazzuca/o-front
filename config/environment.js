@@ -13,7 +13,7 @@ module.exports = function(environment) {
     },
     'simple-auth': {
       authorizer: 'simple-auth-authorizer:devise',
-      crossOriginWhitelist: ['*'],
+      crossOriginWhitelist: ['*']
     },
     'simple-auth-devise': {
       serverTokenEndpoint: 'http://localhost:3000',
