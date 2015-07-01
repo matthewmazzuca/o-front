@@ -171,7 +171,7 @@ button, input, textarea {
 
 .form-validator {
   font-size: 0.8em;
-  color: $subGrey;
+  color: $prime;
 }
 
 
@@ -249,3 +249,4 @@ button, input, textarea {
 @import 'nav';
 @import 'menu';
 @import 'flashes';
+@import 'register';

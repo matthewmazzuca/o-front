@@ -1,13 +1,14 @@
-{{view 'page-title'}}
+<!--{{view 'page-title'}} -->
 
-<div class="container settings property-settings">
-  <div class="setting">
-    <div class="title"> Email </div>
-    <div class="setting-value">
+<div class="websitelogo">
+  <img src="img/websitelogo.png">
+</div>
+
+<div class="register-settings">
+    <div class="register-setting">
       {{input
         value=controller.email
         placeholder="Email"}}
-    </div>
 
     <div class="form-validator">
       {{#if errors.email}}
@@ -16,14 +17,10 @@
     </div>
   </div>
 
-  <div class="setting">
-    <div class="title"> Password </div>
-    <div class="setting-value">
+  <div class="register-setting">
       {{input type="password"
         value=controller.password
         placeholder="Password"}}
-    </div>
-
 
     <div class="form-validator">
       {{#if errors.password}}
@@ -32,14 +29,10 @@
     </div>
   </div>
 
-  <div class="setting">
-    <div class="title"> Password Confirmation </div>
-    <div class="setting-value">
-      {{input type="password"
+  <div class="register-setting">
+      {{input  type="password"
         value=controller.passwordConfirmation
         placeholder="Password Confirmation"}}
-    </div>
-
 
     <div class="form-validator">
       {{#if errors.passwordConfirmation}}
@@ -52,7 +45,7 @@
     <button class="button"
       {{action "save"}}
       {{bind-attr disabled="isInvalid"}} >
-      Register
+      SIGN ME UP!
     </button>
   </div>
 </div>
