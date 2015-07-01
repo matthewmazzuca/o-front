@@ -1,8 +1,9 @@
 {{#if controllers.application.navVisible}}
   {{#liquid-if controllers.application.navVisible class="nav-visible"}}
       <div class="avatar">
+        {{session.currentUser.email}}
         <img src="img/avatar.png">
-        {{session.currentUser.email}}asdf
+        {{session.currentUser.email}}
       </div>
 
   <div class="property">
@@ -20,7 +21,7 @@
       <ul>
         {{#if session.isAuthenticated}}
           <li class='nav-li'>
-            {{#link-to 'users.user.edit' user.id }}
+            {{#link-to 'users.user.edit' user }}
               <img class='icon' src='/img/profile-icon.png'>Account Settings
             {{/link-to}}
           </li>

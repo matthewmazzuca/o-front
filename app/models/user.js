@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-var User = DS.Model.extend({
+export default DS.Model.extend({
   first_name: DS.attr('string'),
   last_name: DS.attr('string'),
   phone: DS.attr('string'),
@@ -14,7 +14,6 @@ var User = DS.Model.extend({
   password: DS.attr('string'),
   password_confirmation: DS.attr('string'),
   old_password: DS.attr('string'),
-  properties: DS.hasMany('property', { async: true, embedded: 'always'}),
 
   name: function() {
   	return this.get('first_name') + " " + this.get('last_name');
@@ -44,4 +43,3 @@ var User = DS.Model.extend({
 // 	]
 // });
 
-export default User;

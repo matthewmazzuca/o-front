@@ -3,27 +3,6 @@ import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
 export default Ember.Route.extend(
   ApplicationRouteMixin, {
-  // currentDevice: Ember.computed('session.deviceUUID', function() {
-  //   return this.store.find('user-device', this.get('session.deviceUUID'));
-  // }),
-
-  // currentUser: Ember.computed('session.userID', function() {
-  //   var userID = this.get('session.accountID');
-  //   console.log(this.get('session.accountID'))
-  //   if (userID) {
-  //     return this.store.find('user', userID);
-  //   } else if (this.get('session.deviceUUID')) {
-  //     this.get('currentDevice').then(function() {
-  //       userID = this.get('session.userID');
-  //       return userID ? this.store.find('user', userID) : null;
-  //     }, function() {
-  //       return null;
-  //     });
-  //   } else {
-  //     return null;
-  //   }
-  //   console.log(currentUser);
-  // }),
 
   actions: {
     error: function(error) {
@@ -43,6 +22,7 @@ export default Ember.Route.extend(
 
     sessionAuthenticationSucceeded: function() {
       this.transitionTo('index');
+      console.log('current user: ' + this.get('session.currentUser'))
     }
   }
 });
