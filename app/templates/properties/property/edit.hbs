@@ -1,7 +1,7 @@
 {{view 'page-title'}}
 
-	<div class="container settings property-settings">
-		<div class="setting">
+	<div class="register-settings">
+		<div class="register-setting">
 			<div class="setting-title"> Address </div>
 			<div class="setting-value">
 				{{input value=model.address}}
@@ -14,15 +14,16 @@
 	    </div>
 		</div>
 
-		<div class="setting">
-			<!--should be automated-->
+		<!-- Either show map view or delete
+
+			<div class="setting">
 			<div class="title"> Location </div>
 			<div class="setting-value">
 				MAP or Text Box?
 			</div>
-		</div>
+		</div> -->
 
-		<div class="setting">
+		<div class="register-setting">
 			<div class="title"> Price </div>
 			<div class="setting-value">
 				{{input value=model.price}}
@@ -35,14 +36,17 @@
     	</div>
 		</div>
 
+		<!--
+		Should be deleted.
+
 		<div class="setting">
-			<!--should be automated -->
 			<div class="title"> Agent Name</div>
 			<div class="setting-value">
 				{{input value=model.agent}}
 			</div>
-		</div>
+		</div>-->
 
+		
 		<div class="setting">
 			<div class="title"> Description </div>
 			<br>
@@ -54,8 +58,9 @@
 	      {{#if errors.description}}
 	        description {{errors.description}}
 	      {{/if}}
-	    </div>
+	    	</div>
 		</div>
+
 
   {{#each field in model.fields}}
     <div class="setting custom">
@@ -76,7 +81,7 @@
 			<span class="sub-text"> e.g. Bedrooms: 2</span>
 		</div>
 		<div class="new-att-icon">
-			<a {{action "newField"}}> <img src="img/new-property-icon.png"></a>
+			<a {{action "newField"}}> <img src="img/new-att-icon.png"></a>
 		</div>
 	</div>
 

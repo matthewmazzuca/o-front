@@ -31,17 +31,18 @@
       color: $prime;
   }
 
+}
 
-  .form-validator {
+ .form-validator {
       font-size: 0.8em;
       color: $prime;
       padding: 0 $leftBumper 0.25em;
   }
-}
 
 .save-container {
     font-size: 1.75em;
     margin: 0;
+    bottom: 0.5em;
 
     .button {
       width: 100%;
