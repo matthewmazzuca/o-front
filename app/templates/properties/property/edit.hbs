@@ -1,11 +1,11 @@
 {{view 'page-title'}}
 
-	<div class="register-settings">
-		<div class="register-setting">
+	<div class="settings">
+		<div class="setting">
 			<div class="setting-title"> Address </div>
-			<div class="setting-value">
-				{{input value=model.address}}
-			</div>
+		
+				{{input value=model.address placeholder="What's the address?"}}
+	
 
 	    <div class="form-validator">
 	      {{#if errors.address}}
@@ -23,11 +23,10 @@
 			</div>
 		</div> -->
 
-		<div class="register-setting">
-			<div class="title"> Price </div>
-			<div class="setting-value">
-				{{input value=model.price}}
-			</div>
+		<div class="setting">
+		<div class="setting-title"> Price </div>
+				{{input value=model.price placeholder="How much is it?"}}
+		
 
 			<div class="form-validator">
 	      {{#if errors.price}}
@@ -48,10 +47,10 @@
 
 		
 		<div class="setting">
-			<div class="title"> Description </div>
+			<div class="setting-title"> Description </div>
 			<br>
 			<div class="description">
-				{{textarea value=model.description maxlength="500"}}
+				{{textarea value=model.description maxlength="500" placeholder="Write a nice description about this property"}}
 			</div>
 			
 			<div class="form-validator">
