@@ -15,7 +15,7 @@ export default Ember.Route.extend({
         then(function() {
 
         let sessionSecure = session.get('content.secure');
-        let user = sessionData.user;
+        let user = sessionSecure.user;
 
         // create user record in the store
         _this.store.push('user', user);

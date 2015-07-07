@@ -31,9 +31,6 @@ export default Ember.Controller.extend(
           passwordConfirmation: ''
         });
 
-        self.set('session.isAuthenticated', true);
-        console.log(self.get('session.isAuthenticated'))
-
         // self.flash({
         //   message: "Account Registered",
         //   type: 'alert-success'

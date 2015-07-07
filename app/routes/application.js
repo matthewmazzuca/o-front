@@ -4,6 +4,13 @@ import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 export default Ember.Route.extend(
   ApplicationRouteMixin, {
 
+  simpleAuth: Ember.inject.service(),
+
+  //TODO use a better pattern when simple auth offers services
+  activate: function() {
+    this.set('simpleAuth.session', this.get('session'))
+  },
+
   actions: {
     error: function(error) {
       console.log("Unexpected error: Check Console");
