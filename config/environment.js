@@ -17,7 +17,7 @@ module.exports = function(environment) {
       // session: 'session:custom'
     },
     'simple-auth-devise': {
-      serverTokenEndpoint: 'http://localhost:3000',
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in',
     },
     // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
     modulePrefix: 'openhouse-front',
@@ -30,8 +30,6 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
-    
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -48,10 +46,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV['simple-auth-devise'].serverTokenEndpoint =
-      'http://localhost:3000/api/v1/users/sign_in';
-    }
-
+  }
 
   if (environment === 'test') {
     // Testem prefers this...

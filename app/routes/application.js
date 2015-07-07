@@ -22,7 +22,6 @@ export default Ember.Route.extend(
 
     sessionAuthenticationSucceeded: function() {
       this.transitionTo('index');
-      console.log('current user: ' + this.get('session.currentUser'))
     }
   }
 });
