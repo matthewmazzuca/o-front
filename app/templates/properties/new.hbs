@@ -1,11 +1,11 @@
 {{view 'page-title'}}
 
-	<div class="container settings property-settings">
+	<div class="settings">
 		<div class="setting">
 			<div class="setting-title"> Address </div>
-			<div class="setting-value">
-				{{input value=controller.address}}
-			</div>
+		
+				{{input value=model.address placeholder="What's the address?"}}
+	
 
 	    <div class="form-validator">
 	      {{#if errors.address}}
@@ -14,19 +14,19 @@
 	    </div>
 		</div>
 
-		<div class="setting">
-			<!--should be automated-->
+		<!-- Either show map view or delete
+
+			<div class="setting">
 			<div class="title"> Location </div>
 			<div class="setting-value">
 				MAP or Text Box?
 			</div>
-		</div>
+		</div> -->
 
 		<div class="setting">
-			<div class="title"> Price </div>
-			<div class="setting-value">
-				{{input value=controller.price}}
-			</div>
+		<div class="setting-title"> Price </div>
+				{{input value=model.price placeholder="How much is it?"}}
+		
 
 			<div class="form-validator">
 	      {{#if errors.price}}
@@ -35,19 +35,31 @@
     	</div>
 		</div>
 
+		<!--
+		Should be deleted.
+
 		<div class="setting">
-			<div class="title"> Description </div>
+			<div class="title"> Agent Name</div>
+			<div class="setting-value">
+				{{input value=model.agent}}
+			</div>
+		</div>-->
+
+		
+		<div class="setting">
+			<div class="setting-title"> Description </div>
 			<br>
 			<div class="description">
-				{{textarea value=controller.description maxlength="500"}}
+				{{textarea value=model.description maxlength="500" placeholder="Write a nice description about this property"}}
 			</div>
-
+			
 			<div class="form-validator">
 	      {{#if errors.description}}
 	        description {{errors.description}}
 	      {{/if}}
-	    </div>
+	    	</div>
 		</div>
+
 
   {{#each field in model.fields}}
     <div class="setting custom">
@@ -68,7 +80,7 @@
 			<span class="sub-text"> e.g. Bedrooms: 2</span>
 		</div>
 		<div class="new-att-icon">
-			<a {{action "newField"}}> <img src="img/new-property-icon.png"></a>
+			<a {{action "newField"}}> <img src="img/new-att-icon.png"></a>
 		</div>
 	</div>
 
@@ -86,7 +98,9 @@
 			both fields need to be filled out to be added
 	  </div>
 
+	  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
+
 	  <div class="save-container">
-	    <button class="button" {{action "save"}} {{bind-attr disabled="isInvalid"}}> Save </button>
+	    <button class="button" {{action "save"}}> Save </button>
 	  </div>
 	</div>

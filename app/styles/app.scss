@@ -53,6 +53,7 @@ button, input, textarea {
   overflow-x: hidden;
   position: relative;
   left: 0;
+  background-color: $white;
 }
 
 
@@ -91,9 +92,6 @@ button, input, textarea {
   color: $prime;
 }
 
-.container {
-  background-color: $lightestGrey;
-}
 
 .page-title {
   position: relative;

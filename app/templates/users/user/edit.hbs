@@ -1,56 +1,65 @@
 {{view 'page-title'}}
 
-<div class="container settings property-settings">
+<div class="settings">
   <div class="setting">
-    <div class="setting-title"> First Name </div>
+    <div class="title"> First Name </div>
     <div class="setting-value">
-      {{input value=model.first_name}}
+      {{input value=model.first_name placeholder="what's your first name?"}}
     </div>
   </div>
 
   <div class="setting">
-    <div class="setting-title"> Last Name </div>
+    <div class="title"> Last Name </div>
     <div class="setting-value">
-      {{input value=model.last_name}}
+      {{input value=model.last_name placeholder="what's your last name?"}}
     </div>
   </div>
 
   <div class="setting">
     <div class="title"> Email </div>
     <div class="setting-value">
-      {{input value=model.email}}
+      {{input value=model.email placeholder="what's your email address?"}}
     </div>
   </div>
 
   <div class="setting">
     <div class="title"> Brokerage </div>
     <div class="setting-value">
-      {{input value=model.brokerage}}
+      {{input value=model.brokerage placeholder="ex. Homelife"}}
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="title"> Subsidiary Brokerage </div>
+    <div class="setting-value">
+      {{input value=model.brokerage placeholder="ex. Victory"}}
     </div>
   </div>
 
   <div class="setting">
     <div class="title"> Phone Number </div>
     <div class="setting-value">
-      {{input value=model.phone}}
+      {{input value=model.phone placeholder="What's your number?"}}
     </div>
   </div>
 
-  <div class="setting-title-small">
-    Change Password
+  
+  <div class="mid-page-title">
+  Change Password
   </div>
 
   <div class="setting">
+
     <div class="title"> Current Password </div>
     <div class="setting-value">
-      {{view Ember.TextField value=old_password}}
+      {{view Ember.TextField value=old_password placeholder="•••••••••"}}
     </div>
   </div>
 
   <div class="setting">
     <div class="title"> New Password </div>
     <div class="setting-value">
-      {{view Ember.TextField value=password}}
+      {{view Ember.TextField value=password placeholder="enter your new password"}}
     </div>
   </div>
 
