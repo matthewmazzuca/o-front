@@ -29,8 +29,11 @@
     <img src="img/arigold.jpeg">
     <p class="agent-name"> {{model.user.name}} </p>
     <p class="brokerage"> {{model.user.brokerage}} </p>
-    <p class="agent-phone"> {{model.user.phone}} </p>
-
+    <p class="agent-phone"> 
+      {{#view "tel-link"}}
+        {{model.user.phone}}
+      {{/view}} 
+    </p>
     <div class="vertical-divider"></div>
 
     {{!-- <div class="openhouse-time"> Openhouse 
