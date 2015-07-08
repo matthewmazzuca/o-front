@@ -3,26 +3,13 @@ import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
 export default Ember.Route.extend(
   ApplicationRouteMixin, {
-  // currentDevice: Ember.computed('session.deviceUUID', function() {
-  //   return this.store.find('user-device', this.get('session.deviceUUID'));
-  // }),
 
-  currentUser: Ember.computed('session.userID', function() {
-    var userID = this.get('session.userID');
-    if (userID) {
-      return this.store.find('user', userID);
-    } else if (this.get('session.deviceUUID')) {
-      this.get('currentDevice').then(function() {
-        userID = this.get('session.userID');
-        return userID ? this.store.find('user', userID) : null;
-      }, function() {
-        return null;
-      });
-    } else {
-      return null;
-    }
-    console.log(currentUser);
-  }),
+  simpleAuth: Ember.inject.service(),
+
+  //TODO use a better pattern when simple auth offers services
+  activate: function() {
+    this.set('simpleAuth.session', this.get('session'))
+  },
 
   actions: {
     error: function(error) {

@@ -2,6 +2,7 @@
   {{#liquid-if controllers.application.navVisible class="nav-visible"}}
       <div class="avatar">
         <img src="img/avatar.png">
+        {{session.currentUser.email}}
       </div>
 
   <div class="property">
@@ -19,7 +20,7 @@
       <ul>
         {{#if session.isAuthenticated}}
           <li class='nav-li'>
-            {{#link-to 'users.user.edit' session.userID}}
+            {{#link-to 'users.user.edit' session.userId }}
               <img class='icon' src='/img/profile-icon.png'>Account Settings
             {{/link-to}}
           </li>
@@ -30,7 +31,7 @@
           </li>
         {{else}}
           <li class='nav-li'>
-            {{#link-to 'users.register' session.userID}}
+            {{#link-to 'users.register'}}
               <img class='icon' src='img/profile-icon.png'>Register
             {{/link-to}}
           </li>
@@ -40,6 +41,7 @@
             {{/link-to}}
           </li>
         {{/if}}
+
         <li class='nav-li'>
           {{#link-to 'properties.index'}}
             <img class='icon' src='img/properties-icon.png'>Properties
