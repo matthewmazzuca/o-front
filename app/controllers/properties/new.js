@@ -19,30 +19,17 @@ export default Ember.Controller.extend(
   },
 
   actions: {
-    // newField: function() {
-    //   var name = this.get('newFieldName');
-    //   var value = this.get('newFieldValue');
-    //   if (!name || !value) { return false; }
-
-    //   var model = this.get('model');
-    //   var self = this;
-    //   model.get('fields').addObject(this.store.createRecord('field', {
-    //     name: name,
-    //     value: value
-    //   })).then(function() {
-    //     self.set('newFieldName', '');
-    //     self.set('newFieldValue', '');
-    //   });
-    // },
 
     save: function() {
       var self = this;
       var property = this.get('model');
       var address = this.get('address');
       var price = this.get('price');
+      var location = this.get('location');
       var description = this.get('description');
       var fields = this.get('fields');
-      property.setProperties({address: address, price: price, description: description })
+      var postal_code = this.get('postal_code');
+      property.setProperties({address: address, price: price, description: description, postal_code: postal_code, location: location})
 
       property.save().then(function(property) {
         property.get('fields').then(function(fields){

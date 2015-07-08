@@ -40,7 +40,7 @@ export default DS.Model.extend({
   	return Ember.A([
   		{lat: this.get('lat'), lng: this.get('lng')}
   	])
-  }.property('lat', 'lng'),
+  }.property('lat', 'lng')
  
 });
 // .reopenClass({
