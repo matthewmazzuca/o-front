@@ -27,13 +27,15 @@
   <div class="agent-info">
     <p class="section-title"> {{model.user.email}} </p>
     <img src="img/arigold.jpeg">
-    <p class="agent-name"> Ari Gold </p>
-    <p class="brokerage"> Harvey Kalles </p>
-    <p class="agent-phone"> (416) 464-4322 </p>
+    <p class="agent-name"> {{model.user.name}} </p>
+    <p class="brokerage"> {{model.user.brokerage}} </p>
+    <p class="agent-phone"> {{model.user.phone}} </p>
 
     <div class="vertical-divider"></div>
 
-    <div class="openhouse-time"> Openhouse <br/> 12pm - 5pm </div>
+    {{!-- <div class="openhouse-time"> Openhouse 
+      <br/> 12pm - 5pm 
+    </div> --}}
   </div>
 
 
@@ -45,41 +47,31 @@
         {{partial 'properties/property/highlights/highlight/inline'}}
       {{/each}}
 
-      <div class="app-card">
-        <img src="img/comment-icon.png" class="app-icon">
-          leave a note
-      </div>
-
       <div class="app-card" {{action "toggleModal"}}>
         Open Modal
       </div>
 
       
-            {{#if isShowingModal}}
-              {{#modal-dialog close="toggleModal" translucentOverlay=true alignmentTarget='#content-target'
-              attachment='middle center'
-              targetAttachment='middle center'
-              }}
+      {{#if isShowingModal}}
+        {{#modal-dialog close="toggleModal" translucentOverlay=true alignmentTarget='#content-target'
+        attachment='middle center'
+        targetAttachment='middle center'
+        }}
 
-             
+        <div class="highlight-image">
+          <img src='img/property-profile-1.jpg'>
+        </div>
 
+        <div class="highlight-heading-modal"> 
+            Beautiful Backyard 
+        </div>
 
-             
-            <div class="highlight-image">
-              <img src='img/property-profile-1.jpg'>
-            </div>
-
-            <div class="highlight-heading-modal"> 
-                Beautiful Backyard 
-            </div>
-
-            <div class="highlight-description">
-            Your backyard is your private retreat. Screened patios extend your season outdoors and transition to patios. Plantings of hydrangeas echo the blues in the seating area and white of this Forest Hill Home. Enhance it by adding touches that make it special: a water feature, comfy seating, lovely plant beds, even just a hammock. 
-            </div>
-
-
-              {{/modal-dialog}}
-            {{/if}}
+        <div class="highlight-description">
+        Your backyard is your private retreat. Screened patios extend your season outdoors and transition to patios. Plantings of hydrangeas echo the blues in the seating area and white of this Forest Hill Home. Enhance it by adding touches that make it special: a water feature, comfy seating, lovely plant beds, even just a hammock. 
+        </div>
+      
+        {{/modal-dialog}}
+      {{/if}}
      
 
     </div>
