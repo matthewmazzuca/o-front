@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>67574FCA-D93B-4E19-8FFD-EEECF050F796</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OpenhouseFront</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D0AFCC53DF49BD70962E5948FE9CE329EFC23EC</key>
+		<string>https://github.com/gnazarkin/openhouse-front.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cordova/platforms/ios/OpenhouseFront.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D0AFCC53DF49BD70962E5948FE9CE329EFC23EC</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gnazarkin/openhouse-front.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D0AFCC53DF49BD70962E5948FE9CE329EFC23EC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D0AFCC53DF49BD70962E5948FE9CE329EFC23EC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>front</string>
+		</dict>
+	</array>
+</dict>
+</plist>
