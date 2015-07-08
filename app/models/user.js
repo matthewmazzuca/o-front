@@ -6,6 +6,7 @@ export default DS.Model.extend({
   phone: DS.attr('string'),
   email: DS.attr('string'),
   brokerage: DS.attr('string'),
+  subsidiary: DS.attr('string'),
   website: DS.attr('string'),
   device_uuid: DS.attr('string'),
   properties: DS.hasMany('property', { async: true }),
