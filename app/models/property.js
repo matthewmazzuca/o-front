@@ -11,8 +11,8 @@ export default DS.Model.extend({
   lng: DS.attr('number'),
 
   user: DS.belongsTo('user', { async: true, embedded: 'always' }),
-  fields: DS.hasMany('field', {async: true, embedded: 'always'}),
-  highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
+  fields: DS.hasMany('field', {async: true, embedded: 'always' }),
+  highlights: DS.hasMany('highlight', {async: true }),
 
   styleString: function() {
   	var imgURL = 'img/property-profile-1.jpg';
