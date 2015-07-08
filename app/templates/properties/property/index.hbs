@@ -25,11 +25,11 @@
   </div>
 
   <div class="agent-info">
-    <p class="section-title"> {{model.user.email}} </p>
+    <p class="section-title"> Agent Info </p>
     <img src="img/arigold.jpeg">
-    <p class="agent-name"> Ari Gold </p>
-    <p class="brokerage"> Harvey Kalles </p>
-    <p class="agent-phone"> (416) 464-4322 </p>
+    <p class="agent-name"> {{model.user.first_name}} {{model.user.last_name}} </p>
+    <p class="brokerage"> {{model.user.brokerage}}</p>
+    <p class="agent-phone"> {{model.user.phone}} </p>
 
     <div class="vertical-divider"></div>
 
