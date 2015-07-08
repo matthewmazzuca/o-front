@@ -35,7 +35,8 @@ export default DS.Model.extend({
              "')"].join('');
   }.property('image_url'),
 
-   marker: function() {
+  //Might be causing 'nodeType' error
+  marker: function() {
   	return Ember.A([
   		{lat: this.get('lat'), lng: this.get('lng')}
   	])
