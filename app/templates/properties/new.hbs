@@ -4,7 +4,7 @@
 		<div class="setting">
 			<div class="setting-title"> Address </div>
 		
-				{{input value=model.address placeholder="What's the address?"}}
+				{{input value=controller.address placeholder="What's the address?"}}
 	
 
 	    <div class="form-validator">
@@ -25,7 +25,7 @@
 
 		<div class="setting">
 		<div class="setting-title"> Price </div>
-				{{input value=model.price placeholder="How much is it?"}}
+				{{input value=controller.price placeholder="How much is it?"}}
 		
 
 			<div class="form-validator">
@@ -50,7 +50,7 @@
 			<div class="setting-title"> Description </div>
 			<br>
 			<div class="description">
-				{{textarea value=model.description maxlength="500" placeholder="Write a nice description about this property"}}
+				{{textarea value=controller.description maxlength="500" placeholder="Write a nice description about this property"}}
 			</div>
 			
 			<div class="form-validator">

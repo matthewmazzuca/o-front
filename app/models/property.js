@@ -5,7 +5,8 @@ export default DS.Model.extend({
   price: DS.attr('number'),
   description: DS.attr('string'),
   location: DS.attr('string'),
-  image_url: DS.attr('string'),
+  postal_code: DS.attr('string'),
+  image_url: DS.attr('string'),  
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
