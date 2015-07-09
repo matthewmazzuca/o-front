@@ -20,7 +20,6 @@
 	<div class="small-nav-spacer"></div>
 
       <ul>
-
         <li class='nav-li'>
           {{#link-to 'properties.index'}}
             <img class='icon' src='img/home3.png'> Home
@@ -56,12 +55,9 @@
             {{/link-to}}
           </li>
         {{/if}}
-
-        
      </ul>
 
    <div class="nav-spacer"> </div>
-
 
 	{{#if controller.controllers.application.activeProperty}}
 		{{partial 'nav/admin-navigation'}}
