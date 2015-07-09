@@ -82,6 +82,21 @@
   .setting-title {
     padding: 0 $leftBumper;
     font-size: 1em;
+
+    img {
+      height: 1em;
+      vertical-align: middle;
+      padding-right: 0.5em;
+      padding-bottom: 0.5em;
+
+    }
+
+    .hi-title {
+      @extend .uppercase-or-num;
+      display: inline;
+      color: $prime;
+      padding-bottom: 0.5em;
+    }
   }
 
   .setting-key {
