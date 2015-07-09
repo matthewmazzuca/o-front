@@ -1,61 +1,125 @@
 {{view 'page-title'}}
 
-	<div class="container settings property-settings">
-		<div class="setting">
-			<div class="setting-title"> Address </div>
-			<div class="setting-value">
-				{{input value=model.address}}
-			</div>
+	<div class="settings">
+	
 
-	    <div class="form-validator">
+	<!--PHOTOS-->
+		<div class="setting">
+			<div class="setting-title"> 		Photos 
+				<br/>
+				<img src="img/new-att-icon.png">
+				<div class="hi-title">
+					Add a photo
+				</div>
+			</div>
+		</div>
+
+	<!--ADDRESS-->
+		<div class="setting">
+			<div class="setting-title"> 		Address 
+			</div>
+		
+				{{input value=model.address placeholder="What's the address?"}}
+
+	    	<div class="form-validator">
 	      {{#if errors.address}}
 	        address {{errors.address}}
 	      {{/if}}
-	    </div>
+	   		</div>
 		</div>
 
+	<!--POSTAL CODE-->
 		<div class="setting">
-			<!--should be automated-->
+			<div class="setting-title"> 		Postal Code 
+			</div>
+		
+				{{input value=model.postal_code placeholder="What's the postal code?"}}
+
+	    	<div class="form-validator">
+	      {{#if errors.address}}
+	        Postal code {{errors.address}}
+	      {{/if}}
+	   		</div>
+		</div>
+
+
+	<!--NEIGHBOURHOOD/LOCATION-->
+		<div class="setting">
+			<div class="setting-title"> 
+				Neighborhood
+			</div>
+		
+				{{input value=model.location placeholder="Ex. North York"}}
+
+	    	<div class="form-validator">
+		      {{#if errors.location}}
+		        Neighbourhood {{errors.location}}
+		      {{/if}}
+	   		</div>
+		</div>
+
+
+
+		<!-- Either show map view or delete
+
+			<div class="setting">
 			<div class="title"> Location </div>
 			<div class="setting-value">
 				MAP or Text Box?
 			</div>
-		</div>
+		</div> -->
 
+	<!--PRICE-->
 		<div class="setting">
-			<div class="title"> Price </div>
-			<div class="setting-value">
-				{{input value=model.price}}
+			<div class="setting-title"> 
+				Price 
 			</div>
+				{{input value=model.price placeholder="How much is it?"}}
+		
 
 			<div class="form-validator">
-	      {{#if errors.price}}
-	        price {{errors.price}}
-	      {{/if}}
-    	</div>
+		      {{#if errors.price}}
+		        price {{errors.price}}
+		      {{/if}}
+    		</div>
 		</div>
 
+
+	<!--VIEWINGTYPE-->
 		<div class="setting">
-			<!--should be automated -->
-			<div class="title"> Agent Name</div>
-			<div class="setting-value">
-				{{input value=model.agent}}
+			<div class="setting-title"> 
+				Viewing Type
 			</div>
+				{{input value=model.price placeholder="INSERT DROPDOWN"}}
+		
+
+			<div class="form-validator">
+		      {{#if errors.price}}
+		        put a dropdown {{errors.price}}
+		      {{/if}}
+    		</div>
 		</div>
 
+
+
+	<!--DESCRIPTION-->	
 		<div class="setting">
-			<div class="title"> Description </div>
+			<div class="setting-title">	
+				Description 
+			</div>
 			<br>
+			
 			<div class="description">
-				{{textarea value=model.description maxlength="500"}}
+				{{textarea value=model.description maxlength="500" placeholder="Tell us about the property, in a few sentences."}}
 			</div>
 			
 			<div class="form-validator">
 	      {{#if errors.description}}
 	        description {{errors.description}}
 	      {{/if}}
-	    </div>
+	    	</div>
 		</div>
+
 
   {{#each field in model.fields}}
     <div class="setting custom">
@@ -76,7 +140,7 @@
 			<span class="sub-text"> e.g. Bedrooms: 2</span>
 		</div>
 		<div class="new-att-icon">
-			<a {{action "newField"}}> <img src="img/new-property-icon.png"></a>
+			<a {{action "newField"}}> <img src="img/new-att-icon.png"></a>
 		</div>
 	</div>
 
@@ -91,12 +155,35 @@
   </div>
 
   	<div class="form-validator">
-			both fields need to be filled out to be added
+		both fields need to be filled out to be added
 	  </div>
 
 	  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
 
-	  <div class="save-container">
-	    <button class="button" {{action "save"}}> Save </button>
-	  </div>
+
+ <div class="mid-page-title">
+  Edit Highlights
+  </div>
+
+	<div class="setting">
+		<div class="setting-title"> 		
+			<img src="img/new-att-icon.png">
+			<div class="hi-title">
+				Add a highlight
+			</div>
+		</div>
 	</div>
+
+	<div class="setting">
+		<div class="setting-title"> 		
+			<img src="img/edit-icon.png">
+			<div class="hi-title">
+				SEX SWING
+			</div>
+		</div>
+	</div>
+
+	<div class="save-container">
+		<button class="button" {{action "save"}}> Save </button>
+	</div>
+</div>

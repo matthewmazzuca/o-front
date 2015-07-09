@@ -1,29 +1,39 @@
-
-
 {{view 'page-title'}}
-
 
 <div class="container list-page index">
 	<div class="search-bar">
     <img src='img/search-icon.png'>
-    {{input placeholder='Whatcha lookin for?'}}	
+    {{input placeholder='Search an address or something'}}	
 	</div>
 {{#each property in model}}
 
-{{#link-to 'properties.property.index' property.id}} <!-- make clickable once component -->
+{{#link-to 'properties.property.index' property.id}} 
+<!-- make clickable once component -->
 
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
-    <div class='listing-main'>
-      <span class='name'>{{property.address}}</span>
-
-        <div class="property-subheading">
-           <!-- <span>Toronto, On</span> reinsert if launched in multiple cities-->
-           <span> 15 km away</span>
+  
+    {{#if session.isAuthenticated}}
+      {{#if (eq session.currentUser.id property.user.id)}}
+        <div class="edit-button">
+          {{#link-to 'properties.property.edit' property}}
+            Edit Property
+          {{/link-to}}
         </div>
+      {{/if}}
+    {{/if}}
 
+    <div class='listing-main'>
+      <span class='name'>
+        {{property.address}}
+      </span>
+
+      <div class="property-subheading">
+           <!-- <span>Toronto, On</span> reinsert if launched in multiple cities-->
+           <span> 
+            {{property.location}}
+           </span>
+      </div>
 		</div>
-
-
 
     <div class='listing-footer'>
       <div class="right-listing wait-list">
@@ -44,10 +54,7 @@
 {{#if session.isAuthenticated}}
   <div class="new-property">
   	{{#link-to 'properties.new'}}
-  		ADD NEW PROPERTY
-  		<div class="new-property-button">
-  			<img src="img/new-property-icon.png">
-  		</div>
+  		ADD A PROPERTY
   	{{/link-to}}
   </div>
 {{/if}}

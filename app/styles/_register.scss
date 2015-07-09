@@ -1,0 +1,55 @@
+.websitelogo {
+  background-color: $white;
+  display: block;
+  text-align: center;
+
+  img {
+    height: 15vh;
+    padding-top: 7vh;
+  }
+}
+
+.register-settings {
+  background-color: $white;
+  padding: 7vh $leftBumper;
+}
+
+.register-setting {
+  padding: 1em $leftBumper 0;
+  font-size: 1.5em;
+  border-bottom: 1px solid $lightGrey;
+  position: relative;
+  line-height: 1em;
+  min-height: 2em;
+  color: $grey;
+
+
+  input {
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      color: $prime;
+  }
+
+}
+
+ .form-validator {
+      font-size: 0.8em;
+      color: $prime;
+      padding: 0 $leftBumper 0.25em;
+  }
+
+.save-container {
+    font-size: 1.75em;
+    margin: 0;
+    bottom: 0.5em;
+
+    .button {
+      width: 100%;
+      padding: 0;
+      position: relative;
+      display: block;
+      height: 50px;
+    }
+
+}

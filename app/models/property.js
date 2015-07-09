@@ -5,14 +5,15 @@ export default DS.Model.extend({
   price: DS.attr('number'),
   description: DS.attr('string'),
   location: DS.attr('string'),
-  image_url: DS.attr('string'),
+  postal_code: DS.attr('string'),
+  image_url: DS.attr('string'),  
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
 
   user: DS.belongsTo('user', { async: true, embedded: 'always' }),
-  fields: DS.hasMany('field', {async: true, embedded: 'always'}),
-  highlights: DS.hasMany('highlight', {async: true, embedded: 'always'}),
+  fields: DS.hasMany('field', {async: true, embedded: 'always' }),
+  highlights: DS.hasMany('highlight', {async: true }),
 
   styleString: function() {
   	var imgURL = 'img/property-profile-1.jpg';
@@ -34,11 +35,20 @@ export default DS.Model.extend({
              "')"].join('');
   }.property('image_url'),
 
-   marker: function() {
+  centerLat: function() {
+    return this.get('lat');
+  }.property('lat'),
+
+  centerLng: function() {
+    return this.get('lng');
+  }.property('lng'),
+
+  //Might be causing 'nodeType' error
+  marker: function() {
   	return Ember.A([
   		{lat: this.get('lat'), lng: this.get('lng')}
   	])
-  }.property('lat', 'lng'),
+  }.property('lat', 'lng')
  
 });
 // .reopenClass({

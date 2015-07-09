@@ -1,11 +1,13 @@
-<div class="container settings property-settings">
-  <div class="setting">
-    <div class="title"> Email </div>
-    <div class="setting-value">
+<div class="websitelogo">
+  <img src="img/websitelogo.png">
+</div>
+
+<div class="register-settings">
+  <div class="register-setting">
       {{input
         value=identification
         placeholder="Email"}}
-    </div>
+    
 
     <div class="form-validator">
       {{#if errors.identification}}
@@ -14,13 +16,10 @@
     </div>
   </div>
 
-  <div class="setting">
-    <div class="title"> Password </div>
-    <div class="setting-value">
+  <div class="register-setting">
       {{input
         value=password type="password"
         placeholder="Password"}}
-    </div>
 
 
     <div class="form-validator">

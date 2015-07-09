@@ -1,9 +1,10 @@
 {{#if controllers.application.navVisible}}
   {{#liquid-if controllers.application.navVisible class="nav-visible"}}
       <div class="avatar">
-        {{currentUser.email}}
-        <img src="img/avatar.png">
-        {{currentUser.email}}
+        <img src="img/websitelogo.png">
+        <br/>
+        Hi {{session.currentUser.first_name}}!
+
       </div>
 
   <div class="property">
@@ -19,39 +20,44 @@
 	<div class="small-nav-spacer"></div>
 
       <ul>
+        <li class='nav-li'>
+          {{#link-to 'properties.index'}}
+            <img class='icon' src='img/home3.png'> Home
+          {{/link-to}}
+        </li>
+
         {{#if session.isAuthenticated}}
           <li class='nav-li'>
-            {{#link-to 'users.user.edit' session.content.secure.userId }}
-              <img class='icon' src='/img/profile-icon.png'>Account Settings
+            {{#link-to 'properties.new'}}
+              {{!-- Icon needs to be replaced --}}
+              <img class='icon' src='/img/signout.png'> New Property
+            {{/link-to}}
+          </li>
+          <li class='nav-li'>
+            {{#link-to 'users.user.edit' session.userId }}
+              <img class='icon' src='/img/user.png'> Account Settings
             {{/link-to}}
           </li>
           <li class='nav-li'>
             {{#link-to 'users.logout'}}
-              <img class='icon' src='/img/profile-icon.png'>Sign Out
+              <img class='icon' src='/img/signout.png'> Sign Out
             {{/link-to}}
           </li>
         {{else}}
           <li class='nav-li'>
             {{#link-to 'users.register'}}
-              <img class='icon' src='img/profile-icon.png'>Register
+              <img class='icon' src='img/register2.png'> Register
             {{/link-to}}
           </li>
           <li class='nav-li'>
             {{#link-to 'users.login'}}
-              <img class='icon' src='img/profile-icon.png'>Sign In
+              <img class='icon' src='img/user.png'> Sign In
             {{/link-to}}
           </li>
         {{/if}}
-
-        <li class='nav-li'>
-          {{#link-to 'properties.index'}}
-            <img class='icon' src='img/properties-icon.png'>Properties
-          {{/link-to}}
-        </li>
      </ul>
 
    <div class="nav-spacer"> </div>
-
 
 	{{#if controller.controllers.application.activeProperty}}
 		{{partial 'nav/admin-navigation'}}

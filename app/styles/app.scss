@@ -5,7 +5,7 @@
 
 html, body {
   margin: 0px;
-  background-color: $prime;
+  background-color: $white;
   font-size: 12px;
   font-color: inherit;
   font-family: "Brandon Grotesque";
@@ -37,7 +37,6 @@ textarea {
   color: $lightBlue;
   padding: 0.25em 0.5em;
   height: 1.5em;
-  width: 125px;
   @include border-radius(0);
 }
 
@@ -53,6 +52,7 @@ button, input, textarea {
   overflow-x: hidden;
   position: relative;
   left: 0;
+  background-color: $white;
 }
 
 
@@ -91,9 +91,6 @@ button, input, textarea {
   color: $prime;
 }
 
-.container {
-  background-color: $lightestGrey;
-}
 
 .page-title {
   position: relative;
@@ -171,7 +168,7 @@ button, input, textarea {
 
 .form-validator {
   font-size: 0.8em;
-  color: $subGrey;
+  color: $prime;
 }
 
 
@@ -249,3 +246,4 @@ button, input, textarea {
 @import 'nav';
 @import 'menu';
 @import 'flashes';
+@import 'register';
