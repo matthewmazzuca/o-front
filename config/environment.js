@@ -22,7 +22,7 @@ module.exports = function(environment) {
     modulePrefix: 'openhouse-front',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    defaultLocationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -33,6 +33,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    cordova: {
+      rebuildOnChange: false,
+      emulate: false
     }
   };
 
