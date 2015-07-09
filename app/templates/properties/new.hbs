@@ -1,18 +1,52 @@
 {{view 'page-title'}}
 
 	<div class="settings">
-		<div class="setting">
-			<div class="setting-title"> Address </div>
-		
-				{{input value=controller.address placeholder="What's the address?"}}
-	
 
-	    <div class="form-validator">
+	<!--ADDRESS-->
+		<div class="setting">
+			<div class="setting-title"> 		Address 
+			</div>
+		
+				{{input value=model.address placeholder="What's the address?"}}
+
+	    	<div class="form-validator">
 	      {{#if errors.address}}
 	        address {{errors.address}}
 	      {{/if}}
-	    </div>
+	   		</div>
 		</div>
+
+	<!--POSTAL CODE-->
+		<div class="setting">
+			<div class="setting-title"> 		Postal Code 
+			</div>
+		
+				{{input value=model.postal_code placeholder="What's the postal code?"}}
+
+	    	<div class="form-validator">
+	      {{#if errors.address}}
+	        Postal code {{errors.address}}
+	      {{/if}}
+	   		</div>
+		</div>
+
+
+	<!--NEIGHBOURHOOD/LOCATION-->
+		<div class="setting">
+			<div class="setting-title"> 
+				Neighborhood
+			</div>
+		
+				{{input value=model.location placeholder="Ex. North York"}}
+
+	    	<div class="form-validator">
+		      {{#if errors.location}}
+		        Neighbourhood {{errors.location}}
+		      {{/if}}
+	   		</div>
+		</div>
+
+
 
 		<!-- Either show map view or delete
 
@@ -23,34 +57,32 @@
 			</div>
 		</div> -->
 
+	<!--PRICE-->
 		<div class="setting">
-		<div class="setting-title"> Price </div>
-				{{input value=controller.price placeholder="How much is it?"}}
+			<div class="setting-title"> 
+				Price 
+			</div>
+				{{input value=model.price placeholder="How much is it?"}}
 		
 
 			<div class="form-validator">
-	      {{#if errors.price}}
-	        price {{errors.price}}
-	      {{/if}}
-    	</div>
+		      {{#if errors.price}}
+		        price {{errors.price}}
+		      {{/if}}
+    		</div>
 		</div>
 
-		<!--
-		Should be deleted.
 
+
+	<!--DESCRIPTION-->	
 		<div class="setting">
-			<div class="title"> Agent Name</div>
-			<div class="setting-value">
-				{{input value=model.agent}}
+			<div class="setting-title">	
+				Description 
 			</div>
-		</div>-->
-
-		
-		<div class="setting">
-			<div class="setting-title"> Description </div>
 			<br>
+			
 			<div class="description">
-				{{textarea value=controller.description maxlength="500" placeholder="Write a nice description about this property"}}
+				{{textarea value=model.description maxlength="500" placeholder="Tell us about the property, in a few sentences."}}
 			</div>
 			
 			<div class="form-validator">

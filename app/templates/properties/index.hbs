@@ -6,7 +6,7 @@
 <div class="container list-page index">
 	<div class="search-bar">
     <img src='img/search-icon.png'>
-    {{input placeholder='Whatcha lookin for?'}}	
+    {{input placeholder='Search an address or something'}}	
 	</div>
 {{#each property in model}}
 
@@ -42,12 +42,10 @@
 </div>
 
 {{#if session.isAuthenticated}}
+
   <div class="new-property">
   	{{#link-to 'properties.new'}}
-  		ADD NEW PROPERTY
-  		<div class="new-property-button">
-  			<img src="img/new-property-icon.png">
-  		</div>
+  		ADD A PROPERTY
   	{{/link-to}}
   </div>
 {{/if}}
