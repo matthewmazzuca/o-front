@@ -35,6 +35,14 @@ export default DS.Model.extend({
              "')"].join('');
   }.property('image_url'),
 
+  centerLat: function() {
+    return this.get('lat');
+  }.property('lat'),
+
+  centerLng: function() {
+    return this.get('lng');
+  }.property('lng'),
+
   //Might be causing 'nodeType' error
   marker: function() {
   	return Ember.A([
