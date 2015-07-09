@@ -10,12 +10,18 @@ export default Ember.Controller.extend(
 
   needs: ["application"],
 
+  pageTitle: 'Edit Property',
+
   address: null,
+  postal_code: null,
+  location: null,
   price: null,
   description: null,
 
   validations: {
     address: { presence: true },
+    postal_code: { presence: true },
+    location: { presence: true },
     price: { presence: true },
     description: { presence: true }
   },
