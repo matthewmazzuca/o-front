@@ -3,6 +3,17 @@
 	<div class="settings">
 	
 
+	<!--PHOTOS-->
+		<div class="setting">
+			<div class="setting-title"> 		Photos 
+				<br/>
+				<img src="img/new-att-icon.png">
+				<div class="hi-title">
+					Add a photo
+				</div>
+			</div>
+		</div>
+
 	<!--ADDRESS-->
 		<div class="setting">
 			<div class="setting-title"> 		Address 
@@ -74,6 +85,22 @@
 		</div>
 
 
+	<!--VIEWINGTYPE-->
+		<div class="setting">
+			<div class="setting-title"> 
+				Viewing Type
+			</div>
+				{{input value=model.price placeholder="INSERT DROPDOWN"}}
+		
+
+			<div class="form-validator">
+		      {{#if errors.price}}
+		        put a dropdown {{errors.price}}
+		      {{/if}}
+    		</div>
+		</div>
+
+
 
 	<!--DESCRIPTION-->	
 		<div class="setting">
@@ -128,12 +155,35 @@
   </div>
 
   	<div class="form-validator">
-			both fields need to be filled out to be added
+		both fields need to be filled out to be added
 	  </div>
 
 	  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
 
-	  <div class="save-container">
-	    <button class="button" {{action "save"}}> Save </button>
-	  </div>
+
+ <div class="mid-page-title">
+  Edit Highlights
+  </div>
+
+	<div class="setting">
+		<div class="setting-title"> 		
+			<img src="img/new-att-icon.png">
+			<div class="hi-title">
+				Add a highlight
+			</div>
+		</div>
 	</div>
+
+	<div class="setting">
+		<div class="setting-title"> 		
+			<img src="img/edit-icon.png">
+			<div class="hi-title">
+				SEX SWING
+			</div>
+		</div>
+	</div>
+
+	<div class="save-container">
+		<button class="button" {{action "save"}}> Save </button>
+	</div>
+</div>

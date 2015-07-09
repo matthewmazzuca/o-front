@@ -13,17 +13,25 @@
 {{#link-to 'properties.property.index' property.id}} <!-- make clickable once component -->
 
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
+  
+   <div class="edit-button">
+      {{#link-to 'properties.property.edit' property}}
+        Edit Property
+      {{/link-to}}
+    </div>
+
     <div class='listing-main'>
-      <span class='name'>{{property.address}}</span>
+      <span class='name'>
+        {{property.address}}
+      </span>
 
-        <div class="property-subheading">
+      <div class="property-subheading">
            <!-- <span>Toronto, On</span> reinsert if launched in multiple cities-->
-           <span> 15 km away</span>
-        </div>
-
+           <span> 
+            {{property.location}}
+           </span>
+      </div>
 		</div>
-
-
 
     <div class='listing-footer'>
       <div class="right-listing wait-list">
@@ -34,12 +42,14 @@
 			</div>
 		</div>
 
+
 <hr class="divider"/>
 
   </div>
   {{/link-to}}
 	{{/each}}
 </div>
+
 
 {{#if session.isAuthenticated}}
 
