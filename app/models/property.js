@@ -16,22 +16,21 @@ export default DS.Model.extend({
   highlights: DS.hasMany('highlight', {async: true }),
 
   styleString: function() {
-  	var imgURL = 'img/property-profile-1.jpg';
+  	var imgURL = this.get('image_url');
 
   	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
   	var urlStr = 'url(' + imgURL + ')';
 
   	var style = [overlayStr, urlStr].join(',');
   	return 'background: ' + style + ';';
-  }.property('photoURL'),
+  }.property('image_url'),
 
   calculatedDistance: function() {
   	return '500m';
   }.property('lat', 'lng'),
 
   style: function() {
-  	return [ "background-image:url('",
-             'img/property-profile-1.jpg',
+  	return [ "background-image:url('",this.get('image_url'),
              "')"].join('');
   }.property('image_url'),
 
