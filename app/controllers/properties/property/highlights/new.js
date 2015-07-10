@@ -7,7 +7,7 @@ export default Ember.Controller.extend(
   EmberValidations.Mixin, {
 
   needs: ["application"],
-  pageTitle: 'New Property',
+  pageTitle: 'New Highlight',
 
   validations: {
   },
