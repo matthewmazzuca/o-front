@@ -1,6 +1,5 @@
 
-
-
+{{view 'page-title'}}
 
 <div class="container list-page index">
 	<div class="search-bar">
@@ -9,15 +8,20 @@
 	</div>
 {{#each property in model}}
 
-{{#link-to 'properties.property.index' property.id}} <!-- make clickable once component -->
+{{#link-to 'properties.property.index' property.id}} 
+<!-- make clickable once component -->
 
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
   
-   <div class="edit-button">
-      {{#link-to 'properties.property.edit' property}}
-        Edit Property
-      {{/link-to}}
-    </div>
+    {{#if session.isAuthenticated}}
+      {{#if (eq session.currentUser.id property.user.id)}}
+        <div class="edit-button">
+          {{#link-to 'properties.property.edit' property}}
+            Edit Property
+          {{/link-to}}
+        </div>
+      {{/if}}
+    {{/if}}
 
     <div class='listing-main'>
       <span class='name'>
@@ -41,7 +45,6 @@
 			</div>
 		</div>
 
-
 <hr class="divider"/>
 
   </div>
@@ -49,9 +52,7 @@
 	{{/each}}
 </div>
 
-
 {{#if session.isAuthenticated}}
-
   <div class="new-property">
   	{{#link-to 'properties.new'}}
   		ADD A PROPERTY

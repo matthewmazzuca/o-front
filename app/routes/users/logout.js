@@ -5,6 +5,8 @@ export default Ember.Route.extend(
   AuthenticatedRouteMixin, {
 
   activate: function() {
-    this.session.invalidate();
+    this.session.invalidate().then(function(){
+    	this.transitionTo('properties.index');
+    });
   }
 });
