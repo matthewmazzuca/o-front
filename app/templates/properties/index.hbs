@@ -12,15 +12,15 @@
 
   <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
   
-    {{#if session.isAuthenticated}}
-      {{#if (eq session.currentUser.id property.user.id)}}
-        <div class="edit-button">
-          {{#link-to 'properties.property.edit' property}}
+    {{#link-to 'properties.property.edit' property}}
+      {{#if session.isAuthenticated}}
+        {{#if (eq session.currentUser.id property.user.id)}}
+          <div class="edit-button">
             Edit Property
-          {{/link-to}}
-        </div>
+          </div>
+        {{/if}}
       {{/if}}
-    {{/if}}
+    {{/link-to}}
 
     <div class='listing-main'>
       <span class='name'>
