@@ -1,1 +1,39 @@
-Please style me Joey
+{{view 'page-title'}}
+
+	<div class="settings">
+
+	{{file-picker model=model}}
+
+	<!--Name-->
+		<div class="setting">
+			<div class="setting-title"> 		Name 
+			</div>
+		
+				{{input value=controller.name placeholder="What's the name?"}}
+
+	    	<div class="form-validator">
+	      {{#if errors.name}}
+	        name {{errors.name}}
+	      {{/if}}
+	   		</div>
+		</div>
+
+	<!-- Sub Heading-->
+		<div class="setting">
+			<div class="setting-title"> 		Sub Heading 
+			</div>
+		
+				{{input value=controller.sub_heading placeholder="What's the subheading?"}}
+
+	    	<div class="form-validator">
+	      {{#if errors.sub_heading}}
+	        Postal code {{errors.sub_heading}}
+	      {{/if}}
+	   		</div>
+		</div>
+
+
+	  <div class="save-container">
+	    <button class="button" {{action "save"}}> Save </button>
+	  </div>
+	</div>
