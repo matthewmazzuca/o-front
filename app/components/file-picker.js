@@ -6,9 +6,10 @@ export default Ember.Component.extend({
 	openPicker: null,
 
 	pickerOptions: {
+    imageMin: [600, 600],
     mimetypes: 'image/*',
     container: 'window',
-    services: ['COMPUTER', 'IMAGE_SEARCH', 'WEBCAM', 'FACEBOOK', 'GMAIL', 'BOX', 'DROPBOX', 'FLICKR', 'PICASA', 'INSTAGRAM']
+    services: ['COMPUTER', 'IMAGE_SEARCH', 'WEBCAM', 'FACEBOOK', 'GMAIL', 'BOX', 'DROPBOX', 'FLICKR', 'PICASA', 'INSTAGRAM'],
   },
 
 	actions: {
@@ -18,8 +19,9 @@ export default Ember.Component.extend({
 
     fileSelected: function(InkBlob){
       var model = this.get('model');
-
+      console.log(InkBlob)
       this.set('model.image_url', InkBlob.url)
+      console.log(this.get('model.image_url'))
     },
 
     onClose: function () {
