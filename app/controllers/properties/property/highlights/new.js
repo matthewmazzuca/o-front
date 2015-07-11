@@ -20,6 +20,8 @@ export default Ember.Controller.extend(
       var name = this.get('name');
       var options = this.get('options');
       var sub_heading = this.get('sub_heading');
+      var property = this.get('model.property');
+      highlight.set('property', property)
 
       highlight.setProperties({name: name, sub_heading: sub_heading })
 

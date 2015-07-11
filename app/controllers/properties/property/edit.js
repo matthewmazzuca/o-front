@@ -30,7 +30,15 @@ export default Ember.Controller.extend(
     save: function() {
       var model = this.get('model');
       var self = this;
-      model.save().then(function() {
+      var fields = this.get('fields');
+
+      model.save().then(function(model) {
+        model.get('fields').then(function(fields) {
+          fields.forEach(function(field){
+            field.save();
+          })
+        });
+        
         self.flash({
           message: "Property Saved",
           type: 'alert-success'
