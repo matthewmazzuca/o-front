@@ -16,15 +16,19 @@ export default Ember.Controller.extend(
 
     save: function() {
       var self = this;
-      var highlight = this.get('model');
+      var highlight = this.store.createRecord('highlight');
       var name = this.get('name');
       var options = this.get('options');
       var sub_heading = this.get('sub_heading');
-      var property = this.get('model.property');
-      highlight.set('property', property)
+
+      var property = highlight.get('property')
+      var propertyID = highlight.get('property.id')
+      console.log(propertyI)
+      console.log(property)
 
       highlight.setProperties({name: name, sub_heading: sub_heading })
 
+      property.
       highlight.save().then(function(highlight) {
         highlight.get('options').then(function(options){
           options.forEach(function(option){
@@ -37,7 +41,6 @@ export default Ember.Controller.extend(
           type: "alert-success"
         });
 
-        self.transitionTo('properties.property.index', property.id);
       }, function() {
         self.flash({
           message: "Error creating account",
