@@ -28,7 +28,7 @@ export default Ember.Controller.extend(
       var location = this.get('location');
       var description = this.get('description');
       var postal_code = this.get('postal_code');
-      property.setProperties({address: address, price: price, description: description, postal_code: postal_code, location: location})
+      property.setProperties({address: address, price: price, description: description, postal_code: postal_code, location: location});
 
       property.save().then(function(property) {
         property.get('fields').then(function(fields){

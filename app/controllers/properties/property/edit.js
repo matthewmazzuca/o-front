@@ -30,13 +30,12 @@ export default Ember.Controller.extend(
     save: function() {
       var model = this.get('model');
       var self = this;
-      var fields = this.get('fields');
 
       model.save().then(function(model) {
         model.get('fields').then(function(fields) {
           fields.forEach(function(field){
             field.save();
-          })
+          });
         });
         
         self.flash({
@@ -61,8 +60,8 @@ export default Ember.Controller.extend(
       model.get('highlights').addObject(highlight).then(function() {
         highlight.save().then(function(highlight) {
           self.transitionToRoute('properties.property.highlights.highlight.edit', highlight);  
-        })
-      })
+        });
+      });
     }
   },
 });

@@ -20,23 +20,20 @@ export default Ember.Controller.extend(
       model.get('options').addObject(option).then(function() {
       	option.save().then(function(option) {
       		self.set('newOptionName', '');
-      		self.transitionToRoute('properties.property.highlights.highlight.options.option.edit', option)
-      	})     
+      		self.transitionToRoute('properties.property.highlights.highlight.options.option.edit', option);
+      	});
       });
     },
 
 		save: function() {
 			var model = this.get('model');
-			var name = this.get('name');
-      var options = this.get('options');
-      var sub_heading = this.get('sub_heading');
 			var self = this;
-			model.save().then(function(highlight) {
+
+			model.save().then(function() {
 				self.flash({
           message: "Highlight Saved",
           type: 'alert-success'
         });
-				console.log(highlight.id)
 			});
 			}, function() {
 				alert('save error');

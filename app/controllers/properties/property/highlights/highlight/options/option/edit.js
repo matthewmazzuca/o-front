@@ -22,7 +22,7 @@ export default Ember.Controller.extend(
 			self.flash({
 				message: "Sorry, there was an error saving your option",
 				type: 'alert-error'
-			})
+			});
 		}
 	}
 });

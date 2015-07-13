@@ -5,13 +5,13 @@ export default Ember.Mixin.create({
 
 	  flash: function(message) {
 	    this.set('flashMessage', message);
-	    console.log('flash success')
+	    console.log('flash success');
 	  },
 
 	  actions: {
 		  closeFlash: function() {
 		    this.set('flashMessage', null);
-		    console.log('flash closed')
+		    console.log('flash closed');
 		  },
 		}
 });
