@@ -7,8 +7,11 @@ export default Ember.Mixin.create({
 	    this.set('flashMessage', message);
 	    console.log('flash success')
 	  },
-	  closeFlash: function() {
-	    this.set('flashMessage', null);
-	    console.log('flash failure')
-	  },
+
+	  actions: {
+		  closeFlash: function() {
+		    this.set('flashMessage', null);
+		    console.log('flash closed')
+		  },
+		}
 });
