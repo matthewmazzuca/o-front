@@ -26,7 +26,6 @@
     "ember-cli-babel": "^5.0.0",
     "ember-cli-cordova": "isleofcode/ember-cli-cordova#develop",
     "ember-cli-dependency-checker": "0.0.8",
-    "ember-cli-estimote": "git+ssh://git@github.com:isleofcode/ember-cli-estimote.git#develop",
     "ember-cli-filepicker": "0.1.8",
     "ember-cli-htmlbars": "0.7.4",
     "ember-cli-ic-ajax": "0.1.1",

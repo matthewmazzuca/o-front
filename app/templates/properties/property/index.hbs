@@ -1,8 +1,17 @@
 
-  <div class="property-profile" style={{model.styleString}}>
-
+  <div class="property-profile" style={{model.style}}>
     <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
     
+        {{#if session.isAuthenticated}}
+        {{#if (eq session.currentUser.id model.user.id)}}
+          {{#link-to 'properties.property.edit' property}}
+          <div class="edit-button">
+            Edit Property
+          </div>
+        {{/link-to}}
+        {{/if}}
+      {{/if}}
+
     <div class="property-hero-title">
       <span>
         {{#link-to 'properties.property.index' model.id classNames="name"}}{{model.address}}{{/link-to}}
