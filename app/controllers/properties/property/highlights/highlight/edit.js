@@ -21,19 +21,23 @@ export default Ember.Controller.extend(
     },
 		save: function() {
 			var model = this.get('model');
+			var name = this.get('name');
+      var options = this.get('options');
+      var sub_heading = this.get('sub_heading');
 			var self = this;
 			model.save().then(function() {
 				self.flash({
-          message: "Highlight saved",
-          type: 'alert-success',
+          message: "Highlight Saved",
+          type: 'alert-success'
         });
+			});
+			self.transitionTo('properties.property.highlights.highlight.edit', model.id)
 			}, function() {
 				alert('save error');
 				self.flash({
 					message: "Sorry, there was an error saving your highlight",
 					type: "alert-error"
 				});
-			});
 		}
 	}
 });

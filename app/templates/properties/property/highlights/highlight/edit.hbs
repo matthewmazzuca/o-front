@@ -1,20 +1,38 @@
 {{view 'page-title'}}
 {{partial 'partials/flash'}}
 
-<div class="container settings property-settings">
-  <div class="setting">
-    <div class="setting-title"> Heading </div>
-    <div class="setting-value">
-      {{input value=model.name}}
-    </div>
-  </div>
 
-  <div class="setting">
-    <div class="setting-title"> Subheading </div>
-    <div class="setting-value">
-      {{input value=model.sub_heading}} 
+  <div class="settings">
+
+  {{file-picker model=model}}
+
+  <!--Name-->
+    <div class="setting">
+      <div class="setting-title">     Name 
+      </div>
+    
+        {{input value=model.name placeholder="What's the name?"}}
+
+        <div class="form-validator">
+        {{#if errors.name}}
+          name {{errors.name}}
+        {{/if}}
+        </div>
     </div>
-  </div>
+
+  <!-- Sub Heading-->
+    <div class="setting">
+      <div class="setting-title">     Sub Heading 
+      </div>
+    
+        {{input value=model.sub_heading placeholder="What's the subheading?"}}
+
+        <div class="form-validator">
+        {{#if errors.sub_heading}}
+          Postal code {{errors.sub_heading}}
+        {{/if}}
+        </div>
+    </div>
   
   
   {{#each option in model.options}}

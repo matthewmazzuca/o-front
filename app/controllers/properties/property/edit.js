@@ -51,6 +51,16 @@ export default Ember.Controller.extend(
           type: 'alert-failure'
         });
       });
+    },
+
+    addHighlight: function() {
+      var self = this;
+      var model = this.get('model');
+      var highlight = this.store.createRecord('highlight');
+
+      model.get('highlights').addObject(highlight).then(function() {
+        self.transitionTo('properties.property.highlights.highlight.edit', highlight);  
+      })
     }
   },
 });

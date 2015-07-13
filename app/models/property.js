@@ -13,7 +13,7 @@ export default DS.Model.extend({
 
   user: DS.belongsTo('user', { async: true, embedded: 'always' }),
   fields: DS.hasMany('field', {async: true, embedded: 'always' }),
-  highlights: DS.hasMany('highlight' ),
+  highlights: DS.hasMany('highlight', { async: true } ),
 
   styleString: function() {
   	var imgURL = this.get('image_url');
