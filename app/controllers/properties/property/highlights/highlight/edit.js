@@ -13,12 +13,17 @@ export default Ember.Controller.extend(
 
       var model = this.get('model');
       var self = this;
-      model.get('options').addObject(this.store.createRecord('option', {
-        name: name
-      })).then(function() {
+      var option = this.store.createRecord('option', {
+      	name: name
+      });
+
+      model.get('options').addObject(option).then(function(option) {
+      	console.log(option);
+      	option.save();
         self.set('newOptionName', '');
       });
     },
+
 		save: function() {
 			var model = this.get('model');
 			var name = this.get('name');
@@ -31,8 +36,6 @@ export default Ember.Controller.extend(
           type: 'alert-success'
         });
 				console.log(highlight.id)
-				console.log(highlight)
-        self.transitionTo('properties.property.edit')
 			});
 			}, function() {
 				alert('save error');
