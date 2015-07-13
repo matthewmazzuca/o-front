@@ -2,13 +2,15 @@
 
 module.exports = function(environment) {
   var ENV = {
+    modulePrefix: 'openhouse-front',
+    filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz',
     contentSecurityPolicy: {
       'default-src': "'none'",
-      // 'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com http://api.filepicker.io/v1/filepicker.js",
-      'connect-src': "'self'",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline'",
-      // 'frame-src': "dialog.filepicker.io www.filepicker.io",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' 'maps.gstatic.com' ",
+      'connect-src': "'self' https://www.filepicker.io/ ",
+      'img-src': "'self'  ",
+      'style-src': "'self' 'unsafe-inline'  ",
+      'frame-src': " ",
       'report-uri': "'self'",
     },
     'simple-auth': {
@@ -18,8 +20,6 @@ module.exports = function(environment) {
     'simple-auth-devise': {
       serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in',
     },
-    // filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz'
-    modulePrefix: 'openhouse-front',
     environment: environment,
     baseURL: '/',
     defaultLocationType: 'auto',

@@ -4,15 +4,7 @@
 	
 
 	<!--PHOTOS-->
-		<div class="setting">
-			<div class="setting-title"> 		Photos 
-				<br/>
-				<img src="img/new-att-icon.png">
-				<div class="hi-title">
-					Add a photo
-				</div>
-			</div>
-		</div>
+	{{file-picker model=model}}
 
 	<!--ADDRESS-->
 		<div class="setting">
@@ -158,21 +150,19 @@
 		both fields need to be filled out to be added
 	  </div>
 
-	  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
-
 
  <div class="mid-page-title">
   Edit Highlights
   </div>
 
-	<div class="setting">
-		<div class="setting-title"> 		
-			<img src="img/new-att-icon.png">
-			<div class="hi-title">
-				Add a highlight
+		<div class="setting">
+			<div class="setting-title" {{action 'addHighlight'}}> 		
+				<img src="img/new-att-icon.png">
+				<div class="hi-title">
+					Add a highlight
+				</div>
 			</div>
 		</div>
-	</div>
 
 	<div class="setting">
 		<div class="setting-title"> 		

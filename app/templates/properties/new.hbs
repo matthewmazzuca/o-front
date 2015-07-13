@@ -2,6 +2,8 @@
 
 	<div class="settings">
 
+	{{file-picker model=model}}
+
 	<!--ADDRESS-->
 		<div class="setting">
 			<div class="setting-title"> 		Address 
@@ -129,8 +131,6 @@
   	<div class="form-validator">
 			both fields need to be filled out to be added
 	  </div>
-
-	  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
 
 	  <div class="save-container">
 	    <button class="button" {{action "save"}}> Save </button>

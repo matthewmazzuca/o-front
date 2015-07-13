@@ -22,7 +22,7 @@ export default Ember.Controller.extend(
 
     save: function() {
       var self = this;
-      var property = this.get('model');
+      var property = this.store.createRecord('property');
       var address = this.get('address');
       var price = this.get('price');
       var location = this.get('location');

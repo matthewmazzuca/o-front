@@ -24,14 +24,6 @@ export default Router.map(function() {
       this.route('edit');
       this.route('details');
 
-      this.route('beacons', function() {
-        this.route('new');
-
-        this.route('beacon', {path: ':beacon_id'}, function() {
-          this.route('edit');
-        });
-      });
-
       this.route('highlights', function() {
         this.route('new');
 
@@ -48,6 +40,13 @@ export default Router.map(function() {
         });
       });
 
+      this.route('beacons', function() {
+        this.route('new');
+
+        this.route('beacon', {path: ':beacon_id'}, function() {
+          this.route('edit');
+        });
+      });
     });
   });
 });
