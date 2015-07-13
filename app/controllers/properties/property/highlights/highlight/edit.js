@@ -17,10 +17,11 @@ export default Ember.Controller.extend(
       	name: name
       });
 
-      model.get('options').addObject(option).then(function(option) {
-      	console.log(option);
-      	option.save();
-        self.set('newOptionName', '');
+      model.get('options').addObject(option).then(function() {
+      	option.save().then(function(option) {
+      		self.set('newOptionName', '');
+      		self.transitionToRoute('properties.property.highlights.highlight.options.option.edit', option)
+      	})     
       });
     },
 

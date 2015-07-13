@@ -60,7 +60,7 @@ export default Ember.Controller.extend(
 
       model.get('highlights').addObject(highlight).then(function() {
         highlight.save().then(function(highlight) {
-          self.transitionTo('properties.property.highlights.highlight.edit', highlight);  
+          self.transitionToRoute('properties.property.highlights.highlight.edit', highlight);  
         })
       })
     }
