@@ -25,13 +25,15 @@ export default Ember.Controller.extend(
       var options = this.get('options');
       var sub_heading = this.get('sub_heading');
 			var self = this;
-			model.save().then(function() {
+			model.save().then(function(highlight) {
 				self.flash({
           message: "Highlight Saved",
           type: 'alert-success'
         });
+				console.log(highlight.id)
+				console.log(highlight)
+        self.transitionTo('properties.property.edit')
 			});
-			self.transitionTo('properties.property.highlights.highlight.edit', model.id)
 			}, function() {
 				alert('save error');
 				self.flash({

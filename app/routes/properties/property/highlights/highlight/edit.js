@@ -5,6 +5,6 @@ export default Ember.Route.extend({
 		this._super(model, controller);
 
 		var name = model.get('name');
-		controller.set('pageTitle', name);
+		if (name) {controller.set('pageTitle', name) };
 	}
 });

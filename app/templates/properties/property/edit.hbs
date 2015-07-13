@@ -163,15 +163,20 @@
 				</div>
 			</div>
 		</div>
+	
+		{{#each highlight in model.highlights}}
+      {{partial 'properties/property/highlights/highlight/inline'}}
+    {{/each}}
 
-	<div class="setting">
-		<div class="setting-title"> 		
-			<img src="img/edit-icon.png">
-			<div class="hi-title">
-				SEX SWING
+
+{{!-- 		<div class="setting">
+			<div class="setting-title"> 		
+				<img src="img/edit-icon.png">
+				<div class="hi-title">
+					SEX SWING
+				</div>
 			</div>
-		</div>
-	</div>
+		</div> --}}
 
 	<div class="save-container">
 		<button class="button" {{action "save"}}> Save </button>
