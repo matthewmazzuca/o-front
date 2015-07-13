@@ -10,12 +10,12 @@ export default Ember.Controller.extend(
 
   needs: ["application"],
   pageTitle: 'New Property',
+  viewingOptions: ['Openhouse', 'Private Showing'],
 
   validations: {
     address: { presence: true },
     price: { presence: true },
     description: { presence: true },
-
   },
 
   actions: {

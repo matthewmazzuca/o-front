@@ -11,6 +11,7 @@ export default Ember.Controller.extend(
   needs: ["application"],
 
   pageTitle: 'Edit Property',
+  viewingOptions: ['Openhouse', 'Private Showing'],
 
   address: null,
   postal_code: null,
