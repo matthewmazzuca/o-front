@@ -6,8 +6,9 @@ export default Ember.Component.extend({
 	openPicker: null,
 
 	pickerOptions: {
-    imageMin: [600, 600],
-    mimetypes: 'image/*',
+    // dimensions can be put back when subscription is paid for
+    // imageMin: [600, 600],
+    mimetype: 'image/*',
     container: 'window',
     services: ['COMPUTER', 'IMAGE_SEARCH', 'WEBCAM', 'FACEBOOK', 'GMAIL', 'BOX', 'DROPBOX', 'FLICKR', 'PICASA', 'INSTAGRAM'],
   },
