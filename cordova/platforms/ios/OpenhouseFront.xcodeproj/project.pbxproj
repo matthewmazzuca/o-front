@@ -49,6 +49,7 @@
 		1726A646AD78412BB3919AF9 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9866EE543F8F45AA86F040B3 /* CDVFile.m */; };
 		09E0269C6AA64C2D8A894C39 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445787BA4454340AC666FC4 /* CDVLocalFilesystem.m */; };
 		0F2F872AE7DA4303909D0841 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6617C533D4D045C2B509C41B /* CDVAssetLibraryFilesystem.m */; };
+		0BBB0B7782104F73B2ED09FE /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B6A443F4304C1AB2D394EC /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,8 @@
 		92B87F53F06A472EBD931D0D /* CDVFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVFile.h"; path = "org.apache.cordova.file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		8CD70D7A4DF94A98BE1020D2 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocalFilesystem.h"; path = "org.apache.cordova.file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		44F17E71935B4FE89963BD59 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAssetLibraryFilesystem.h"; path = "org.apache.cordova.file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E2B6A443F4304C1AB2D394EC /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		94909AB214AC4572BFF86D51 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +299,8 @@
 				92B87F53F06A472EBD931D0D /* CDVFile.h */,
 				8CD70D7A4DF94A98BE1020D2 /* CDVLocalFilesystem.h */,
 				44F17E71935B4FE89963BD59 /* CDVAssetLibraryFilesystem.h */,
+				E2B6A443F4304C1AB2D394EC /* CDVInAppBrowser.m */,
+				94909AB214AC4572BFF86D51 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "OpenhouseFront/Plugins";
@@ -486,6 +491,7 @@
 				1726A646AD78412BB3919AF9 /* CDVFile.m in Sources */,
 				09E0269C6AA64C2D8A894C39 /* CDVLocalFilesystem.m in Sources */,
 				0F2F872AE7DA4303909D0841 /* CDVAssetLibraryFilesystem.m in Sources */,
+				0BBB0B7782104F73B2ED09FE /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
