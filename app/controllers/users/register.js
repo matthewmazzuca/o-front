@@ -23,7 +23,7 @@ export default Ember.Controller.extend(
     save: function() {
       var self = this;
       var model = this.store.createRecord('user');
-      model.setProperties({email: this.get('email'), password: this.get('password')})
+      model.setProperties({email: this.get('email'), password: this.get('password')});
 
       model.save().then(function() {
         model.setProperties({

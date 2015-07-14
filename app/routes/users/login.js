@@ -25,7 +25,7 @@ export default Ember.Route.extend({
         let newContent = {
           secure: sessionSecure,
           userId: user.id
-        }
+        };
 
         session.set('content', newContent);
         session.get('store').persist(newContent); // not running automatically

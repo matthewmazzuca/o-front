@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -46,7 +47,7 @@ export default DS.Model.extend({
   marker: function() {
   	return Ember.A([
   		{lat: this.get('lat'), lng: this.get('lng')}
-  	])
+  	]);
   }.property('lat', 'lng')
  
 });

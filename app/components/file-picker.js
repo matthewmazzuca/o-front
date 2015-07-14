@@ -19,10 +19,8 @@ export default Ember.Component.extend({
 
     fileSelected: function(InkBlob){
       var model = this.get('model');
-      console.log(model)
-      console.log(InkBlob)
-      this.set('model.image_url', InkBlob.url)
-      console.log(this.get('model.image_url'))
+      this.set('model.image_url', InkBlob.url);
+      console.log(this.get('model.image_url'));
     },
 
     onClose: function () {

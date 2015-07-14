@@ -1,4 +1,26 @@
-<div class="container property-settings">
-	{{input value=name}}
-	<a {{action 'save'}}> Save </a>
-</div>
+{{view 'page-title'}}
+{{partial 'partials/flash'}}
+
+  <div class="settings">
+
+  {{file-picker model=model}}
+
+  <!--Name-->
+    <div class="setting">
+      <div class="setting-title">     Name 
+      </div>
+    
+        {{input value=model.name placeholder="What's the name?"}}
+
+        <div class="form-validator">
+        {{#if errors.name}}
+          name {{errors.name}}
+        {{/if}}
+        </div>
+    </div>
+
+    <div class="save-container">
+      <button class="button" {{action "save"}}> Save </button>
+    </div>
+  </div>
+

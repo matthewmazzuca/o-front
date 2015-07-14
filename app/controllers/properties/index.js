@@ -5,5 +5,5 @@ export default Ember.ArrayController.extend({
 	
 	pageTitle: 'Properties',
 
-	agentProperty: Ember.computed.equal('property.user.id', 'user.id')
+	
 });

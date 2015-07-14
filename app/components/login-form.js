@@ -31,7 +31,7 @@ export default Ember.Component.extend(
       var data= this.getProperties('identification', 'password');
       this.sendAction('authenticate', data);
       this.send('resetParams');
-      this.transitionTo('properties.index')
+      this.transitionTo('properties.index');
     }
   }
 });

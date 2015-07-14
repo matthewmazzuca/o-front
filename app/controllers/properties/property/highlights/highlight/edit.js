@@ -13,26 +13,27 @@ export default Ember.Controller.extend(
 
       var model = this.get('model');
       var self = this;
-      model.get('options').addObject(this.store.createRecord('option', {
-        name: name
-      })).then(function() {
-        self.set('newOptionName', '');
+      var option = this.store.createRecord('option', {
+      	name: name
+      });
+
+      model.get('options').addObject(option).then(function() {
+      	option.save().then(function(option) {
+      		self.set('newOptionName', '');
+      		self.transitionToRoute('properties.property.highlights.highlight.options.option.edit', option);
+      	});
       });
     },
+
 		save: function() {
 			var model = this.get('model');
-			var name = this.get('name');
-      var options = this.get('options');
-      var sub_heading = this.get('sub_heading');
 			var self = this;
-			model.save().then(function(highlight) {
+
+			model.save().then(function() {
 				self.flash({
           message: "Highlight Saved",
           type: 'alert-success'
         });
-				console.log(highlight.id)
-				console.log(highlight)
-        self.transitionTo('properties.property.edit')
 			});
 			}, function() {
 				alert('save error');

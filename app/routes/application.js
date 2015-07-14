@@ -8,7 +8,7 @@ export default Ember.Route.extend(
 
   //TODO use a better pattern when simple auth offers services
   activate: function() {
-    this.set('simpleAuth.session', this.get('session'))
+    this.set('simpleAuth.session', this.get('session'));
   },
 
   actions: {
@@ -17,8 +17,8 @@ export default Ember.Route.extend(
       console.log(error);
 
       var message = error.status + " " + error.statusText;
-      App.errorMessage = message;
-      App.errorUrl = window.location.href;
+      Ember.Application.errorMessage = message;
+      Ember.Application.errorUrl = window.location.href;
 
       return true;
     },

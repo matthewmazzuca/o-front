@@ -82,17 +82,8 @@
 			<div class="setting-title"> 
 				Viewing Type
 			</div>
-				{{input value=model.price placeholder="INSERT DROPDOWN"}}
-		
-
-			<div class="form-validator">
-		      {{#if errors.price}}
-		        put a dropdown {{errors.price}}
-		      {{/if}}
-    		</div>
+			{{view "select" content=viewingOptions}}
 		</div>
-
-
 
 	<!--DESCRIPTION-->	
 		<div class="setting">
