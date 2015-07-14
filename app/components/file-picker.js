@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 	pickerOptions: {
     imageMin: [600, 600],
     mimetypes: 'image/*',
-    container: 'modal',
+    container: 'window',
     services: ['COMPUTER', 'IMAGE_SEARCH', 'WEBCAM', 'FACEBOOK', 'GMAIL', 'BOX', 'DROPBOX', 'FLICKR', 'PICASA', 'INSTAGRAM'],
   },
 
