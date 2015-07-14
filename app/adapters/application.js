@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.ActiveModelAdapter.extend({
-	host: 'http://45.55.74.11:3000',
+	host: 'http://localhost:3000',
   namespace: 'api/v1',
   ancestorTypes: null,
 

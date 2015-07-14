@@ -18,7 +18,7 @@ module.exports = function(environment) {
       crossOriginWhitelist: ['*']
     },
     'simple-auth-devise': {
-      serverTokenEndpoint: 'http://45.55.74.11:3000/api/v1/users/sign_in',
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in',
     },
     environment: environment,
     baseURL: '/',
