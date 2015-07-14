@@ -6,7 +6,7 @@ module.exports = function(environment) {
     filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz',
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' 'maps.gstatic.com' ",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com maps.googleapis.com ",
       'connect-src': "'self' https://www.filepicker.io/ ",
       'img-src': "'self'  ",
       'style-src': "'self' 'unsafe-inline'  ",
@@ -18,7 +18,7 @@ module.exports = function(environment) {
       crossOriginWhitelist: ['*']
     },
     'simple-auth-devise': {
-      serverTokenEndpoint: 'http://45.55.74.11:3000/api/v1/users/sign_in',
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in',
     },
     environment: environment,
     baseURL: '/',
