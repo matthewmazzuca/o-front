@@ -4,6 +4,14 @@ export default Ember.Component.extend({
 	filepicker: Ember.inject.service(),
 
 	openPicker: null,
+  multipleImages: function() {
+    var model = this.get('model');
+    if (model.image_url) {
+      return false
+    } else {
+      return true
+    }
+  },
 
 	pickerOptions: {
     // dimensions can be put back when subscription is paid for
@@ -19,9 +27,25 @@ export default Ember.Component.extend({
     },
 
     fileSelected: function(InkBlob){
+      var store = this.get('targetObject.store');
+      var self = this;
       var model = this.get('model');
-      this.set('model.image_url', InkBlob.url);
-      console.log(this.get('model.image_url'));
+
+      if (model.image_url) { 
+
+        this.set('model.image_url', InkBlob.url);
+        console.log(this.get('model.image_url'));
+
+      } else {
+        InkBlob.forEach(function(item) {
+          var image = store.createRecord('image', {
+            image_url: item.url
+          });
+          model.get('images').addObject(image).then(function() {
+            image.save();
+          });
+        })
+      }
     },
 
     onClose: function () {

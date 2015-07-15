@@ -9,5 +9,5 @@
 </div>
 
 {{#if openPicker}}
-  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' onClose='onClose' onError='onError'}}
+  {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' multiple=multiple onClose='onClose' onError='onError'}}
 {{/if}}

@@ -27,7 +27,7 @@
     "ember-cli-cordova": "isleofcode/ember-cli-cordova#develop",
     "ember-cli-dependency-checker": "^1.0.0",
     "ember-cli-estimote": "git+ssh://git@github.com:isleofcode/ember-cli-estimote.git#develop",
-    "ember-cli-filepicker": "0.1.8",
+    "ember-cli-filepicker": "0.1.95",
     "ember-cli-htmlbars": "0.7.6",
     "ember-cli-ic-ajax": "0.1.1",
     "ember-cli-inject-live-reload": "^1.3.0",
