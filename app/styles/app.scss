@@ -125,11 +125,13 @@ button, input, textarea {
 .left {
   display: inline-block;
   float: left;
+  width: 12em;
 }
 
 .right {
-  display: inline-block;
-  float: right;
+  display: block;
+  text-align: left;
+  
 }
 
 .save-container {
