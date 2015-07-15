@@ -10,10 +10,11 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
+
   &.property {
     height: 12em;
     margin: 2em;
-
+    margin-bottom: 4em;
   }
 }
 
@@ -111,22 +112,24 @@
 .edit-button {
     @extend .uppercase-or-num;
     
-    display: inline-block;
+    position: relative;
+    display: block;
     background-color: $prime;
     color: $white;
     width: 120px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
     text-align: center;
     border-radius: 5px;
+    top: 4.25em;
   }
 
   
   .divider {
     position: relative;
     color: $prime;
-    top: 7em;
-    border: 0.1em solid $prime;
+    top: 12.5em;
+    border: 0.1em solid $lightGrey;
+    margin-bottom: 5em;
 
   }

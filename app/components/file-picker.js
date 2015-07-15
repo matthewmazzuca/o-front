@@ -6,9 +6,9 @@ export default Ember.Component.extend({
 	openPicker: null,
 
 	pickerOptions: {
-    imageMin: [375, 240],
-    imageMax: [1000,1000],
-    imageQuality: 100,
+    // imageMin: [375, 240],
+    // imageMax: [1000,1000],
+    // imageQuality: 100,
     mimetypes: 'image/*',
     container: 'modal',
     services: ['COMPUTER', 'IMAGE_SEARCH', 'WEBCAM', 'FACEBOOK', 'GMAIL', 'BOX', 'DROPBOX', 'FLICKR', 'PICASA', 'INSTAGRAM'],

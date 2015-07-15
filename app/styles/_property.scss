@@ -31,22 +31,6 @@ $appCardHeight: 80px;
 
   }
 
-    .edit-button {
-    @extend .uppercase-or-num;
-
-    position: relative;
-    display: block;
-    background-color: $prime;
-    color: $white;
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5em;
-    margin-top: -1em;
-    text-align: center;
-    border-radius: 5px;
-  }
-
 
 .property-hero-title {
   /*should pull info from google maps to show address, postal code/zip, and city,state */
@@ -101,6 +85,11 @@ $appCardHeight: 80px;
   background-color: $white;
   height: 20em;
   padding: 2em 2px;
+
+  .edit-button {
+    top: -1em;
+    margin-bottom: 0.5em;
+  }
 }
 
 .price {
