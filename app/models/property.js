@@ -7,7 +7,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   location: DS.attr('string'),
   postal_code: DS.attr('string'),
-  image_url: DS.attr('string'),  
+  images: DS.hasMany('image', { async: true, embedded: 'always' }),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),

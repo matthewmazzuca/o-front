@@ -12,8 +12,6 @@
 <!-- make clickable once component -->
 
   <div class="listpage-listing property" {{bind-attr style=property.style}}>
-  
-
 
     <div class='listing-main'>
       <span class='name'>
@@ -36,10 +34,6 @@
         +	{{calculatedDistance}} from here
 			</div>
 		</div>
-
-
-    
-
 
       {{#if session.isAuthenticated}}
         {{#if (eq session.currentUser.id property.user.id)}}

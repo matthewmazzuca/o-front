@@ -6,7 +6,7 @@ module.exports = function(environment) {
     filepickerKey: 'AvMSkkBziQo2QzqDcSOQRz',
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' 'maps.gstatic.com' ",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maps.gstatic.com maps.googleapis.com ",
       'connect-src': "'self' https://www.filepicker.io/ ",
       'img-src': "'self'  ",
       'style-src': "'self' 'unsafe-inline'  ",
