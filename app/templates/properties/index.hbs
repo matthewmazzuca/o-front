@@ -11,19 +11,7 @@
 {{#link-to 'properties.property.index' property.id}} 
 <!-- make clickable once component -->
 
-  <div class="listpage-listing property" {{bind-attr style=property.styleString}}>
-  
-
-      {{#if session.isAuthenticated}}
-        {{#if (eq session.currentUser.id property.user.id)}}
-          {{#link-to 'properties.property.edit' property}}
-          <div class="edit-button">
-            Edit Property
-          </div>
-        {{/link-to}}
-        {{/if}}
-      {{/if}}
-    
+  <div class="listpage-listing property" {{bind-attr style=property.style}}>
 
     <div class='listing-main'>
       <span class='name'>
@@ -47,12 +35,24 @@
 			</div>
 		</div>
 
-<hr class="divider"/>
+      {{#if session.isAuthenticated}}
+        {{#if (eq session.currentUser.id property.user.id)}}
+
+        <hr class="divider"/>
+        
+          {{#link-to 'properties.property.edit' property}}
+          <div class="edit-button">
+            Edit Property
+          </div>
+        {{/link-to}}
+        {{/if}}
+      {{/if}}
 
   </div>
   {{/link-to}}
 	{{/each}}
 </div>
+
 
 {{#if session.isAuthenticated}}
   <div class="new-property">

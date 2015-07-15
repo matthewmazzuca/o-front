@@ -7,23 +7,14 @@
   position: relative;
   display: block;
   border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
 
   &.property {
     height: 12em;
     margin: 2em;
-
-  }
-
-  .edit-button {
-    @extend .uppercase-or-num;
-
-    display: inline-block;
-    background-color: $prime;
-    color: $white;
-    width: 120px;
-    text-align: center;
-    border-radius: 5px;
-    right: 5em;
+    margin-bottom: 4em;
   }
 }
 
@@ -118,9 +109,27 @@
 }
 
 
+.edit-button {
+    @extend .uppercase-or-num;
+    
+    position: relative;
+    display: block;
+    background-color: $prime;
+    color: $white;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 5px;
+    top: 4.25em;
+  }
+
+  
   .divider {
-    position: inherit;
-    display: none;
-    top: 9.6em;
-    border: 0.1em solid $prime;
+    position: relative;
+    color: $prime;
+    top: 12.5em;
+    border: 0.1em solid $lightGrey;
+    margin-bottom: 5em;
+
   }

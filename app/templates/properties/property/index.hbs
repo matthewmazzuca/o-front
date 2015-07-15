@@ -1,16 +1,6 @@
 
   <div class="property-profile" style={{model.style}}>
     <img {{action "back" target="controllers.application"}} src="img/back-icon.png" class="back-icon">
-     
-        {{#if session.isAuthenticated}}
-        {{#if (eq session.currentUser.id model.user.id)}}
-          {{#link-to 'properties.property.edit' property}}
-          <div class="edit-button">
-            Edit Property
-          </div>
-        {{/link-to}}
-        {{/if}}
-      {{/if}}
 
     <div class="property-hero-title">
       <span>
@@ -18,7 +8,6 @@
       </span>
 
         <div class="property-subheading">
-           <span>{{model.location}}</span>
            <span>{{model.postal_code}}</span>
         </div>
     </div>
@@ -29,7 +18,7 @@
 
   <div class="down-icon-cont">
   {{#link-to 'properties.property.details' model.id}}
-    <img src="img/down-icon.png">
+    <img src="img/down-icon-green.png">
   {{/link-to}}
   </div>
 

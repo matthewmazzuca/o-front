@@ -6,6 +6,12 @@
 	<!--PHOTOS-->
 	{{file-picker model=model multiple=true}}
 
+	{{#each image in model.images}}
+		<div class="photo-preview" style={{image.style}}>
+			Hi
+		</div>
+	{{/each}}
+
 	<!--ADDRESS-->
 		<div class="setting">
 			<div class="setting-title"> 		Address 

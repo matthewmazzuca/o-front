@@ -7,12 +7,12 @@ $appCardHeight: 80px;
 /*PROPERTY IMAGE AND INFO*/
 .property-profile {
   position: relative;
-  height: 20em;
+  height: 18em;
   width: 100%;
   display: block;
 
-  background-repeat: repeat;
-  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   
 
     img {
@@ -29,18 +29,6 @@ $appCardHeight: 80px;
       padding: 10px;
     }
 
-    .edit-button {
-    @extend .uppercase-or-num;
-
-    text-align: center;
-    display: inline-block;
-    background-color: $prime;
-    color: $white;
-    width: 120px;
-    text-align: center;
-    border-radius: 5px;
-  }
-
   }
 
 
@@ -54,7 +42,7 @@ $appCardHeight: 80px;
   color:white;
   margin: 0 auto;
   position: absolute;
-  top: 7.083em; /* or 170px */
+  top: 6.083em; /* or 170px */
   width: 100%;
     
     span {
@@ -81,12 +69,12 @@ $appCardHeight: 80px;
 
 
 .property-show {
-  color: $white;
+  color: $dark;
   text-align: left;
 }
 
 .property-details {
-  background-color: $dark;
+  background-color: $white;
   font-weight: normal;
 }
 
@@ -94,16 +82,21 @@ $appCardHeight: 80px;
   position: relative;
   font-weight: normal;
 
-  background-color: $dark;
+  background-color: $white;
   height: 20em;
   padding: 2em 2px;
+
+  .edit-button {
+    top: -1em;
+    margin-bottom: 0.5em;
+  }
 }
 
 .price {
   @extend .uppercase-or-num;
   position: relative;
   display: block;
-  color: $white;
+  color: $dark;
   font-size: 2em;
   font-weight: 500;
   margin: 0 $leftBumper;
@@ -171,12 +164,12 @@ $appCardHeight: 80px;
 
 .down-icon-cont {
  
-  background-color: $dark;
+  background-color: $white;
   padding-bottom: 0.5em;
   position: relative;
   text-align: center;
   img {
-    height: 0.5em;
+    height: 0.75em;
   }
 
 }
@@ -327,7 +320,7 @@ $appCardHeight: 80px;
   font-size: 14px;
   margin: 0 $leftBumper 0px;
   text-align: left;
-  color: $white;
+  color: $dark;
 
 }
 
@@ -349,7 +342,7 @@ $appCardHeight: 80px;
 }
 
 .property-map-container {
-  background-color: $dark;
+  background-color: $white;
   height: 20em;
   padding: 1em;
   margin: auto;

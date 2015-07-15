@@ -14,8 +14,9 @@ export default Ember.Component.extend({
   },
 
 	pickerOptions: {
+    // imageMin: [375, 240],
+    // imageMax: [1000,1000],
     // dimensions can be put back when subscription is paid for
-    // imageMin: [600, 600],
     mimetype: 'image/*',
     container: 'window',
     services: ['COMPUTER', 'IMAGE_SEARCH', 'WEBCAM', 'FACEBOOK', 'GMAIL', 'BOX', 'DROPBOX', 'FLICKR', 'PICASA', 'INSTAGRAM'],
