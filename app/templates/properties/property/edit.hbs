@@ -4,7 +4,15 @@
 	
 
 	<!--PHOTOS-->
-	{{file-picker model=model multiple=true}}
+	<div>
+		Add profile photo
+		{{file-picker model=model multiple=false}}
+	</div>
+
+	<div>
+		Add additional images
+		{{file-picker model=model multiple=true}}
+	</div>
 
 	{{#each image in model.images}}
 		<div class="photo-preview" style={{image.style}}>

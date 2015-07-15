@@ -1,14 +1,14 @@
 <div class="property-hero">
  
-           {{#if session.isAuthenticated}}
-        {{#if (eq session.currentUser.id model.user.id)}}
-          {{#link-to 'properties.property.edit' property}}
-          <div class="edit-button">
-            Edit Property
-          </div>
-        {{/link-to}}
-        {{/if}}
-      {{/if}}
+  {{#if session.isAuthenticated}}
+    {{#if (eq session.currentUser.id model.user.id)}}
+      {{#link-to 'properties.property.edit' model}}
+        <div class="edit-button">
+          Edit Property
+        </div>
+      {{/link-to}}
+    {{/if}}
+  {{/if}}
       
   <div class="price">
     {{format-money model.price precision=0}}
