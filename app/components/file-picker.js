@@ -4,14 +4,6 @@ export default Ember.Component.extend({
 	filepicker: Ember.inject.service(),
 
 	openPicker: null,
-  multipleImages: function() {
-    var model = this.get('model');
-    if (model.image_url) {
-      return false
-    } else {
-      return true
-    }
-  },
 
 	pickerOptions: {
     // imageMin: [375, 240],
@@ -29,7 +21,6 @@ export default Ember.Component.extend({
 
     fileSelected: function(InkBlob){
       var store = this.get('targetObject.store');
-      var self = this;
       var model = this.get('model');
 
       if (model.image_url) { 
@@ -38,14 +29,23 @@ export default Ember.Component.extend({
         console.log(this.get('model.image_url'));
 
       } else {
-        InkBlob.forEach(function(item) {
-          var image = store.createRecord('image', {
-            image_url: item.url
+        // If filepicker passes array then multiple images were picked
+        // used to distinguish whether it is adding a profile_url or multiple images
+        if (InkBlob[0]) {
+          InkBlob.forEach(function(item) {
+            var image = store.createRecord('image', {
+              image_url: item.url
+            });
+            model.get('images').addObject(image).then(function() {
+              image.save();
+            });
           });
-          model.get('images').addObject(image).then(function() {
-            image.save();
-          });
-        })
+        } else {
+
+          this.set('model.profile_url', InkBlob.url);
+          console.log(this.get('model.profile_url'));
+
+        }
       }
     },
 

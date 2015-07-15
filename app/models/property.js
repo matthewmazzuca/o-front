@@ -7,7 +7,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   location: DS.attr('string'),
   postal_code: DS.attr('string'),
-  images: DS.hasMany('image', { async: true, embedded: 'always' }),
+  profile_url: DS.attr('string'),
 
   lat: DS.attr('number'),
   lng: DS.attr('number'),
@@ -15,25 +15,17 @@ export default DS.Model.extend({
   user: DS.belongsTo('user', { async: true, embedded: 'always' }),
   fields: DS.hasMany('field', {async: true, embedded: 'always' }),
   highlights: DS.hasMany('highlight', { async: true } ),
+  images: DS.hasMany('image', { async: true, embedded: 'always' }),
 
-  styleString: function() {
-  	var imgURL = this.get('image_url');
-
-  	var overlayStr = 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))';
-  	var urlStr = 'url(' + imgURL + ')';
-
-  	var style = [overlayStr, urlStr].join(',');
-  	return 'background: ' + style + ';';
-  }.property('image_url'),
 
   calculatedDistance: function() {
   	return '500m';
   }.property('lat', 'lng'),
 
   style: function() {
-  	return [ "background-image:url('",this.get('image_url'),
+  	return [ "background-image:url('",this.get('profile_url'),
              "')"].join('');
-  }.property('image_url'),
+  }.property('profile_url'),
 
   centerLat: function() {
     return this.get('lat');
