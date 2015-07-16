@@ -4,14 +4,20 @@
 
   <div class="settings">
 
-  {{file-picker model=model multiple=false}}
+    <!--COVER PHOTO-->
+    <div class="setting">
+      <div class="setting-title">
+        Cover Photo
+        {{file-picker model=model multiple=false}}
+      </div>
+    </div>
 
   <!--Name-->
     <div class="setting">
       <div class="setting-title">     Name 
       </div>
     
-        {{input value=model.name placeholder="What's the name?"}}
+        {{input value=model.name placeholder="Ex. Backyard"}}
 
         <div class="form-validator">
         {{#if errors.name}}
@@ -20,43 +26,92 @@
         </div>
     </div>
 
-  <!-- Sub Heading-->
+
+  <!--TAGLINE-->
     <div class="setting">
-      <div class="setting-title">     Sub Heading 
+      <div class="setting-title">     Tagline
       </div>
     
-        {{input value=model.sub_heading placeholder="What's the subheading?"}}
+        {{input value=model.name placeholder="Ex. Checkout the backyard!"}}
 
         <div class="form-validator">
-        {{#if errors.sub_heading}}
-          Postal code {{errors.sub_heading}}
+        {{#if errors.name}}
+          name {{errors.name}}
         {{/if}}
         </div>
     </div>
-  
+
+  <!--DESCRIPTION-->  
+    <div class="setting">
+      <div class="setting-title"> 
+        Description 
+      </div>
+      <br>
+      
+      <div class="description">
+        {{textarea value=model.description maxlength="200" placeholder="Tell us why this highlight is so good, in a sentence or two."}}
+      </div>
+      
+      <div class="form-validator">
+        {{#if errors.description}}
+          description {{errors.description}}
+        {{/if}}
+        </div>
+    </div>
+
+
+<!--HIGHLIGHT OPTIONS-->
+ <div class="mid-page-title">
+  Options & Additions
+  </div>
+
   
   {{#each option in model.options}}
     {{partial 'properties/property/highlights/highlight/options/option/inline'}}
   {{/each}}
 
-  <div class="preamble">
-    <div class="title small">
-      Add new option image to be displayed
-      <span class="sub-text"> e.g. Granite top </span>
-    </div>
-    <div class="new-att-icon">
-      <a {{action "newOption"}}> <img src="img/new-att-icon.png"></a>
+<!--COVER PHOTO-->
+  <div class="setting">
+    <div class="setting-title">
+      Photo
+      {{file-picker model=model multiple=false}}
     </div>
   </div>
 
-  <div class="setting custom">
-    <div class="setting-key">
-      {{input value=newOptionName placeholder="e.g. \"Granite top\""}}
+<!--TAG LINE-->
+  <div class="setting">
+    <div class="new-att-icon">
+      <a {{action "newOption"}}> <img src="img/new-att-icon.png"></a>
+    </div>
+    <div class="setting-title">
+      Tagline
+    </div>
+      {{input value=newOptionName placeholder="Ex. Add a hammock!"}}
   </div>
+
+    <!--DESCRIPTION-->  
+    <div class="setting">
+      <div class="setting-title"> 
+        Description 
+      </div>
+      <br>
+      
+      <div class="description">
+        {{textarea value=model.description maxlength="200" placeholder="Ex. Your new hammock will add a touch of floating serenity to your beautiful backyard!"}}
+      </div>
+      
+      <div class="form-validator">
+        {{#if errors.description}}
+          description {{errors.description}}
+        {{/if}}
+        </div>
+    </div>
+
+
+
 
 
     <div class="save-container">
       <button class="button" {{action "save"}}> Save </button>
     </div>
   </div>
-</div>

@@ -1,13 +1,9 @@
-<div class="setting">
-	<div class="setting-title"> 		Photos 
-		<br/>
+	<div class="file-picker">
 		<img src="img/new-att-icon.png">
-		<button class="button" {{action "pickWithFilepicker"}}>
+		<div class="hi-title" {{action "pickWithFilepicker"}}>
 			Add a photo
-		</button>
+		</div>
 	</div>
-</div>
-
 {{#if openPicker}}
   {{ember-filepicker pickerOptions=pickerOptions onSelection='fileSelected' multiple=multiple onClose='onClose' onError='onError'}}
 {{/if}}

@@ -37,6 +37,7 @@ textarea {
   color: $lightBlue;
   padding: 0.25em 0.5em;
   height: 1.5em;
+  width: 100vw;
   @include border-radius(0);
 }
 
@@ -238,6 +239,9 @@ button, input, textarea {
 
   }
 
+.file-picker {
+  margin-bottom: 0.5em;
+}
 
 
 

@@ -3,21 +3,27 @@
 	<div class="settings">
 	
 
-	<!--PHOTOS-->
-	<div>
-		Add profile photo
-		{{file-picker model=model multiple=false}}
-	</div>
+	<!--COVER PHOTO-->
+	<div class="setting">
 
-	<div>
-		Add additional images
-		{{file-picker model=model multiple=true}}
-	</div>
-
-	{{#each image in model.images}}
-		<div class="photo-preview" style={{image.style}}>
+		<div class="setting-title">
+			Cover Photo
+			{{file-picker model=model multiple=false}}
 		</div>
-	{{/each}}
+	</div>
+
+		<!--PROPERTY PHOTOS-->
+	<div class="setting">
+		<div class="setting-title">
+			Property Photos
+			{{file-picker model=model multiple=true}}
+		</div>
+
+		{{#each image in model.images}}
+			<div class="photo-preview" style={{image.style}}>
+			</div>
+		{{/each}}
+	</div>
 
 	<!--ADDRESS-->
 		<div class="setting">
@@ -117,6 +123,7 @@
 		</div>
 
 
+	<!--FIELDS-->
   {{#each field in model.fields}}
     <div class="setting custom">
     	<div class="setting-key">
